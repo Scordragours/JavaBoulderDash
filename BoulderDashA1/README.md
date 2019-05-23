@@ -1,3 +1,3 @@
-# JPU-BlankProject
+# BoulderDash architecture 
 
-Base de démarrage pour le projet Jave/POO/UML des 1ières années Exia-Cesi
+For the moment it is the empty architecture of our project 
