@@ -18,7 +18,7 @@ protected Entity entite;
     }
 
     @Test
-    public void getPositionX() {
+    public void getPositionX() throws Exception {
 
     }
 
