@@ -18,16 +18,16 @@ public final class Model extends Observable implements IModel {
 	int remainingTime;
 	int diamond;
 	int remainingDiamond;
-	Entity world = new Entity[][];
+	Entity[][] world;
 	int score;
-	Player player= new Player();
+	Player player;
 
 	public Model(int levelID)
 	{
 
 	}
 	public Observable getObservable() {
-
+		return null;
 	}
 	private void loadLevel(int levelID)
 	{
@@ -62,13 +62,13 @@ public final class Model extends Observable implements IModel {
 	{
 
 	}
-	public Entity getWorld()
+	public Entity[][] getWorld()
 	{
-
+		return null;
 	}
 	public Player getPlayer()
 	{
-
+		return null;
 	}
 	public void updateEntity(int posX, int posY)
 	{

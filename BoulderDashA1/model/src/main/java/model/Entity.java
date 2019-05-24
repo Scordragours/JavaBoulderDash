@@ -35,17 +35,17 @@ public abstract class Entity {
 
     public Sprite getSprite()
     {
-
+        return null;
     }
 
     public EntityType getType()
     {
-
+        return null;
     }
 
     public Entity getRelativeEntity(int posX, int posY)
     {
-
+        return null;
     }
 
 }
