@@ -74,15 +74,6 @@ import java.sql.SQLException;
          */
         public abstract D find(int id);
 
-        /**
-         * Find.
-         *
-         * @param code
-         *          the code
-         * @return the e
-         */
-        public abstract D find(String code);
-
     }
 
 

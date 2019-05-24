@@ -8,43 +8,42 @@ public class Level extends Data {
 
     public Level()
     {
-
+        this(0, 0, 0, "");
     }
-    public Level(int id,int time, int nbDiamond, String level)
+    public Level(final int id, final int time, final int nbDiamond, final String level)
     {
-
+        this.setId(id);
+        this.setTime(time);
+        this.setNbDiamond(nbDiamond);
+        this.setLevel(level);
     }
+
     public int getId()
     {
-        return 0;
+        return this.id;
     }
-    public void setId(int id)
-    {
 
-    }
+    public void setId(int id) { this.id = id; }
+
     public int getTime()
     {
-        return 0;
+        return this.time;
     }
-    public void setTime(int time)
-    {
 
-    }
+    public void setTime(int time) { this.time = time; }
+
     public int getNbDiamond()
     {
-        return 0;
+        return this.nbDiamond;
     }
-    public void setNbDiamond(int nbDiamond)
-    {
 
-    }
+    public void setNbDiamond(int nbDiamond) { this.nbDiamond = nbDiamond; }
+
     public String getLevel()
     {
-        return "";
+        return this.level;
     }
-    public void setLevel(String level)
-    {
 
-    }
+    public void setLevel(String level) { this.level = level; }
 
 }
