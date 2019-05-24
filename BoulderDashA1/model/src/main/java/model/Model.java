@@ -13,14 +13,14 @@ import contract.IModel;
  */
 public final class Model extends Observable implements IModel {
 
-	String level = new String();
-	int time;
-	int remainingTime;
-	int diamond;
-	int remainingDiamond;
-	Entity[][] world;
-	int score;
-	Player player;
+	private String level;
+	private int time;
+	private int remainingTime;
+	private int diamond;
+	private int remainingDiamond;
+	private Entity[][] world;
+	private int score;
+	private Player player;
 
 	public Model(int levelID)
 	{

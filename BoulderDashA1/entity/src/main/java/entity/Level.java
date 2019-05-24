@@ -1,10 +1,10 @@
 package entity;
 
 public class Level extends Data {
-    int id;
-    int time;
-    int nbDiamond;
-    String level = new String();
+    private int id;
+    private int time;
+    private int nbDiamond;
+    private String level;
 
     public Level()
     {
