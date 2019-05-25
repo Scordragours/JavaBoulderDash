@@ -15,22 +15,22 @@ public abstract class Entity {
 
     public int getPositionX()
     {
-        return 0;
+        return positionX;
     }
 
-    public void setPositionX(int positionX)
+    public void setPositionX(int x)
     {
-
+        this.positionX = x;
     }
 
     public int getPositionY()
     {
-        return 0;
+        return positionY;
     }
 
-    public void setPositionY(int positionY)
+    public void setPositionY(int y)
     {
-
+        this.positionY = y;
     }
 
     public Sprite getSprite()
