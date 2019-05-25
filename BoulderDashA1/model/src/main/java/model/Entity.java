@@ -10,7 +10,8 @@ public abstract class Entity {
 
     public Entity(int x, int y, EntityType type)
     {
-
+        positionY = y;
+        positionX = x;
     }
 
     public int getPositionX()
