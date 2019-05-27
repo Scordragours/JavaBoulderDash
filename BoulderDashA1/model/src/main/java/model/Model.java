@@ -18,7 +18,7 @@ public final class Model extends Observable implements IModel {
 	private Level level;
 	private int remainingTime;
 	private int remainingDiamonds;
-	private Entity[][] world = new Entity[26][48];//{{null},{null},{null}};
+	private Entity[][] world = new Entity[26][48];
 	private int score;
 	private Player player;
 	private int levelTexture;
@@ -111,10 +111,23 @@ public final class Model extends Observable implements IModel {
 
 	public Level getLevel() { return this.level; }
 
-	public void setRemainingTime(int remainingTime) { this.remainingTime = remainingTime; }
+	public void setRemainingTime(int remainingTime)
+	{
+		this.remainingTime = remainingTime;
+
+		setChanged();
+		notifyObservers();
+	}
+
 	public int getRemainingTime() { return this.remainingTime; }
 
-	public void setRemainingDiamonds(int remainingDiamond) { this.remainingDiamonds = remainingDiamond; }
+	public void setRemainingDiamonds(int remainingDiamond)
+	{
+		this.remainingDiamonds = remainingDiamond;
+
+		setChanged();
+		notifyObservers();
+	}
 	public int getRemainingDiamonds() { return this.remainingDiamonds; }
 
 	public int getScore() { return this.score; }
@@ -129,16 +142,25 @@ public final class Model extends Observable implements IModel {
 	    entity.setPositionX(x);
 	    entity.setPositionY(y);
 		world[x][y] = entity;
-	}
 
-	public void updateStats() {
-
+		setChanged();
+		notifyObservers();
 	}
 
 	public void updateSlidingBlocks()
 	{
-
+		for(Entity[] line : world)
+		{
+			for(Entity e : line)
+			{
+				if(e instanceof SlidingBlock)
+				{
+					((SlidingBlock) e).pathFinder();
+				}
+			}
+		}
 	}
+
 	public char[][] convertWorld()
 	{
 		char[][] cw = new char[26][48];
