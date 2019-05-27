@@ -2,18 +2,18 @@ package model;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Test;
+
 
 import java.lang.reflect.Field;
 
-import static org.junit.Assert.*;
 
-public class DirtTest extends BlockTest {
+
+public class DirtTest extends EntityTest {
     @Override
     @Before
     public void setUp() throws Exception {
 
-        this.entite = new Dirt(5,6,EntityType.DIRT,true);
+        this.entite = new Dirt(model,5,6);
         Class<?> entiteReflector = this.entite.getClass();
         this.fields = entiteReflector.getDeclaredFields();
         for(Field field : this.fields)

@@ -1,27 +1,35 @@
 package model;
 
+
 public abstract class Entity {
 
     protected Model model;
     private int positionX;
     private int positionY;
-    private Sprite sprite;
     private EntityType type;
 
-    public Entity(int x, int y, EntityType type)
+    public Entity(Model model,int positionX, int positionY, EntityType type)
     {
-        positionY = y;
-        positionX = x;
+        this.model = model;
+        this.positionY = positionY;
+        this.positionX = positionX;
+        this.type = type;
     }
 
     public int getPositionX()
     {
-        return positionX;
+        return this.positionX;
     }
 
-    public void setPositionX(int x)
+    public void setPositionX(int x) throws Exception
     {
-        this.positionX = x;
+        if(x<0)
+        {
+            throw new Exception("The X position cannot be negative");
+        }else{
+            this.positionX = x;
+        }
+
     }
 
     public int getPositionY()
@@ -29,24 +37,26 @@ public abstract class Entity {
         return positionY;
     }
 
-    public void setPositionY(int y)
+    public void setPositionY(int y) throws Exception
     {
-        this.positionY = y;
+        if(y<0)
+        {
+            throw new Exception("The Y position cannot be negative");
+        }else{
+            this.positionY = y;
+        }
+
     }
 
-    public Sprite getSprite()
-    {
-        return null;
-    }
 
     public EntityType getType()
     {
-        return null;
+        return type;
     }
 
-    public Entity getRelativeEntity(int posX, int posY)
+    public Entity getRelativeEntity(int x, int y)
     {
-        return null;
+        return this.model.getWorld()[positionX+x][positionY+y];
     }
 
 }

@@ -2,13 +2,19 @@ package model;
 
 public abstract class Enemy extends Character{
 
-    public Enemy(int x, int y, EntityType type)
+    public Enemy(Model model,int x, int y, EntityType type)
     {
-        super(x,y,type);
+        super(model,x,y,type);
     }
 
-    public void move()
+    public void move(int x, int y)
     {
 
     }
+
+    public void pathFinder()
+    {
+
+    }
+
 }

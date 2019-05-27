@@ -1,19 +1,19 @@
-/**
- * @author CANDAT ETIENNE AND DENEUVE GREGORY
- * @version 1.0
- */
 package model;
 
 import entity.Level;
 import org.junit.After;
 import org.junit.AfterClass;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.lang.reflect.Field;
+import static org.junit.Assert.*;
 
+/**
+ * @author CANDAT ETIENNE AND DENEUVE GREGORY
+ * @version 1.0
+ */
 public class ModelTest {
     private Model model;
     private Field[] fields;
@@ -29,7 +29,7 @@ public class ModelTest {
     @Before
     public void setUp() throws Exception
     {
-        this.model = new Model(1);
+        this.model = new Model(1, 1);
         Class<?> modelReflector = this.model.getClass();
         this.fields = modelReflector.getDeclaredFields();
         for(Field field : this.fields) {
@@ -41,6 +41,41 @@ public class ModelTest {
     public void tearDown() throws Exception {
     }
 
+    @Test
+    public void excepLevelTextureMinRange()
+    {
+        try
+        {
+            new Model(1,0);
+            fail("Should throw exception when levelTexture < 1");
+        } catch (final Exception e)
+        {
+            final String excepted = "levelTexture out of range";
+            assertEquals(excepted, e.getMessage());
+        }
+    }
+
+    @Test
+    public void excepLevelTextureMaxRange()
+    {
+        try
+        {
+            new Model(1,7);
+            fail("Should throw exception when levelTexture > 6");
+        } catch (final Exception e)
+        {
+            final String excepted = "levelTexture out of range";
+            assertEquals(excepted, e.getMessage());
+        }
+    }
+
+    @Test
+    public void testGetObservable()
+    {
+        Model expectedModel = this.model;
+
+        assertEquals(expectedModel, this.model.getObservable());
+    }
 
     @Test
     public void testGetLevel() throws Exception
@@ -55,7 +90,15 @@ public class ModelTest {
             }
         }
 
-        Assert.assertEquals(expectedLevel, this.model.getLevel());
+        assertEquals(expectedLevel, this.model.getLevel());
+    }
+
+    @Test
+    public void testGetLevelTexture() throws Exception
+    {
+        int expectedLevelTexture = 1;
+
+        assertEquals(expectedLevelTexture, this.model.getLevelTexture());
     }
 
     @Test
@@ -63,7 +106,7 @@ public class ModelTest {
     {
         int expectedRemainingTime = 80;
 
-        Assert.assertEquals(expectedRemainingTime, this.model.getRemainingTime());
+        assertEquals(expectedRemainingTime, this.model.getRemainingTime());
     }
 
     @Test
@@ -80,7 +123,7 @@ public class ModelTest {
                 remainingTime = (int)field.get(this.model);
             }
         }
-        Assert.assertEquals(expectedRemainingTime, remainingTime);
+        assertEquals(expectedRemainingTime, remainingTime);
     }
 
     @Test
@@ -88,7 +131,7 @@ public class ModelTest {
     {
         int expectedRemainingDiamonds = 15;
 
-        Assert.assertEquals(expectedRemainingDiamonds, this.model.getRemainingDiamonds());
+        assertEquals(expectedRemainingDiamonds, this.model.getRemainingDiamonds());
     }
 
     @Test
@@ -105,7 +148,40 @@ public class ModelTest {
                 remainingDiamonds = (int)field.get(this.model);
             }
         }
-        Assert.assertEquals(expectedRemainingDiamonds, remainingDiamonds);
+        assertEquals(expectedRemainingDiamonds, remainingDiamonds);
+    }
+
+    @Test
+    public void testGetScore() throws Exception
+    {
+        int expectedScore = 15;
+
+        for (Field field : this.fields)
+        {
+            if(field.getName().equals("score"))
+            {
+                field.set(this.model, expectedScore);
+            }
+        }
+
+        assertEquals(expectedScore, this.model.getScore());
+    }
+
+    @Test
+    public void testSetScore() throws Exception
+    {
+        int expectedScore = 20;
+        this.model.setScore(expectedScore);
+        int score = 0;
+
+        for (Field field : this.fields)
+        {
+            if(field.getName().equals("score"))
+            {
+                score = (int)field.get(this.model);
+            }
+        }
+        assertEquals(expectedScore, score);
     }
 
     @Test
@@ -117,17 +193,17 @@ public class ModelTest {
         {
             if(field.getName().equals("world"))
             {
-                field.set(this.model, expectedWorld);
+                expectedWorld = (Entity[][])field.get(this.model);
             }
         }
-        Assert.assertEquals(expectedWorld, this.model.getWorld());
+        assertEquals(expectedWorld, this.model.getWorld());
     }
 
 
     @Test
     public void testLoadLevel() throws Exception
     {
-        Level expectedLevel = new Level(1, 80, 15, "zeub");
+        Level expectedLevel = new Level(1, 80, 15, "I;P;I.");
         Level currentLevel = null;
 
 
@@ -137,16 +213,20 @@ public class ModelTest {
         }
 
 
-        Assert.assertEquals(expectedLevel.getId(), currentLevel.getId());
-        Assert.assertEquals(expectedLevel.getLevel(), currentLevel.getLevel());
-        Assert.assertEquals(expectedLevel.getNbDiamond(), currentLevel.getNbDiamond());
-        Assert.assertEquals(expectedLevel.getTime(), currentLevel.getTime());
+        assertEquals(expectedLevel.getId(), currentLevel.getId());
+        assertEquals(expectedLevel.getLevel(), currentLevel.getLevel());
+        assertEquals(expectedLevel.getNbDiamond(), currentLevel.getNbDiamond());
+        assertEquals(expectedLevel.getTime(), currentLevel.getTime());
     }
 
     @Test
     public void testBuildWorld() throws Exception
     {
-        Entity[][] expectedWorld = null;
+        Entity[][] expectedWorld = {
+                {new Wall(this.model, 0,0,EntityType.WALL, false)},
+                {new Player(this.model,1,0)},
+                {new Wall(this.model,2,0,EntityType.WALL, false)}
+        };
 
         Entity[][] currentWorld = null;
 
@@ -157,7 +237,17 @@ public class ModelTest {
                 currentWorld = (Entity[][])field.get(this.model);
             }
         }
-        Assert.assertEquals(expectedWorld, currentWorld);
+        assertEquals(expectedWorld[0][0].getType(), currentWorld[0][0].getType());
+        assertEquals(expectedWorld[1][0].getType(), currentWorld[1][0].getType());
+        assertEquals(expectedWorld[2][0].getType(), currentWorld[2][0].getType());
+
+        assertEquals(expectedWorld[0][0].getPositionX(), currentWorld[0][0].getPositionX());
+        assertEquals(expectedWorld[1][0].getPositionX(), currentWorld[1][0].getPositionX());
+        assertEquals(expectedWorld[2][0].getPositionX(), currentWorld[2][0].getPositionX());
+
+        assertEquals(expectedWorld[0][0].getPositionY(), currentWorld[0][0].getPositionY());
+        assertEquals(expectedWorld[1][0].getPositionY(), currentWorld[1][0].getPositionY());
+        assertEquals(expectedWorld[2][0].getPositionY(), currentWorld[2][0].getPositionY());
     }
 
     @Test
@@ -170,8 +260,33 @@ public class ModelTest {
             if(field.getName().equals("player")) { expectedPlayer = (Player)field.get(this.model); }
         }
 
-        Assert.assertEquals(expectedPlayer, this.model.getPlayer());
+        assertEquals(expectedPlayer, this.model.getPlayer());
     }
 
+    @Test
+    public void testConvertWorld()
+    {
+        char[][] expectedConvertedWorld = new char[26][48];
+        for(int x =0; x<26;x++)
+            for(int y=0; y<48;y++)
+                expectedConvertedWorld[x][y] = ' ';
+        expectedConvertedWorld[0][0] = 'I';
+        expectedConvertedWorld[1][0] = 'P';
+        expectedConvertedWorld[2][0] = 'I';
 
+        assertArrayEquals(expectedConvertedWorld, this.model.convertWorld());
+    }
+
+    @Test
+    public void testUpdateEntity() throws Exception
+    {
+        Entity expectedEntity = new Dirt(this.model, 3,0);
+
+        this.model.updateEntity(4,1, expectedEntity);
+
+        assertEquals(4, expectedEntity.getPositionX());
+        assertEquals(1, expectedEntity.getPositionY());
+        assertEquals(expectedEntity, this.model.getWorld()[4][1]);
+
+    }
 }

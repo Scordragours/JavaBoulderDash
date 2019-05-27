@@ -1,10 +1,10 @@
 package model;
 
-public abstract class SlidingBlock extends Block {
+public abstract class SlidingBlock extends Entity {
 
-    public SlidingBlock(int x, int y, EntityType type, boolean destructible)
+    public SlidingBlock(Model model,int x, int y, EntityType type)
     {
-        super(x,y,type,destructible);
+        super(model,x,y,type);
     }
 
     public void fall()
@@ -13,6 +13,10 @@ public abstract class SlidingBlock extends Block {
     }
 
     public void slide(boolean isDefault)
+    {
+
+    }
+    public void pathFinder()
     {
 
     }

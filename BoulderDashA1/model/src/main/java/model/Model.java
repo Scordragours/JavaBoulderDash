@@ -18,16 +18,24 @@ public final class Model extends Observable implements IModel {
 	private Level level;
 	private int remainingTime;
 	private int remainingDiamonds;
-	private Entity[][] world;
+	private Entity[][] world = new Entity[26][48];//{{null},{null},{null}};
 	private int score;
 	private Player player;
+	private int levelTexture;
+	private boolean win;
 
-	public Model(int levelID)
+	public Model(int levelID, int levelTexture) throws Exception
 	{
+	    if ((levelTexture<1) || (levelTexture>6))
+        {
+            throw new Exception("levelTexture out of range");
+        }
+	    this.levelTexture = levelTexture;
 		this.loadLevel(levelID);
-	}
-	public Observable getObservable() {
-		return null;
+		this.remainingDiamonds = this.level.getNbDiamond();
+		this.remainingTime = this.level.getTime();
+		this.score = 0;
+		this.buildWorld();
 	}
 
 	private void loadLevel(final int levelID)
@@ -42,54 +50,88 @@ public final class Model extends Observable implements IModel {
 
 	private void buildWorld()
 	{
+		int x = 0;
+		int y = 0;
+		for(char c : level.getLevel().toCharArray())
+		{
+			if(c == ';')
+			{
+				x++;
+				y = 0;
+			}
+			else if(c == '.')
+			{
+				break;
+			}
+			else
+			{
+				switch (c)
+				{
+					case 'P' :
+						world[x][y] = new Player(this, x,y);
+						this.player = (Player)world[x][y];
+						break;
+					case 'B' :
+						world[x][y] = new Dirt(this, x,y);
+						break;
+					case 'R' :
+						world[x][y] = new RollingRock(this, x,y);
+						break;
+					case 'D' :
+						world[x][y] = new Diamond(this, x,y);
+						break;
+					case 'I' :
+						world[x][y] = new Wall(this, x,y, EntityType.WALL, true);
+						break;
+					case '1' :
+						world[x][y] = new EnemyDiamond(this, x,y);
+						break;
+					case '2' :
+						world[x][y] = new EnemyPoint(this, x,y);
+						break;
+					case 'E' :
+						world[x][y] = new Exit(this, x,y);
+						break;
+					case 'O' :
+						world[x][y] = new Wall(this, x,y, EntityType.OUTLINE, false);
+						break;
+					default:
+						world[x][y] = null;
+						break;
+				}
+				y++;
+			}
 
+		}
 	}
 
-	public Level getLevel() { return this.level;}
+	public Observable getObservable() { return this; }
 
+	public int getLevelTexture() { return this.levelTexture; }
 
-	public void setRemainingTime(int time)
-	{
+	public Level getLevel() { return this.level; }
 
-	}
-	public int getRemainingTime()
-	{
-		return 0;
-	}
+	public void setRemainingTime(int remainingTime) { this.remainingTime = remainingTime; }
+	public int getRemainingTime() { return this.remainingTime; }
 
-	public void setRemainingDiamonds(int remainingDiamond) { }
+	public void setRemainingDiamonds(int remainingDiamond) { this.remainingDiamonds = remainingDiamond; }
 	public int getRemainingDiamonds() { return this.remainingDiamonds; }
 
-	public int getScore()
-	{
-		return 0;
-	}
-	public void setScore(int score)
-	{
+	public int getScore() { return this.score; }
+	public void setScore(int score) { this.score = score; }
 
-	}
-	public Entity[][] getWorld()
+	public Entity[][] getWorld() { return this.world; }
+	public Player getPlayer() { return this.player; }
+
+
+	public void updateEntity(int x, int y, Entity entity) throws Exception
 	{
-		return null;
-	}
-	public Player getPlayer()
-	{
-		return null;
+	    entity.setPositionX(x);
+	    entity.setPositionY(y);
+		world[x][y] = entity;
 	}
 
-
-	public void updateEntity(int posX, int posY)
-	{
-
-	}
-
-	public void updateStats()
-	{
-
-	}
-
-	public void updateEntitiesState()
-	{
+	public void updateStats() {
 
 	}
 
@@ -97,4 +139,57 @@ public final class Model extends Observable implements IModel {
 	{
 
 	}
+	public char[][] convertWorld()
+	{
+		char[][] cw = new char[26][48];
+
+		for(int x = 0; x<26; x++)
+		{
+			for(int y = 0; y<48; y++)
+			{
+				if(world[x][y] != null) {
+					switch (world[x][y].getType()) {
+						case DIRT:
+							cw[x][y] = 'B';
+							break;
+						case DIAMOND:
+							cw[x][y] = 'D';
+							break;
+						case PLAYER:
+							cw[x][y] = 'P';
+							break;
+						case WALL:
+							cw[x][y] = 'I';
+							break;
+						case OUTLINE:
+							cw[x][y] = 'O';
+							break;
+						case EXIT:
+							cw[x][y] = 'E';
+							break;
+						case ENEMYPOINT:
+							cw[x][y] = '2';
+							break;
+						case ENEMYDIAMOND:
+							cw[x][y] = '1';
+							break;
+						case ROLLINGROCK:
+							cw[x][y] = 'R';
+							break;
+						default:
+							cw[x][y] = ' ';
+							break;
+					}
+				}
+				else
+				{
+					cw[x][y] = ' ';
+				}
+			}
+		}
+
+        return cw;
+	}
+
+	public boolean isWin() { return this.win; }
 }

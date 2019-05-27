@@ -1,9 +1,15 @@
 package model;
 
-public class Exit extends Block {
-
-    public Exit(int x, int y, EntityType type, boolean destructible)
+public class Exit extends Entity {
+    private boolean open;
+    public Exit(Model model,int x, int y)
     {
-        super(x,y,type,destructible);
+        super(model,x, y,EntityType.EXIT);
     }
+
+    public boolean isOpen()
+    {
+        return true;
+    }
+
 }

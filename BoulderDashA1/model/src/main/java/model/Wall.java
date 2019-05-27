@@ -1,9 +1,15 @@
 package model;
 
-public class Wall extends Block {
-
-    public Wall(int x, int y, EntityType type, boolean destructible)
+public class Wall extends Entity {
+    private boolean destructible;
+    public Wall(Model model,int x, int y, EntityType type, boolean destructible)
     {
-        super(x,y,type,destructible);
+        super(model,x,y,type);
+        this.destructible = destructible;
+    }
+
+    public boolean isDestructible()
+    {
+        return true;
     }
 }

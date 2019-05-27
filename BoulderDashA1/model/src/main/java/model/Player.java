@@ -2,12 +2,14 @@ package model;
 
 public class Player extends Character {
 
-    public Player(int x, int y, EntityType type)
+    private boolean alive;
+    private float lastMove;
+    public Player(Model model,int x, int y)
     {
-        super(x,y,type);
+        super(model,x,y,EntityType.PLAYER);
     }
 
-    public void move()
+    public void move(int x, int y)
     {
 
     }
@@ -15,5 +17,13 @@ public class Player extends Character {
     public void die()
     {
 
+    }
+    public boolean isAlive()
+    {
+        return true;
+    }
+    public float getLastMove()
+    {
+        return 3.55457f;
     }
 }

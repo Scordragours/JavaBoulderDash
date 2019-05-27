@@ -2,9 +2,9 @@ package model;
 
 public class RollingRock extends SlidingBlock {
 
-    public RollingRock(int x, int y, EntityType type, boolean destructible)
+    public RollingRock(Model model,int x, int y)
     {
-        super(x,y,type,destructible);
+        super(model,x,y,EntityType.ROLLINGROCK);
     }
 
     public void moved()
