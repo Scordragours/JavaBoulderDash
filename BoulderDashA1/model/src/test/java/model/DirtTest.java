@@ -13,7 +13,7 @@ public class DirtTest extends EntityTest {
     @Before
     public void setUp() throws Exception {
 
-        this.entite = new Dirt(5,6,EntityType.DIRT);
+        this.entite = new Dirt(model,5,6,EntityType.DIRT);
         Class<?> entiteReflector = this.entite.getClass();
         this.fields = entiteReflector.getDeclaredFields();
         for(Field field : this.fields)

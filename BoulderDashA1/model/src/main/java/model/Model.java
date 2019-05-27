@@ -120,7 +120,7 @@ public final class Model extends Observable implements IModel {
 
 	public Entity[][] getWorld()
 	{
-		return null;
+		return this.world;
 	}
 	public Player getPlayer()
 	{

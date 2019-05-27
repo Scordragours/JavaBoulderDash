@@ -14,9 +14,12 @@ import java.lang.reflect.Field;
 public  class EntityTest {
 protected Entity entite;
 protected Field[] fields;
+protected Model model;
     @Before
     public void setUp() throws Exception {
-        this.entite = new Dirt(5,6,EntityType.DIRT);
+        this.model = new Model(5,6);
+        this.entite = new Dirt(model,5,6,EntityType.DIRT);
+        //this.entite = this.model.getWorld()[0][0];
         Class<?> entiteReflector = this.entite.getClass();
         this.fields = entiteReflector.getDeclaredFields();
         for(Field field : this.fields)
@@ -133,6 +136,8 @@ protected Field[] fields;
 
     @Test
     public void TestGetRelativeEntity() {
+        Entity expected = model.getWorld()[1][0];
 
+        Assert.assertEquals(expected,this.entite.getRelativeEntity(-4,-6));
     }
 }
