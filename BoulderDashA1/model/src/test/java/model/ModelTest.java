@@ -4,6 +4,7 @@
  */
 package model;
 
+import entity.Level;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
@@ -31,8 +32,7 @@ public class ModelTest {
         this.model = new Model(1);
         Class<?> modelReflector = this.model.getClass();
         this.fields = modelReflector.getDeclaredFields();
-        for(Field field : this.fields)
-        {
+        for(Field field : this.fields) {
             field.setAccessible(true);
         }
     }
@@ -43,34 +43,69 @@ public class ModelTest {
 
 
     @Test
-    public void testGetTime() throws Exception
+    public void testGetLevel() throws Exception
     {
-        int expectedTime = 70;
+        Level expectedLevel = new Level(1, 80, 15, "");
 
         for(Field field : this.fields)
         {
-            if(field.getName().equals("time"))
+            if(field.getName().equals("level"))
             {
-                field.set(this.model, expectedTime);
+                field.set(this.model, expectedLevel);
             }
         }
 
-        Assert.assertEquals(expectedTime, this.model.getTime());
+        Assert.assertEquals(expectedLevel, this.model.getLevel());
     }
 
+    @Test
+    public void testGetRemainingTime()
+    {
+        int expectedRemainingTime = 80;
+
+        Assert.assertEquals(expectedRemainingTime, this.model.getRemainingTime());
+    }
 
     @Test
-    public void testGetDiamonds() throws Exception
+    public void testSetRemainingTime() throws Exception
     {
-        int expectedDiamonds = 10;
-        for(Field field : this.fields)
+        int expectedRemainingTime = 80;
+        this.model.setRemainingTime(expectedRemainingTime);
+        int remainingTime = 0;
+
+        for (Field field : this.fields)
         {
-            if(field.getName().equals("diamonds"))
+            if(field.getName().equals("remainingTime"))
             {
-                field.set(this.model, expectedDiamonds);
+                remainingTime = (int)field.get(this.model);
             }
         }
-        Assert.assertEquals(expectedDiamonds, this.model.getDiamonds());
+        Assert.assertEquals(expectedRemainingTime, remainingTime);
+    }
+
+    @Test
+    public void testGetRemainingDiamonds()
+    {
+        int expectedRemainingDiamonds = 15;
+
+        Assert.assertEquals(expectedRemainingDiamonds, this.model.getRemainingDiamonds());
+    }
+
+    @Test
+    public void testSetRemainingDiamonds() throws Exception
+    {
+        int expectedRemainingDiamonds = 15;
+        this.model.setRemainingDiamonds(15);
+        int remainingDiamonds = 0;
+
+        for (Field field : this.fields)
+        {
+            if(field.getName().equals("remainingDiamonds"))
+            {
+                remainingDiamonds = (int)field.get(this.model);
+            }
+        }
+        Assert.assertEquals(expectedRemainingDiamonds, remainingDiamonds);
     }
 
     @Test
@@ -92,25 +127,20 @@ public class ModelTest {
     @Test
     public void testLoadLevel() throws Exception
     {
-        int expectedTime = 80;
-        int expectedDiamonds = 15;
-        String expectedLevel = "????";
+        Level expectedLevel = new Level(1, 80, 15, "zeub");
+        Level currentLevel = null;
 
-        int currentTime = 0;
-        int currentDiamonds = 0;
-        String currentLevel = "";
 
         for(Field field : this.fields)
         {
-            if(field.getName().equals("level")) { currentLevel = (String)field.get(this.model); }
-            if(field.getName().equals("diamonds")) { currentDiamonds = (int)field.get(this.model); }
-            if(field.getName().equals("time")) { currentTime = (int)field.get(this.model); }
+            if(field.getName().equals("level")) { currentLevel = (Level)field.get(this.model); }
         }
 
 
-        Assert.assertEquals(expectedTime, currentTime);
-        Assert.assertEquals(expectedDiamonds, currentDiamonds);
-        Assert.assertEquals(expectedLevel, currentLevel);
+        Assert.assertEquals(expectedLevel.getId(), currentLevel.getId());
+        Assert.assertEquals(expectedLevel.getLevel(), currentLevel.getLevel());
+        Assert.assertEquals(expectedLevel.getNbDiamond(), currentLevel.getNbDiamond());
+        Assert.assertEquals(expectedLevel.getTime(), currentLevel.getTime());
     }
 
     @Test
