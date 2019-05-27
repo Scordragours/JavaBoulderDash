@@ -16,4 +16,8 @@ public abstract class SlidingBlock extends Entity {
     {
 
     }
+    public void pathFinder()
+    {
+
+    }
 }
