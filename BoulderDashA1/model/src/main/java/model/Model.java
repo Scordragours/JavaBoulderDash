@@ -21,8 +21,9 @@ public final class Model extends Observable implements IModel {
 	private Entity[][] world;
 	private int score;
 	private Player player;
+	private int LevelTexture;
 
-	public Model(int levelID)
+	public Model(int levelID, int levelTexture)
 	{
 		this.loadLevel(levelID);
 	}
@@ -38,6 +39,10 @@ public final class Model extends Observable implements IModel {
 		} catch (final SQLException e) {
 			e.printStackTrace();
 		}
+	}
+	public int getLevelTexture()
+	{
+		return 1;
 	}
 
 	private void buildWorld()
@@ -83,17 +88,15 @@ public final class Model extends Observable implements IModel {
 
 	}
 
-	public void updateStats()
-	{
-
-	}
-
-	public void updateEntitiesState()
-	{
+	public void updateStats() {
 
 	}
 
 	public void updateSlidingBlocks()
+	{
+
+	}
+	public char [][] ConvertWorld()
 	{
 
 	}

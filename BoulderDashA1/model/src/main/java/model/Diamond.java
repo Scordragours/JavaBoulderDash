@@ -4,6 +4,6 @@ public class Diamond extends SlidingBlock {
 
     public Diamond(int x, int y, EntityType type, boolean destructible)
     {
-        super(x,y,type,destructible);
+        super(x,y,type);
     }
 }

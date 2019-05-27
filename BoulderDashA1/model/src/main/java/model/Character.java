@@ -12,7 +12,7 @@ public abstract class Character extends Entity {
 
     }
 
-    public abstract void move();
+    public abstract void move(int y, int x);
 
     public abstract void die();
 }

@@ -7,8 +7,14 @@ public abstract class Enemy extends Character{
         super(x,y,type);
     }
 
-    public void move()
+    public void move(int x, int y)
     {
 
     }
+
+    public void pathFinder()
+    {
+
+    }
+
 }

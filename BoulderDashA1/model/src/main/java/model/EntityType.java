@@ -8,5 +8,6 @@ public enum EntityType {
     DIRT,
     PLAYER,
     ENEMYDIAMOND,
-    ENEMYPOINT
+    ENEMYPOINT,
+    OUTLINE
 }

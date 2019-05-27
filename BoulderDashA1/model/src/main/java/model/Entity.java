@@ -5,7 +5,6 @@ public abstract class Entity {
     protected Model model;
     private int positionX;
     private int positionY;
-    private Sprite sprite;
     private EntityType type;
 
     public Entity(int x, int y, EntityType type)
@@ -34,10 +33,6 @@ public abstract class Entity {
         this.positionY = y;
     }
 
-    public Sprite getSprite()
-    {
-        return null;
-    }
 
     public EntityType getType()
     {

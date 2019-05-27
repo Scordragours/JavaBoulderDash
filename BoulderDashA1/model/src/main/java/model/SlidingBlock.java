@@ -1,10 +1,10 @@
 package model;
 
-public abstract class SlidingBlock extends Block {
+public abstract class SlidingBlock extends Entity {
 
-    public SlidingBlock(int x, int y, EntityType type, boolean destructible)
+    public SlidingBlock(int x, int y, EntityType type)
     {
-        super(x,y,type,destructible);
+        super(x,y,type);
     }
 
     public void fall()

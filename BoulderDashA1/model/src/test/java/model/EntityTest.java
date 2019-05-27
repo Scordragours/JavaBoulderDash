@@ -13,7 +13,7 @@ protected Entity entite;
 protected Field[] fields;
     @Before
     public void setUp() throws Exception {
-        this.entite = new Dirt(5,6,EntityType.DIRT,true);
+        this.entite = new Dirt(5,6,EntityType.DIRT);
         Class<?> entiteReflector = this.entite.getClass();
         this.fields = entiteReflector.getDeclaredFields();
         for(Field field : this.fields)
@@ -71,10 +71,6 @@ protected Field[] fields;
     @Test
     public void TestSetNotNull()
     {
-
-    }
-    @Test
-    public void TestGetSprite() {
 
     }
 
