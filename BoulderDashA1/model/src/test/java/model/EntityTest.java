@@ -18,7 +18,7 @@ protected Model model;
     @Before
     public void setUp() throws Exception {
         this.model = new Model(5,6);
-        this.entite = new Dirt(model,5,6,EntityType.DIRT);
+        this.entite = new Dirt(model,5,6);
         //this.entite = this.model.getWorld()[0][0];
         Class<?> entiteReflector = this.entite.getClass();
         this.fields = entiteReflector.getDeclaredFields();
