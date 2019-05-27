@@ -97,7 +97,7 @@ protected Model model;
     {
      try
      {
-         this.entite.setPositionY(-8);
+         this.entite.setPositionY(-18);
 
      }catch(final Exception e)
      {
