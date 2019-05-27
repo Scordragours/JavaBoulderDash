@@ -9,5 +9,5 @@ public enum EntityType {
     PLAYER,
     ENEMYDIAMOND,
     ENEMYPOINT,
-    OUTLINE
+    INLINE
 }
