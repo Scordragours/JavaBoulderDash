@@ -8,13 +8,13 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
-public abstract class CharacterTest extends EntityTest {
+public class CharacterTest extends EntityTest {
 
     @Before
     public void setUp() throws Exception
     {
-        /*this.model = new Model(1,1);
-        this.entite = this.model.getPlayer();*/
+        this.model = new Model(2,1);
+        this.entite = this.model.getPlayer();
     }
 
     @After
@@ -25,15 +25,15 @@ public abstract class CharacterTest extends EntityTest {
     public void testExplode() throws Exception
     {
         int[][] expectedExplosions = {
-                {0,0},
-                {0,1},
-                {1,1},
-                {1,0},
-                {-1,1},
-                {-1,0},
-                {-1,-1},
-                {0,-1},
-                {1,-1}
+                {this.entite.getPositionX(),this.entite.getPositionY()},
+                {this.entite.getPositionX(),this.entite.getPositionY()+1},
+                {this.entite.getPositionX()+1,this.entite.getPositionY()+1},
+                {this.entite.getPositionX()+1,this.entite.getPositionY()},
+                {this.entite.getPositionX()-1,this.entite.getPositionY()+1},
+                {this.entite.getPositionX()-1,this.entite.getPositionY()},
+                {this.entite.getPositionX()-1,this.entite.getPositionY()-1},
+                {this.entite.getPositionX(),this.entite.getPositionY()-1},
+                {this.entite.getPositionX()+1,this.entite.getPositionY()-1}
         };
         int[][] currentExplosions = new int[9][2];
 
@@ -45,6 +45,14 @@ public abstract class CharacterTest extends EntityTest {
             currentExplosions[i] = explosions.remove(0);
         }
         assertArrayEquals(expectedExplosions, currentExplosions);
+        assertNull(this.entite.getRelativeEntity(0,-1));
+        assertNull(this.entite.getRelativeEntity(0,1));
+        assertNull(this.entite.getRelativeEntity(1,0));
+        assertNull(this.entite.getRelativeEntity(1,1));
+        assertNull(this.entite.getRelativeEntity(1,-1));
+        assertNull(this.entite.getRelativeEntity(-1,0));
+        assertNull(this.entite.getRelativeEntity(-1,1));
+        assertNull(this.entite.getRelativeEntity(-1,-1));
     }
 
     @Test

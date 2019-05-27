@@ -23,14 +23,25 @@ public abstract class Character extends Entity {
     {
         for(int[] pos : this.positions)
         {
-            if(getRelativeEntity(pos[0], pos[1]).getType() != EntityType.OUTLINE)
+            if(getRelativeEntity(pos[0], pos[1]) != null)
             {
-                this.model.addExplosion(pos);
-                if(getRelativeEntity(pos[0], pos[1]).getType() != EntityType.PLAYER)
+                if(getRelativeEntity(pos[0], pos[1]).getType() != EntityType.OUTLINE)
                 {
-                    this.model.updateEntity(pos[0], pos[1], null);
+                    this.model.addExplosion(new int[]{getPositionX()+pos[0],getPositionY()+pos[1]});
+                    if(getRelativeEntity(pos[0], pos[1]).getType() != EntityType.PLAYER)
+                    {
+                        this.model.updateEntity(getPositionX() + pos[0], getPositionY() + pos[1], null);
+                    }
+                    else
+                    {
+                        this.model.getPlayer().die();
+                    }
                 }
+            }else
+            {
+                this.model.addExplosion(new int[]{getPositionX()+pos[0],getPositionY()+pos[1]});
             }
+
         }
     }
 

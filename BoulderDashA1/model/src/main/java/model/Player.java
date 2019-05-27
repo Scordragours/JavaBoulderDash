@@ -7,15 +7,16 @@ public class Player extends Character {
     public Player(Model model,int x, int y)
     {
         super(model,x,y,EntityType.PLAYER);
+        this.alive = true;
     }
 
     public void die()
     {
-
+        this.alive = false;
     }
     public boolean isAlive()
     {
-        return true;
+        return this.alive;
     }
     public float getLastMove()
     {

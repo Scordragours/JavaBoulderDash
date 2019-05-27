@@ -56,7 +56,7 @@ public abstract class Entity {
 
     public Entity getRelativeEntity(int x, int y)
     {
-        return this.model.getWorld()[positionX+x][positionY+y];
+        return this.model.getWorld()[positionY+y][positionX+x];
     }
 
 }

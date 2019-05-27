@@ -11,9 +11,6 @@ public class EnemyPoint extends Enemy {
     {
         this.explode();
 
-        /*for(int[] pos : this.positions)
-        {
-            if(this.model.getWorld())
-        }*/
+
     }
 }
