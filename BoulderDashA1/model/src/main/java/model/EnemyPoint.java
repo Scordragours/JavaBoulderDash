@@ -7,8 +7,13 @@ public class EnemyPoint extends Enemy {
         super(model,x,y,EntityType.ENEMYPOINT);
     }
 
-    public void die()
+    public void die() throws Exception
     {
+        this.explode();
 
+        /*for(int[] pos : this.positions)
+        {
+            if(this.model.getWorld())
+        }*/
     }
 }

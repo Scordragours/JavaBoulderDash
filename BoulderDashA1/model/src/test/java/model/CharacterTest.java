@@ -13,7 +13,8 @@ public abstract class CharacterTest extends EntityTest {
     @Before
     public void setUp() throws Exception
     {
-
+        /*this.model = new Model(1,1);
+        this.entite = this.model.getPlayer();*/
     }
 
     @After
@@ -21,7 +22,7 @@ public abstract class CharacterTest extends EntityTest {
     }
 
     @Test
-    public void testExplode()
+    public void testExplode() throws Exception
     {
         int[][] expectedExplosions = {
                 {0,0},
@@ -46,12 +47,13 @@ public abstract class CharacterTest extends EntityTest {
         assertArrayEquals(expectedExplosions, currentExplosions);
     }
 
-    /*@Test
-    public void move() {
-
-    }
-
     @Test
-    public void die() {
-    }*/
+    public void move() throws Exception
+    {
+        int[] expectedPosition = new int[]{1,1};
+        ((Character)this.entite).move(1,0);
+        assertEquals(expectedPosition[1], this.entite.getPositionX());
+        assertEquals(expectedPosition[0], this.entite.getPositionY());
+        assertNull(this.model.getWorld()[0][1]);
+    }
 }

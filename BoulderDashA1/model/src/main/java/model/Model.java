@@ -58,8 +58,8 @@ public final class Model extends Observable implements IModel {
 		{
 			if(c == ';')
 			{
-				x++;
-				y = 0;
+				y++;
+				x = 0;
 			}
 			else if(c == '.')
 			{
@@ -70,38 +70,38 @@ public final class Model extends Observable implements IModel {
 				switch (c)
 				{
 					case 'P' :
-						world[x][y] = new Player(this, x,y);
-						this.player = (Player)world[x][y];
+						world[y][x] = new Player(this, x,y);
+						this.player = (Player)world[y][x];
 						break;
 					case 'B' :
-						world[x][y] = new Dirt(this, x,y);
+						world[y][x] = new Dirt(this, x,y);
 						break;
 					case 'R' :
-						world[x][y] = new RollingRock(this, x,y);
+						world[y][x] = new RollingRock(this, x,y);
 						break;
 					case 'D' :
-						world[x][y] = new Diamond(this, x,y);
+						world[y][x] = new Diamond(this, x,y);
 						break;
 					case 'I' :
-						world[x][y] = new Wall(this, x,y, EntityType.WALL, true);
+						world[y][x] = new Wall(this, x,y, EntityType.WALL, true);
 						break;
 					case '1' :
-						world[x][y] = new EnemyDiamond(this, x,y);
+						world[y][x] = new EnemyDiamond(this, x,y);
 						break;
 					case '2' :
-						world[x][y] = new EnemyPoint(this, x,y);
+						world[y][x] = new EnemyPoint(this, x,y);
 						break;
 					case 'E' :
-						world[x][y] = new Exit(this, x,y);
+						world[y][x] = new Exit(this, x,y);
 						break;
 					case 'O' :
-						world[x][y] = new Wall(this, x,y, EntityType.OUTLINE, false);
+						world[y][x] = new Wall(this, x,y, EntityType.OUTLINE, false);
 						break;
 					default:
-						world[x][y] = null;
+						world[y][x] = null;
 						break;
 				}
-				y++;
+				x++;
 			}
 
 		}
@@ -141,9 +141,13 @@ public final class Model extends Observable implements IModel {
 
 	public void updateEntity(int x, int y, Entity entity) throws Exception
 	{
-	    entity.setPositionX(x);
-	    entity.setPositionY(y);
-		world[x][y] = entity;
+	    if(entity != null)
+        {
+            entity.setPositionX(x);
+            entity.setPositionY(y);
+        }
+
+		world[y][x] = entity;
 
 		setChanged();
 		notifyObservers();
@@ -167,47 +171,47 @@ public final class Model extends Observable implements IModel {
 	{
 		char[][] cw = new char[26][48];
 
-		for(int x = 0; x<26; x++)
+		for(int y = 0; y<26; y++)
 		{
-			for(int y = 0; y<48; y++)
+			for(int x = 0; x<48; x++)
 			{
-				if(world[x][y] != null) {
-					switch (world[x][y].getType()) {
+				if(world[y][x] != null) {
+					switch (world[y][x].getType()) {
 						case DIRT:
-							cw[x][y] = 'B';
+							cw[y][x] = 'B';
 							break;
 						case DIAMOND:
-							cw[x][y] = 'D';
+							cw[y][x] = 'D';
 							break;
 						case PLAYER:
-							cw[x][y] = 'P';
+							cw[y][x] = 'P';
 							break;
 						case WALL:
-							cw[x][y] = 'I';
+							cw[y][x] = 'I';
 							break;
 						case OUTLINE:
-							cw[x][y] = 'O';
+							cw[y][x] = 'O';
 							break;
 						case EXIT:
-							cw[x][y] = 'E';
+							cw[y][x] = 'E';
 							break;
 						case ENEMYPOINT:
-							cw[x][y] = '2';
+							cw[y][x] = '2';
 							break;
 						case ENEMYDIAMOND:
-							cw[x][y] = '1';
+							cw[y][x] = '1';
 							break;
 						case ROLLINGROCK:
-							cw[x][y] = 'R';
+							cw[y][x] = 'R';
 							break;
 						default:
-							cw[x][y] = ' ';
+							cw[y][x] = ' ';
 							break;
 					}
 				}
 				else
 				{
-					cw[x][y] = ' ';
+					cw[y][x] = ' ';
 				}
 			}
 		}

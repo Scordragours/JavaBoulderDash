@@ -10,7 +10,7 @@ public abstract class Enemy extends Character{
         lastDirection = Direction.UP;
     }
 
-    public void pathFinder()
+    public void pathFinder() throws Exception
     {
         switch (lastDirection){
             case UP:

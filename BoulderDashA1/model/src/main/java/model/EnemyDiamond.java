@@ -7,8 +7,8 @@ public class EnemyDiamond extends Enemy {
         super(model,x,y,EntityType.ENEMYDIAMOND);
     }
 
-    public void die()
+    public void die() throws Exception
     {
-
+        this.explode();
     }
 }

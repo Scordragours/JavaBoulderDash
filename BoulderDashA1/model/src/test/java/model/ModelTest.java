@@ -226,8 +226,8 @@ public class ModelTest {
     {
         Entity[][] expectedWorld = {
                 {new Wall(this.model, 0,0,EntityType.WALL, false)},
-                {new Player(this.model,1,0)},
-                {new Wall(this.model,2,0,EntityType.WALL, false)}
+                {new Player(this.model,0,1)},
+                {new Wall(this.model,0,2,EntityType.WALL, false)}
         };
 
         Entity[][] currentWorld = null;
@@ -269,9 +269,9 @@ public class ModelTest {
     public void testConvertWorld()
     {
         char[][] expectedConvertedWorld = new char[26][48];
-        for(int x =0; x<26;x++)
-            for(int y=0; y<48;y++)
-                expectedConvertedWorld[x][y] = ' ';
+        for(int y =0; y<26;y++)
+            for(int x=0; x<48;x++)
+                expectedConvertedWorld[y][x] = ' ';
         expectedConvertedWorld[0][0] = 'I';
         expectedConvertedWorld[1][0] = 'P';
         expectedConvertedWorld[2][0] = 'I';
@@ -288,7 +288,7 @@ public class ModelTest {
 
         assertEquals(4, expectedEntity.getPositionX());
         assertEquals(1, expectedEntity.getPositionY());
-        assertEquals(expectedEntity, this.model.getWorld()[4][1]);
+        assertEquals(expectedEntity, this.model.getWorld()[1][4]);
 
     }
 
