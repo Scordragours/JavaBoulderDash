@@ -5,7 +5,7 @@ import java.util.Observable;
 /**
  * The Interface IModel.
  *
- * @author Jean-Aymeric Diet
+ * @author CANDAT ETIENNE DENEUVE GREGORY
  */
 public interface IModel {
 
