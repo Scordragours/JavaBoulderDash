@@ -193,7 +193,7 @@ public class ModelTest {
         {
             if(field.getName().equals("world"))
             {
-                field.set(this.model, expectedWorld);
+                expectedWorld = (Entity[][])field.get(this.model);
             }
         }
         assertEquals(expectedWorld, this.model.getWorld());
@@ -223,9 +223,9 @@ public class ModelTest {
     public void testBuildWorld() throws Exception
     {
         Entity[][] expectedWorld = {
-                {new Wall(this.model, 0,0,EntityType.INLINE, false)},
-                {new Player(this.model,1,0,EntityType.PLAYER)},
-                {new Wall(this.model,2,0,EntityType.INLINE, false)}
+                {new Wall(this.model, 0,0,EntityType.WALL, false)},
+                {new Player(this.model,1,0)},
+                {new Wall(this.model,2,0,EntityType.WALL, false)}
         };
 
         Entity[][] currentWorld = null;
@@ -240,6 +240,14 @@ public class ModelTest {
         assertEquals(expectedWorld[0][0].getType(), currentWorld[0][0].getType());
         assertEquals(expectedWorld[1][0].getType(), currentWorld[1][0].getType());
         assertEquals(expectedWorld[2][0].getType(), currentWorld[2][0].getType());
+
+        assertEquals(expectedWorld[0][0].getPositionX(), currentWorld[0][0].getPositionX());
+        assertEquals(expectedWorld[1][0].getPositionX(), currentWorld[1][0].getPositionX());
+        assertEquals(expectedWorld[2][0].getPositionX(), currentWorld[2][0].getPositionX());
+
+        assertEquals(expectedWorld[0][0].getPositionY(), currentWorld[0][0].getPositionY());
+        assertEquals(expectedWorld[1][0].getPositionY(), currentWorld[1][0].getPositionY());
+        assertEquals(expectedWorld[2][0].getPositionY(), currentWorld[2][0].getPositionY());
     }
 
     @Test
@@ -255,5 +263,30 @@ public class ModelTest {
         assertEquals(expectedPlayer, this.model.getPlayer());
     }
 
+    @Test
+    public void testConvertWorld()
+    {
+        char[][] expectedConvertedWorld = new char[26][48];
+        for(int x =0; x<26;x++)
+            for(int y=0; y<48;y++)
+                expectedConvertedWorld[x][y] = ' ';
+        expectedConvertedWorld[0][0] = 'I';
+        expectedConvertedWorld[1][0] = 'P';
+        expectedConvertedWorld[2][0] = 'I';
 
+        assertArrayEquals(expectedConvertedWorld, this.model.convertWorld());
+    }
+
+    @Test
+    public void testUpdateEntity() throws Exception
+    {
+        Entity expectedEntity = new Dirt(this.model, 3,0);
+
+        this.model.updateEntity(4,1, expectedEntity);
+
+        assertEquals(4, expectedEntity.getPositionX());
+        assertEquals(1, expectedEntity.getPositionY());
+        assertEquals(expectedEntity, this.model.getWorld()[4][1]);
+
+    }
 }

@@ -12,7 +12,7 @@ protected Model model;
     @Before
     public void setUp() throws Exception {
 
-        this.entite = new EnemyPoint(model,5,6,EntityType.ENEMYPOINT);
+        this.entite = new EnemyPoint(model,5,6);
 
     }
 

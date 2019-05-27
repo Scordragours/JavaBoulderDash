@@ -22,6 +22,7 @@ public final class Model extends Observable implements IModel {
 	private int score;
 	private Player player;
 	private int levelTexture;
+	private boolean win;
 
 	public Model(int levelID, int levelTexture) throws Exception
 	{
@@ -67,31 +68,32 @@ public final class Model extends Observable implements IModel {
 				switch (c)
 				{
 					case 'P' :
-						world[x][y] = new Player(this, x,y, EntityType.PLAYER);
+						world[x][y] = new Player(this, x,y);
+						this.player = (Player)world[x][y];
 						break;
 					case 'B' :
-						world[x][y] = new Dirt(this, x,y, EntityType.DIRT);
+						world[x][y] = new Dirt(this, x,y);
 						break;
 					case 'R' :
-						world[x][y] = new RollingRock(this, x,y, EntityType.ROLLINGROCK);
+						world[x][y] = new RollingRock(this, x,y);
 						break;
 					case 'D' :
-						world[x][y] = new Diamond(this, x,y, EntityType.DIAMOND);
+						world[x][y] = new Diamond(this, x,y);
 						break;
-					case 'O' :
+					case 'I' :
 						world[x][y] = new Wall(this, x,y, EntityType.WALL, true);
 						break;
 					case '1' :
-						world[x][y] = new EnemyDiamond(this, x,y, EntityType.ENEMYDIAMOND);
+						world[x][y] = new EnemyDiamond(this, x,y);
 						break;
 					case '2' :
-						world[x][y] = new EnemyPoint(this, x,y, EntityType.ENEMYPOINT);
+						world[x][y] = new EnemyPoint(this, x,y);
 						break;
 					case 'E' :
-						world[x][y] = new Exit(this, x,y, EntityType.EXIT);
+						world[x][y] = new Exit(this, x,y);
 						break;
-					case 'I' :
-						world[x][y] = new Wall(this, x,y, EntityType.INLINE, false);
+					case 'O' :
+						world[x][y] = new Wall(this, x,y, EntityType.OUTLINE, false);
 						break;
 					default:
 						world[x][y] = null;
@@ -118,19 +120,15 @@ public final class Model extends Observable implements IModel {
 	public int getScore() { return this.score; }
 	public void setScore(int score) { this.score = score; }
 
-	public Entity[][] getWorld()
-	{
-		return this.world;
-	}
-	public Player getPlayer()
-	{
-		return null;
-	}
+	public Entity[][] getWorld() { return this.world; }
+	public Player getPlayer() { return this.player; }
 
 
-	public void updateEntity(int posX, int posY)
+	public void updateEntity(int x, int y, Entity entity) throws Exception
 	{
-
+	    entity.setPositionX(x);
+	    entity.setPositionY(y);
+		world[x][y] = entity;
 	}
 
 	public void updateStats() {
@@ -141,8 +139,57 @@ public final class Model extends Observable implements IModel {
 	{
 
 	}
-	public char [][] ConvertWorld()
+	public char[][] convertWorld()
 	{
-        return null;
+		char[][] cw = new char[26][48];
+
+		for(int x = 0; x<26; x++)
+		{
+			for(int y = 0; y<48; y++)
+			{
+				if(world[x][y] != null) {
+					switch (world[x][y].getType()) {
+						case DIRT:
+							cw[x][y] = 'B';
+							break;
+						case DIAMOND:
+							cw[x][y] = 'D';
+							break;
+						case PLAYER:
+							cw[x][y] = 'P';
+							break;
+						case WALL:
+							cw[x][y] = 'I';
+							break;
+						case OUTLINE:
+							cw[x][y] = 'O';
+							break;
+						case EXIT:
+							cw[x][y] = 'E';
+							break;
+						case ENEMYPOINT:
+							cw[x][y] = '2';
+							break;
+						case ENEMYDIAMOND:
+							cw[x][y] = '1';
+							break;
+						case ROLLINGROCK:
+							cw[x][y] = 'R';
+							break;
+						default:
+							cw[x][y] = ' ';
+							break;
+					}
+				}
+				else
+				{
+					cw[x][y] = ' ';
+				}
+			}
+		}
+
+        return cw;
 	}
+
+	public boolean isWin() { return this.win; }
 }
