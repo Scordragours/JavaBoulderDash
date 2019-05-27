@@ -9,10 +9,28 @@ public abstract class Character extends Entity {
 
     public void explode()
     {
+        int[][] positions = {
+                {0,0},
+                {0,1},
+                {1,1},
+                {1,0},
+                {-1,1},
+                {-1,0},
+                {-1,-1},
+                {0,-1},
+                {1,-1}
+        };
 
+        for(int[] pos : positions)
+        {
+            this.model.addExplosion(pos);
+        }
     }
 
-    public abstract void move(int y, int x);
+    public void move(int y, int x)
+    {
+
+    }
 
     public abstract void die();
 }

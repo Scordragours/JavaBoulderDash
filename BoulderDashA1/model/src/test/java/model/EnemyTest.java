@@ -6,9 +6,8 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class EnemyTest {
-protected Entity entite;
-protected Model model;
+public class EnemyTest extends CharacterTest{
+
     @Before
     public void setUp() throws Exception {
 
@@ -26,6 +25,8 @@ protected Model model;
     }
 
     @Test
-    public void pathFinder() {
+    public void pathFinder()
+    {
+
     }
 }

@@ -4,12 +4,16 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.*;
 
-abstract class CharacterTest {
+public abstract class CharacterTest extends EntityTest {
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() throws Exception
+    {
+
     }
 
     @After
@@ -17,15 +21,37 @@ abstract class CharacterTest {
     }
 
     @Test
-    public void explode() {
+    public void testExplode()
+    {
+        int[][] expectedExplosions = {
+                {0,0},
+                {0,1},
+                {1,1},
+                {1,0},
+                {-1,1},
+                {-1,0},
+                {-1,-1},
+                {0,-1},
+                {1,-1}
+        };
+        int[][] currentExplosions = new int[9][2];
+
+        ((Character)this.entite).explode();
+
+        ArrayList<int[]> explosions = this.entite.model.getExplosions();
+        for(int i = 0; !explosions.isEmpty(); i++)
+        {
+            currentExplosions[i] = explosions.remove(0);
+        }
+        assertArrayEquals(expectedExplosions, currentExplosions);
     }
 
-    @Test
+    /*@Test
     public void move() {
 
     }
 
     @Test
     public void die() {
-    }
+    }*/
 }

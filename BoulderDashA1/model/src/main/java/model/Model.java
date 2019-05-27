@@ -149,7 +149,7 @@ public final class Model extends Observable implements IModel {
 		notifyObservers();
 	}
 
-	public void updateSlidingBlocks()
+	public void updateSlidingBlocks() throws Exception
 	{
 		for(Entity[] line : world)
 		{

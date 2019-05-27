@@ -9,11 +9,6 @@ public class Player extends Character {
         super(model,x,y,EntityType.PLAYER);
     }
 
-    public void move(int x, int y)
-    {
-
-    }
-
     public void die()
     {
 
