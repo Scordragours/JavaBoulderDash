@@ -2,6 +2,7 @@ package model;
 
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Observable;
 
 import contract.IModel;
@@ -23,6 +24,7 @@ public final class Model extends Observable implements IModel {
 	private Player player;
 	private int levelTexture;
 	private boolean win;
+	private ArrayList<int[]> explosions = new ArrayList<>();
 
 	public Model(int levelID, int levelTexture) throws Exception
 	{
@@ -214,4 +216,11 @@ public final class Model extends Observable implements IModel {
 	}
 
 	public boolean isWin() { return this.win; }
+
+	public void addExplosion(final int[] coordinates)
+    {
+        this.explosions.add(coordinates);
+    }
+
+    public ArrayList<int[]> getExplosions() { return this.explosions; }
 }

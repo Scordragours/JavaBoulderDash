@@ -8,6 +8,8 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
+
 import static org.junit.Assert.*;
 
 /**
@@ -288,5 +290,33 @@ public class ModelTest {
         assertEquals(1, expectedEntity.getPositionY());
         assertEquals(expectedEntity, this.model.getWorld()[4][1]);
 
+    }
+
+    @Test
+    public void testAddExplosion() throws Exception
+    {
+        int[] expected = {5,5};
+
+        this.model.addExplosion(expected);
+        ArrayList<int[]> current = null;
+        for(Field field : this.fields)
+        {
+            if(field.getName().equals("explosions")) { current = (ArrayList<int[]>) field.get(this.model); }
+        }
+
+        int[] currentCoords = new int[] {current.get(0)[0],current.get(0)[1]};
+        assertArrayEquals(expected, currentCoords);
+    }
+
+    @Test
+    public void testGetExplosion() throws Exception
+    {
+        ArrayList<int[]> expected = null;
+        for(Field field : this.fields)
+        {
+            if(field.getName().equals("explosions")) { expected = (ArrayList<int[]>) field.get(this.model); }
+        }
+
+        assertEquals(expected, this.model.getExplosions());
     }
 }
