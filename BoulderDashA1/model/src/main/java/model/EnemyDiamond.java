@@ -2,9 +2,9 @@ package model;
 
 public class EnemyDiamond extends Enemy {
 
-    public EnemyDiamond(int x, int y, EntityType type)
+    public EnemyDiamond(Model model,int x, int y, EntityType type)
     {
-        super(x,y,type);
+        super(model,x,y,type);
     }
 
     public void die()

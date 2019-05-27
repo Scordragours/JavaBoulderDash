@@ -1,14 +1,17 @@
 package model;
-
+/**
+ * @author CANDAT ETIENNE AND DENEUVE GREGORY
+ * @version 1.0
+ */
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import java.lang.reflect.Field;
 
-import static org.junit.Assert.*;
 
-public abstract class EntityTest {
+
+public  class EntityTest {
 protected Entity entite;
 protected Field[] fields;
     @Before
@@ -43,42 +46,93 @@ protected Field[] fields;
     }
 
     @Test
-    public void TestGetPositionY() {
-        int posY = 6;
-        this.entite.setPositionY(6);
-        Assert.assertEquals(posY,entite.getPositionY());
+    public void TestGetPositionY() throws IllegalAccessException {
+
+        int expectedPositionY = 6;
+        for(Field field : this.fields)
+        {
+            if(field.getName().equals("positionY"))
+            {
+                field.get(this.entite);
+            }
+        }
+
+        Assert.assertEquals(expectedPositionY,this.entite.getPositionY());
     }
 
     @Test
-    public void TestSetPositionX() throws IllegalAccessException {
-        int SetX=6;
+    public void TestSetPositionX() throws Exception {
+        int expectedX=15;
+        this.entite.setPositionX(expectedX);
         for(Field field : this.fields)
         {
             if(field.getName().equals("positionX"))
             {
-                field.set(this.entite, SetX);
+                field.get(this.entite);
             }
         }
-        Assert.assertEquals(SetX,this.entite.getPositionX());
+
+        Assert.assertEquals(expectedX,this.entite.getPositionX());
     }
 
     @Test
-    public void TestSetPositionY() {
-        int PosY = 45;
-        this.entite.setPositionY(45);
-        Assert.assertEquals(this.entite.getPositionY(),PosY);
+    public void TestSetPositionY() throws Exception{
+        int expectedY = 10;
+        this.entite.setPositionY(expectedY);
+        for(Field field : this.fields)
+        {
+            if(field.getName().equals("positionY"))
+            {
+                field.get(this.entite);
+            }
+        }
+            Assert.assertEquals(expectedY, this.entite.getPositionY());
     }
+
     @Test
-    public void TestSetNotNull()
+    public void TestYNotNegative() throws Exception
     {
+     try
+     {
+         this.entite.setPositionY(-8);
 
+     }catch(final Exception e)
+     {
+         final String expected="The Y position cannot be negative";
+         Assert.assertEquals(expected,e.getMessage());
+     }
     }
-
     @Test
-    public void TestGetType() {
+    public void TestXNotNegative() throws Exception
+    {
+        try
+        {
+            this.entite.setPositionX(-9);
+        }catch (final Exception e)
+        {
+            final String expected="The X position cannot be negative";
+            Assert.assertEquals(expected,e.getMessage());
+        }
     }
+    @Test
+    public void TestGetType() throws IllegalAccessException
+    {
+        EntityType expectedType =  EntityType.DIRT;
+        for(Field field : this.fields)
+        {
+            if(field.getName().equals("type"))
+            {
+                field.get(this.entite);
+            }
+        }
+
+        Assert.assertEquals(expectedType,this.entite.getType());
+    }
+
+
 
     @Test
     public void TestGetRelativeEntity() {
+
     }
 }

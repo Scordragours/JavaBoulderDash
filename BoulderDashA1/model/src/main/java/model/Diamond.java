@@ -2,8 +2,8 @@ package model;
 
 public class Diamond extends SlidingBlock {
 
-    public Diamond(int x, int y, EntityType type, boolean destructible)
+    public Diamond(Model model,int x, int y, EntityType type)
     {
-        super(x,y,type);
+        super(model,x,y,type);
     }
 }

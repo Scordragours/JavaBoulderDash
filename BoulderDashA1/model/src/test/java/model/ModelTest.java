@@ -1,7 +1,3 @@
-/**
- * @author CANDAT ETIENNE AND DENEUVE GREGORY
- * @version 1.0
- */
 package model;
 
 import entity.Level;
@@ -13,7 +9,10 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.lang.reflect.Field;
-
+/**
+ * @author CANDAT ETIENNE AND DENEUVE GREGORY
+ * @version 1.0
+ */
 public class ModelTest {
     private Model model;
     private Field[] fields;
@@ -29,7 +28,7 @@ public class ModelTest {
     @Before
     public void setUp() throws Exception
     {
-        this.model = new Model(1);
+        this.model = new Model(1, 2);
         Class<?> modelReflector = this.model.getClass();
         this.fields = modelReflector.getDeclaredFields();
         for(Field field : this.fields) {

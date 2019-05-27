@@ -98,6 +98,6 @@ public final class Model extends Observable implements IModel {
 	}
 	public char [][] ConvertWorld()
 	{
-
+		return null;
 	}
 }
