@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ced6bba6-f76a-41f8-a65d-ecf6fea6b4a9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoulderDashA1/contract/src/main/java/contract/IView.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoulderDashA1/contract/src/main/java/contract/IView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewFrameFinal.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewFrameFinal.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/BoulderDashA1/bin/" />
     <ignored path="$PROJECT_DIR$/BoulderDashA1/target/" />
@@ -39,127 +39,146 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-610453972">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="45" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="45" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Model.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="122" column="35" selection-start-line="122" selection-start-column="35" selection-end-line="122" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4994#4995#0" expanded="true" />
-                <element signature="e#5161#5162#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/DAOLevel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-187">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoulderDashA1/entity/src/main/java/entity/Level.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoulderDashA1/main/src/main/java/main/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="26" column="48" lean-forward="true" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoulderDashA1/controller/src/main/java/controller/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="13" column="19" lean-forward="true" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-              <folding>
-                <element signature="e#686#687#0" expanded="true" />
-                <element signature="e#710#711#0" expanded="true" />
-                <element signature="e#804#805#0" expanded="true" />
-                <element signature="e#829#830#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Entity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
-              <folding>
-                <element signature="e#996#997#0" expanded="true" />
-                <element signature="e#1027#1028#0" expanded="true" />
-                <element signature="e#1084#1085#0" expanded="true" />
-                <element signature="e#1154#1155#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/UpdateWorld.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="15" lean-forward="true" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
-              <folding>
-                <element signature="e#133#134#0" expanded="true" />
-                <element signature="e#166#167#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/TimeCounter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
-              <folding>
-                <element signature="e#114#115#0" expanded="true" />
-                <element signature="e#148#149#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Character.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-85">
-              <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Enemy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.49107143">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewFrameFinal.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="543">
+                  <caret line="123" column="67" lean-forward="true" selection-start-line="123" selection-start-column="67" selection-end-line="123" selection-end-column="67" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#1358#1359#0" expanded="true" />
+                    <element signature="e#1406#1407#0" expanded="true" />
+                    <element signature="e#1462#1463#0" expanded="true" />
+                    <element signature="e#1514#1515#0" expanded="true" />
+                    <element signature="e#1551#1552#0" expanded="true" />
+                    <element signature="e#1593#1594#0" expanded="true" />
+                    <element signature="e#1654#1655#0" expanded="true" />
+                    <element signature="e#1698#1699#0" expanded="true" />
+                    <element signature="e#1707#1708#0" expanded="true" />
+                    <element signature="e#1733#1734#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/BoulderDashA1/contract/src/main/java/contract/IController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="340">
+                  <caret line="20" column="28" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="28" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewPanelFinal.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="100">
+                  <caret line="263" column="33" selection-start-line="263" selection-start-column="33" selection-end-line="263" selection-end-column="33" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#388#389#0" expanded="true" />
+                    <element signature="e#436#437#0" expanded="true" />
+                    <element signature="e#478#479#0" expanded="true" />
+                    <element signature="e#518#519#0" expanded="true" />
+                    <element signature="e#572#573#0" expanded="true" />
+                    <element signature="e#618#619#0" expanded="true" />
+                    <element signature="e#1075#1076#0" expanded="true" />
+                    <element signature="e#1111#1112#0" expanded="true" />
+                    <element signature="e#1155#1156#0" expanded="true" />
+                    <element signature="e#1193#1194#0" expanded="true" />
+                    <element signature="e#1178#1179#0" expanded="true" />
+                    <element signature="e#1204#1205#0" expanded="true" />
+                    <element signature="e#1237#1238#0" expanded="true" />
+                    <element signature="e#1275#1276#0" expanded="true" />
+                    <element signature="e#1327#1328#0" expanded="true" />
+                    <element signature="e#1361#1362#0" expanded="true" />
+                    <element signature="e#1368#1369#0" expanded="true" />
+                    <element signature="e#1397#1398#0" expanded="true" />
+                    <element signature="e#1527#1528#0" expanded="true" />
+                    <element signature="e#1557#1558#0" expanded="true" />
+                    <element signature="e#1442#1443#0" expanded="true" />
+                    <element signature="e#1472#1473#0" expanded="true" />
+                    <element signature="e#1665#1666#0" expanded="true" />
+                    <element signature="e#1696#1697#0" expanded="true" />
+                    <element signature="e#1512#1513#0" expanded="true" />
+                    <element signature="e#1542#1543#0" expanded="true" />
+                    <element signature="e#1819#1820#0" expanded="true" />
+                    <element signature="e#1845#1846#0" expanded="true" />
+                    <element signature="e#1626#1627#0" expanded="true" />
+                    <element signature="e#1669#1670#0" expanded="true" />
+                    <element signature="e#1718#1719#0" expanded="true" />
+                    <element signature="e#1744#1745#0" expanded="true" />
+                    <element signature="e#2290#2291#0" expanded="true" />
+                    <element signature="e#2342#2343#0" expanded="true" />
+                    <element signature="e#2341#2342#0" expanded="true" />
+                    <element signature="e#2372#2373#0" expanded="true" />
+                    <element signature="e#2377#2378#0" expanded="true" />
+                    <element signature="e#2414#2415#0" expanded="true" />
+                    <element signature="e#2396#2397#0" expanded="true" />
+                    <element signature="e#2448#2449#0" expanded="true" />
+                    <element signature="e#2591#2592#0" expanded="true" />
+                    <element signature="e#2624#2625#0" expanded="true" />
+                    <element signature="e#2549#2550#0" expanded="true" />
+                    <element signature="e#2587#2588#0" expanded="true" />
+                    <element signature="e#2472#2473#0" expanded="true" />
+                    <element signature="e#2537#2538#0" expanded="true" />
+                    <element signature="e#2710#2711#0" expanded="true" />
+                    <element signature="e#2760#2761#0" expanded="true" />
+                    <element signature="e#3058#3059#0" expanded="true" />
+                    <element signature="e#3104#3105#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/BoulderDashA1/contract/src/main/java/contract/IModel.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="272">
+                  <caret line="16" column="54" lean-forward="true" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -228,8 +247,16 @@
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Enemy.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/controller/src/main/java/controller/Controller.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Model.java" />
+        <option value="$PROJECT_DIR$/BoulderDashA1/contract/src/main/java/contract/IView.java" />
+        <option value="$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewFrameFinal.java" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -276,14 +303,16 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -325,178 +354,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="contract" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
@@ -546,7 +403,7 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559042726811" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../5.7/Workshop/jpu2016_hero/jpu2016_hero" />
+    <property name="last_opened_file_path" value="$USER_HOME$/5.7/Workshop/jpu2016_hero/jpu2016_hero" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -564,6 +421,492 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\CESI\Prépa\UE5\Entrainement JAVA\POMTest\BoulderDashA1\model\src\main\resources" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/misc.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/README.md</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/contract/contract.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/contract/src/main/java/contract/ControllerOrder.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/contract/src/main/java/contract/IController.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/contract/src/main/java/contract/IModel.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/controller/controller.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/controller/src/main/java/controller/Controller.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/main/main.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/main/src/main/java/main/Main.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/model.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Model.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/model.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/ModelTest.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/dataSources.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/uiDesigner.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/entity/src/main/java/entity/Data.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/entity/src/main/java/entity/Level.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Character.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/DAOData.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/DAOLevel.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Diamond.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Direction.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Dirt.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Enemy.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/EnemyDiamond.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/EnemyPoint.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Entity.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/EntityType.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Exit.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Player.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/RollingRock.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/SlidingBlock.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/TimeCounter.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/UpdateWorld.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Wall.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Interface/ClockBoard.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Interface/DiamondBoard.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Interface/ScoreBoard.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Background/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Breakable/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Delemitation_Block_1/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Delemitation_Block_1/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Delemitation_Block_1/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Delemitation_Block_1/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Delemitation_Block_2/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Delemitation_Block_2/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Delemitation_Block_2/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Delemitation_Block_2/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Diamond/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Diamond/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Diamond/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Diamond/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Diamond/5.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Diamond/6.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Diamond/7.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Diamond/8.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Enemy/1/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Enemy/1/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Enemy/1/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Enemy/1/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Enemy/2/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Enemy/2/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Enemy/2/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Enemy/2/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Enemy/Butterfly/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Enemy/Butterfly/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Enemy/Butterfly/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Enemy/Butterfly/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Enemy/Mistery/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Enemy/Mistery/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Enemy/Mistery/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Enemy/Mistery/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Gravity/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Gravity/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Gravity/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Gravity/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Outline/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Outline/Outline.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Plasma/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Plasma/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Plasma/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Plasma/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Star/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Star/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Star/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_1/Star/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Background/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Breakable/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Delemitation_Block_1/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Delemitation_Block_1/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Delemitation_Block_1/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Delemitation_Block_1/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Delemitation_Block_2/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Delemitation_Block_2/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Delemitation_Block_2/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Delemitation_Block_2/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Diamond/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Diamond/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Diamond/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Diamond/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Diamond/5.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Diamond/6.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Diamond/7.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Diamond/8.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Enemy/1/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Enemy/1/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Enemy/1/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Enemy/1/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Enemy/2/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Enemy/2/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Enemy/2/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Enemy/2/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Enemy/Butterfly/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Enemy/Butterfly/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Enemy/Butterfly/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Enemy/Butterfly/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Enemy/Penguin/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Enemy/Penguin/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Enemy/Penguin/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Enemy/Penguin/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Gravity/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Gravity/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Gravity/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Gravity/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Outline/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Plasma/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Plasma/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Plasma/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Plasma/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Star/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Star/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Star/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_2/Star/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Background/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Background/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Background/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Background/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Breakable/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Breakable/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Breakable/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Breakable/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Delemitation_Block_1/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Delemitation_Block_1/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Delemitation_Block_1/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Delemitation_Block_1/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Delemitation_Block_2/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Delemitation_Block_2/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Delemitation_Block_2/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Delemitation_Block_2/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Diamond/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Diamond/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Diamond/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Diamond/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Diamond/5.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Diamond/6.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Diamond/7.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Diamond/8.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Enemy/1/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Enemy/1/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Enemy/1/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Enemy/1/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Enemy/2/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Enemy/2/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Enemy/2/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Enemy/2/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Enemy/Bat/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Enemy/Bat/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Enemy/Bat/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Enemy/Bat/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Enemy/Butterfly/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Enemy/Butterfly/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Enemy/Butterfly/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Enemy/Butterfly/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Gravity/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Gravity/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Gravity/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Gravity/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Outline/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Plasma/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Plasma/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Plasma/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Plasma/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Star/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Star/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Star/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_3/Star/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Background/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Background/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Background/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Background/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Breakable/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Delemitation_Block_1/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Delemitation_Block_1/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Delemitation_Block_1/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Delemitation_Block_1/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Delemitation_Block_2/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Delemitation_Block_2/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Delemitation_Block_2/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Delemitation_Block_2/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Diamond/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Diamond/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Diamond/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Diamond/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Diamond/5.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Diamond/6.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Diamond/7.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Diamond/8.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Enemy/1/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Enemy/1/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Enemy/1/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Enemy/1/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Enemy/2/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Enemy/2/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Enemy/2/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Enemy/2/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Enemy/Fish/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Enemy/Fish/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Enemy/Fish/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Enemy/Fish/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Enemy/Gost/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Enemy/Gost/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Enemy/Gost/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Enemy/Gost/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Gravity/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Gravity/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Gravity/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Gravity/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Outline/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Plasma/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Plasma/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Plasma/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Plasma/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Star/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Star/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Star/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_4/Star/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Background/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Background/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Background/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Background/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Breakable/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Breakable/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Breakable/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Breakable/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Delemitation_Block_1/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Delemitation_Block_1/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Delemitation_Block_1/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Delemitation_Block_1/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Delemitation_Block_2/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Delemitation_Block_2/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Delemitation_Block_2/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Delemitation_Block_2/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Diamond/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Diamond/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Diamond/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Diamond/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Diamond/5.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Diamond/6.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Diamond/7.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Diamond/8.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Enemy/1/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Enemy/1/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Enemy/1/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Enemy/1/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Enemy/2/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Enemy/2/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Enemy/2/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Enemy/2/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Enemy/Mistery/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Enemy/Mistery/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Enemy/Mistery/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Enemy/Mistery/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Enemy/Mower/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Enemy/Mower/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Enemy/Mower/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Enemy/Mower/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Gravity/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Gravity/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Gravity/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Gravity/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Outline/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Plasma/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Plasma/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Plasma/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Plasma/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Star/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Star/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Star/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_5/Star/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Background/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Background/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Background/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Background/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Breakable/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Breakable/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Breakable/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Breakable/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Delemitation_Block_1/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Delemitation_Block_1/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Delemitation_Block_1/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Delemitation_Block_1/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Delemitation_Block_2/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Delemitation_Block_2/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Delemitation_Block_2/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Delemitation_Block_2/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Diamond/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Diamond/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Diamond/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Diamond/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Diamond/5.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Diamond/6.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Diamond/7.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Diamond/8.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Enemy/Mistery/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Enemy/Mistery/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Enemy/Mistery/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Enemy/Mistery/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Enemy/Mower/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Enemy/Mower/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Enemy/Mower/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Enemy/Mower/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Gravity/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Gravity/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Gravity/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Gravity/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Outline/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Plasma/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Plasma/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Plasma/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Plasma/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Star/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Star/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Star/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Level_6/Star/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Personnage/Down/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Personnage/Down/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Personnage/Down/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Personnage/Down/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Personnage/Left/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Personnage/Left/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Personnage/Left/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Personnage/Lose/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Personnage/Lose/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Personnage/Motionless/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Personnage/Motionless/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Personnage/Right/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Personnage/Right/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Personnage/Right/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Personnage/Up/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Personnage/Up/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Personnage/Up/3.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Personnage/Up/4.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Personnage/Win/1.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/Assets/Personnage/Win/2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/BoulderDash.sql</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/CharacterTest.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/DiamondTest.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/DirtTest.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/EnemyDiamondTest.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/EnemyPointTest.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/EnemyTest.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/EntityTest.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/ExitTest.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/PlayerTest.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/RollingRockTest.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/SlidingBlockTest.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/WallTest.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/entity/src/main/java/entity/Entity.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/entity/src/main/java/entity/HelloWorld.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/DAOEntity.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/DAOHelloWorld.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/jpublankproject.sql</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/View.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewFrame.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewPanel.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -704,11 +1047,11 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.model in model" />
+      <item itemvalue="Maven.Build" />
       <item itemvalue="JUnit.RollingRockTest.moved" />
       <item itemvalue="JUnit.EntityTest.TestGetRelativeEntity" />
       <item itemvalue="JUnit.EntityTest.TestGetType" />
       <item itemvalue="JUnit.PlayerTest.testMove" />
-      <item itemvalue="Maven.Build" />
       <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
@@ -909,13 +1252,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93770000" />
+    <option name="totallyTimeSpent" value="94089000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25426438" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1641791" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -931,7 +1274,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3286334" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32907802" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.25893825" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1018,16 +1361,6 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Downloads/Diamond.java" />
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Sprite.java" />
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/model.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/jpublankproject.sql" />
     <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/testsuit.java" />
     <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/BoulderDash.sql">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1188,9 +1521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1215,23 +1545,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/contract/src/main/java/contract/IModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="16" column="54" lean-forward="true" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewFrame.java" />
     <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/CharacterTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1364,6 +1678,57 @@
             <element signature="imports" expanded="true" />
             <element signature="e#4994#4995#0" expanded="true" />
             <element signature="e#5161#5162#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/contract/src/main/java/contract/ControllerOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/contract/src/main/java/contract/IView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/contract/src/main/java/contract/IController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="28" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/contract/src/main/java/contract/IModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="54" lean-forward="true" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewFrameFinal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="123" column="67" lean-forward="true" selection-start-line="123" selection-start-column="67" selection-end-line="123" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1358#1359#0" expanded="true" />
+            <element signature="e#1406#1407#0" expanded="true" />
+            <element signature="e#1462#1463#0" expanded="true" />
+            <element signature="e#1514#1515#0" expanded="true" />
+            <element signature="e#1551#1552#0" expanded="true" />
+            <element signature="e#1593#1594#0" expanded="true" />
+            <element signature="e#1654#1655#0" expanded="true" />
+            <element signature="e#1698#1699#0" expanded="true" />
+            <element signature="e#1707#1708#0" expanded="true" />
+            <element signature="e#1733#1734#0" expanded="true" />
           </folding>
         </state>
       </provider>

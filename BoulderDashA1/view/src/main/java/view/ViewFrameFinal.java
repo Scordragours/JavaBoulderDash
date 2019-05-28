@@ -4,6 +4,7 @@ import contract.ControllerOrder;
 import contract.IController;
 import contract.IModel;
 import contract.IView;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.event.KeyEvent;
@@ -18,9 +19,11 @@ public class ViewFrameFinal extends JFrame implements IView, KeyListener, Observ
     private boolean Die, Live;
     private ViewPanelFinal Panel;
     private IController Controller;
+    private IModel Model;
 
 
     public ViewFrameFinal(IModel Model){
+        this.Model = Model;
         Model.getObservable().addObserver(this);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("Boolder Dash");
@@ -51,6 +54,9 @@ public class ViewFrameFinal extends JFrame implements IView, KeyListener, Observ
     }
     public void setController(IController Controller){
         this.Controller = Controller;
+    }
+    public IController getControler(){
+        return this.Controller;
     }
 
     public void Run(){
@@ -105,7 +111,11 @@ public class ViewFrameFinal extends JFrame implements IView, KeyListener, Observ
         if(Die||Live){
 
         }else{
-            this.getControler().orderPerform(this.KeyCodeToControllerOrder(KeyEventTouch.getKeyCode()));
+            try{
+                this.getControler().orderPerform(this.KeyCodeToControllerOrder(KeyEventTouch.getKeyCode()));
+            }catch(Exception e){
+                e.printStackTrace();
+            }
         }
     }
     public void keyReleased(KeyEvent KeyEvent){}
