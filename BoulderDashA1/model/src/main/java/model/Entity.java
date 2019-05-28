@@ -51,7 +51,7 @@ public abstract class Entity {
 
     public EntityType getType()
     {
-        return type;
+            return type;
     }
 
     public Entity getRelativeEntity(int x, int y)

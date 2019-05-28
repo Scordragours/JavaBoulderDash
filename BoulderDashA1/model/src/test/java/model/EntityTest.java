@@ -138,6 +138,6 @@ protected Model model;
     public void TestGetRelativeEntity() {
         Entity expected = model.getWorld()[1][0];
 
-        Assert.assertEquals(expected,this.entite.getRelativeEntity(-4,-6));
+        Assert.assertEquals(expected,this.entite.getRelativeEntity(-5,-5));
     }
 }

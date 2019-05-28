@@ -11,7 +11,8 @@ public abstract class SlidingBlock extends Entity {
     public void fall() throws Exception
     {
         Entity entity;
-
+        int antX = getPositionX();
+        int antY = getPositionY();
         if(this instanceof Diamond)
         {
             entity = new Diamond(this.model, getPositionX(), getPositionY());
@@ -26,6 +27,7 @@ public abstract class SlidingBlock extends Entity {
         }
 
         this.model.updateEntity(getPositionX(), getPositionY() - 1,entity);
+        this.model.updateEntity(antX, antY - 1,null);
 
     }
 
@@ -43,12 +45,12 @@ public abstract class SlidingBlock extends Entity {
         {
 
             this.model.updateEntity(getPositionX() - 1, getPositionY(),entity);
-            //Maybe add a Thread to allow time for the slide
+
             fall();
         }else
         {
             this.model.updateEntity(getPositionX() + 1, getPositionY(),entity);
-            //Maybe add a Thread to allow time for the slide
+
             fall();
         }
 
