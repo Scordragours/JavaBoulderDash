@@ -80,7 +80,7 @@ public final class Controller implements IController {
 	 *            the controller order
 	 */
 
-	public void orderPerform(final ControllerOrder controllerOrder) {
+	public void orderPerform(final ControllerOrder controllerOrder) throws Exception {
 		switch (controllerOrder) {
 			case LEFT:
 				this.model.getPlayer().move(-1,0);
@@ -97,12 +97,6 @@ public final class Controller implements IController {
 			case DOWN:
 				this.model.getPlayer().move(0,1);
 				MotionLessControl(false);
-				break;
-			case WIN:
-				this.model.isWin();
-				break;
-			case LOSE:
-				this.model.getPlayer().isAlive(false);
 				break;
 			default:
 				MotionLessControl(true);

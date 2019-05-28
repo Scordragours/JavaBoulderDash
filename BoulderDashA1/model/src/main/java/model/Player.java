@@ -1,6 +1,8 @@
 package model;
 
 
+import contract.IModel;
+
 public class Player extends Character {
 
     private boolean alive;
