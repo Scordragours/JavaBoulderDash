@@ -9,6 +9,6 @@ public class EnemyDiamond extends Enemy {
 
     public void die() throws Exception
     {
-        this.explode();
+        this.explode(true);
     }
 }

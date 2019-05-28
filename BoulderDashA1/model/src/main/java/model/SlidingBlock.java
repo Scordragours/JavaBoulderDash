@@ -23,7 +23,7 @@ public abstract class SlidingBlock extends Entity {
         //Not sure
         if(getRelativeEntity(getPositionX(),getPositionY()+1) ==null && player.getPositionX() == entity.getPositionX()&& player.getPositionY()-1 == entity.getPositionY())
         {
-            player.explode();
+            player.explode(false);
         }
 
         this.model.updateEntity(getPositionX(), getPositionY() - 1,entity);

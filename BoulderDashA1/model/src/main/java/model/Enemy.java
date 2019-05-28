@@ -10,6 +10,17 @@ public abstract class Enemy extends Character{
         lastDirection = Direction.UP;
     }
 
+    public void move(int x, int y) throws Exception
+    {
+        if(getRelativeEntity(x,y) == null)
+        {
+            int antX = getPositionX();
+            int antY = getPositionY();
+            this.model.updateEntity(getPositionX()+x, getPositionY()+y, this);
+            this.model.updateEntity(antX, antY, null);
+        }
+    }
+
     public void pathFinder() throws Exception
     {
         switch (lastDirection){

@@ -8,13 +8,13 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
-public class CharacterTest extends EntityTest {
+public abstract class CharacterTest extends EntityTest {
 
     @Before
     public void setUp() throws Exception
     {
-        this.model = new Model(2,1);
-        this.entite = this.model.getPlayer();
+        /*this.model = new Model(2,1);
+        this.entite = this.model.getPlayer();*/
     }
 
     @After
@@ -37,7 +37,7 @@ public class CharacterTest extends EntityTest {
         };
         int[][] currentExplosions = new int[9][2];
 
-        ((Character)this.entite).explode();
+        ((Character)this.entite).explode(false);
 
         ArrayList<int[]> explosions = this.entite.model.getExplosions();
         for(int i = 0; !explosions.isEmpty(); i++)

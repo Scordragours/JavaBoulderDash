@@ -19,7 +19,7 @@ public abstract class Character extends Entity {
         super(model,x,y,type);
     }
 
-    public void explode() throws Exception
+    public void explode(boolean generateDiamonds) throws Exception
     {
         for(int[] pos : this.positions)
         {
@@ -30,7 +30,13 @@ public abstract class Character extends Entity {
                     this.model.addExplosion(new int[]{getPositionX()+pos[0],getPositionY()+pos[1]});
                     if(getRelativeEntity(pos[0], pos[1]).getType() != EntityType.PLAYER)
                     {
-                        this.model.updateEntity(getPositionX() + pos[0], getPositionY() + pos[1], null);
+                        if(generateDiamonds)
+                        {
+                            this.model.updateEntity(getPositionX() + pos[0], getPositionY() + pos[1], new Diamond(this.model, 0,0));
+                        }
+                        else{
+                            this.model.updateEntity(getPositionX() + pos[0], getPositionY() + pos[1], null);
+                        }
                     }
                     else
                     {
@@ -45,18 +51,7 @@ public abstract class Character extends Entity {
         }
     }
 
-    public boolean move(int x, int y) throws Exception
-    {
-        if(getRelativeEntity(x,y) == null)
-        {
-            int antX = getPositionX();
-            int antY = getPositionY();
-            this.model.updateEntity(getPositionX()+x, getPositionY()+y, this);
-            this.model.updateEntity(antX, antY, null);
-            return true;
-        }
-        return false;
-    }
+    public abstract void move(int x, int y) throws Exception;
 
     public abstract void die() throws Exception;
 }

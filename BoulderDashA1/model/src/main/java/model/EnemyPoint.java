@@ -9,8 +9,7 @@ public class EnemyPoint extends Enemy {
 
     public void die() throws Exception
     {
-        this.explode();
-
-
+        this.model.setScore(this.model.getScore() + 250);
+        this.explode(false);
     }
 }
