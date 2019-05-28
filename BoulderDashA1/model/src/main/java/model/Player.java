@@ -25,17 +25,21 @@ public class Player extends Character {
         {
             if(x < 0)
             {
-                ((RollingRock)getRelativeEntity(x,y)).moved(Direction.LEFT);
-                this.model.updateEntity(getPositionX()+x, getPositionY()+y, this);
-                this.model.updateEntity(antX, antY, null);
-                this.lastMove = System.currentTimeMillis();
+                if(((RollingRock)getRelativeEntity(x,y)).moved(Direction.LEFT))
+                {
+                    this.model.updateEntity(getPositionX()+x, getPositionY()+y, this);
+                    this.model.updateEntity(antX, antY, null);
+                    this.lastMove = System.currentTimeMillis();
+                }
             }
             else if (x > 0)
             {
-                ((RollingRock)getRelativeEntity(x,y)).moved(Direction.RIGHT);
-                this.model.updateEntity(getPositionX()+x, getPositionY()+y, this);
-                this.model.updateEntity(antX, antY, null);
-                this.lastMove = System.currentTimeMillis();
+                if(((RollingRock)getRelativeEntity(x,y)).moved(Direction.RIGHT))
+                {
+                    this.model.updateEntity(getPositionX()+x, getPositionY()+y, this);
+                    this.model.updateEntity(antX, antY, null);
+                    this.lastMove = System.currentTimeMillis();
+                }
             }
         }
     }

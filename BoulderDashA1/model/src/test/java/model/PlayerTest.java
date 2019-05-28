@@ -23,6 +23,20 @@ public class PlayerTest extends CharacterTest {
     }
 
     @Test
-    public void setLastMove() {
+    public void testMove() throws Exception
+    {
+        int expectedX = 6;
+        int expectedY = 3;
+
+        assertEquals(EntityType.ROLLINGROCK, this.model.getWorld()[3][6].getType());
+        assertNull(this.model.getWorld()[3][7]);
+
+        ((Player)this.entite).move(1,0);
+
+        assertEquals(expectedX, this.entite.getPositionX());
+        assertEquals(expectedY, this.entite.getPositionY());
+        assertNull(this.model.getWorld()[3][5]);
+        assertEquals(this.entite, this.model.getWorld()[3][6]);
+        assertEquals(EntityType.ROLLINGROCK, this.model.getWorld()[3][7].getType());
     }
 }
