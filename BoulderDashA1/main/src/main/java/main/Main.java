@@ -4,9 +4,11 @@
  */
 package main;
 
+import controller.Controller;
 import model.Model;
 import model.TimeCounter;
 import model.UpdateWorld;
+import view.ViewFrame;
 
 /**
  * The Class Main.
@@ -28,5 +30,9 @@ public abstract class Main {
         uw.start();
         TimeCounter tc = new TimeCounter(model);
         tc.start();
+        ViewFrame viewFrame = new ViewFrame(model);
+        Controller controller = new Controller(viewFrame, model);
+        viewFrame.setController(controller);
+        viewFrame.Run();
     }
 }
