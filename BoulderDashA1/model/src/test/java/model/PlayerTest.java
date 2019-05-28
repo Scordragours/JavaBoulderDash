@@ -10,7 +10,7 @@ public class PlayerTest extends CharacterTest {
 
     @Before
     public void setUp() throws Exception {
-        this.model = new Model(2,1);
+        this.model = new Model(39,1);
         this.entite = this.model.getPlayer();
     }
 

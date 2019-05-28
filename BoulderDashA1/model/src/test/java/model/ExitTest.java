@@ -9,7 +9,7 @@ public class ExitTest extends EntityTest {
 
     @Before
     public void setUp() throws Exception {
-        this.model = new Model(1,6);
+        this.model = new Model(38,6);
         this.entite = new Exit(model,5,6);
     }
 

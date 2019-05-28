@@ -9,7 +9,7 @@ public class EnemyDiamondTest extends EnemyTest {
 
     @Before
     public void setUp() throws Exception {
-        this.model = new Model(2,1);
+        this.model = new Model(39,1);
 
         for(Entity[] etab : this.model.getWorld())
             for(Entity e : etab)

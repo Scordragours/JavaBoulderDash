@@ -42,6 +42,13 @@ public class Player extends Character {
                 }
             }
         }
+        else if(getRelativeEntity(x,y) != null && getRelativeEntity(x,y).getType() == EntityType.EXIT && ((Exit)getRelativeEntity(x,y)).isOpen())
+        {
+            this.model.updateEntity(getPositionX()+x, getPositionY()+y, this);
+            this.model.updateEntity(antX, antY, null);
+            this.lastMove = System.currentTimeMillis();
+            this.model.winned();
+        }
     }
 
     public void die()

@@ -127,6 +127,15 @@ public final class Model extends Observable implements IModel {
 	{
 		this.remainingDiamonds = remainingDiamond;
 
+		if(this.remainingDiamonds <= 0)
+        {
+            this.remainingDiamonds = 0;
+            for(Entity[] eTab : this.world)
+                for(Entity e : eTab)
+                    if(e != null && e.getType() == EntityType.EXIT)
+                        ((Exit)e).openned();
+        }
+
 		setChanged();
 		notifyObservers();
 	}
@@ -220,6 +229,8 @@ public final class Model extends Observable implements IModel {
 	}
 
 	public boolean isWin() { return this.win; }
+
+	public void winned() { this.win = true; }
 
 	public void addExplosion(final int[] coordinates)
     {

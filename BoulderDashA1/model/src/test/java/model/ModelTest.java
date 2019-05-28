@@ -31,7 +31,7 @@ public class ModelTest {
     @Before
     public void setUp() throws Exception
     {
-        this.model = new Model(1, 1);
+        this.model = new Model(38, 1);
         Class<?> modelReflector = this.model.getClass();
         this.fields = modelReflector.getDeclaredFields();
         for(Field field : this.fields) {
@@ -205,7 +205,7 @@ public class ModelTest {
     @Test
     public void testLoadLevel() throws Exception
     {
-        Level expectedLevel = new Level(1, 80, 15, "I;P;I.");
+        Level expectedLevel = new Level(38, 80, 15, "I;P;I.");
         Level currentLevel = null;
 
 

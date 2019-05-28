@@ -9,7 +9,9 @@ public class Exit extends Entity {
 
     public boolean isOpen()
     {
-        return true;
+        return this.open;
     }
+
+    public void openned() { this.open = true; }
 
 }

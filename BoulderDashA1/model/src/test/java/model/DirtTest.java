@@ -12,7 +12,7 @@ public class DirtTest extends EntityTest {
 
     @Before
     public void setUp() throws Exception {
-        this.model = new Model(1,6);
+        this.model = new Model(38,6);
         this.entite = new Dirt(model,5,6);
         /*Class<?> entiteReflector = this.entite.getClass();
         this.fields = entiteReflector.getDeclaredFields();
