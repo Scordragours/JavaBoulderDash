@@ -22,6 +22,9 @@ public abstract class Main {
      *
      * @param args
      *            the arguments
+     *
+     * @throws Exception
+     *          for bad moving assignation
      */
     public static void main(final String[] args) throws Exception {
         Model model = new Model(41,1);
