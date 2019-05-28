@@ -3,7 +3,7 @@ package contract;
 /**
  * The Enum ControllerOrder.
  *
- * @author Nathan PORET & Arthur LECRAS
+ * @author Nathan PORET and Arthur LECRAS
  */
 public enum ControllerOrder {
 	/** Turn Left. */
