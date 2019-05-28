@@ -15,8 +15,8 @@ CREATE TABLE `level` (
 
 
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `SelectID` (IN `id` INT)  READS SQL DATA
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SelectID` (IN `i` INT)  READS SQL DATA
     SQL SECURITY INVOKER
-SELECT * FROM level WHERE id = id;
+SELECT * FROM level WHERE id = i;
 
 
