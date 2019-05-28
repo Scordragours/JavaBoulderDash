@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class SlidingBlockTest {
+public class SlidingBlockTest extends EntityTest{
 
     @Before
     public void setUp() throws Exception {

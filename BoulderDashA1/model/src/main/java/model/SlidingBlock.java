@@ -2,7 +2,8 @@ package model;
 
 public abstract class SlidingBlock extends Entity {
 
-    protected Player player;
+
+
     public SlidingBlock(Model model,int x, int y, EntityType type)
     {
         super(model,x,y,type);
@@ -10,63 +11,51 @@ public abstract class SlidingBlock extends Entity {
 
     public void fall() throws Exception
     {
-        Entity entity;
         int antX = getPositionX();
         int antY = getPositionY();
-        if(this instanceof Diamond)
-        {
-            entity = new Diamond(this.model, getPositionX(), getPositionY());
-        }else
-        {
-            entity = new RollingRock(this.model, getPositionX(), getPositionY());
-        }
+
         //Not sure
-        if(getRelativeEntity(getPositionX(),getPositionY()+1) ==null && player.getPositionX() == entity.getPositionX()&& player.getPositionY()-1 == entity.getPositionY())
+        if(getRelativeEntity(0,1) ==null && this.model.getPlayer().getPositionX() == this.getPositionX()&& this.model.getPlayer().getPositionY()-1 == this.getPositionY())
         {
-            player.explode(false);
+            this.model.getPlayer().explode(false);
         }
 
-        this.model.updateEntity(getPositionX(), getPositionY() - 1,entity);
-        this.model.updateEntity(antX, antY - 1,null);
+        this.model.updateEntity(getPositionX(), getPositionY() - 1,this);
+        this.model.updateEntity(antX, antY,null);
 
     }
 
     public void slide(boolean isDefault) throws Exception
     {
-        Entity entity;
-        if(this instanceof Diamond)
-        {
-            entity = new Diamond(this.model, getPositionX(), getPositionY());
-        }else
-        {
-            entity = new RollingRock(this.model, getPositionX(), getPositionY());
-        }
+        int antX = getPositionX();
+        int antY = getPositionY();
         if(isDefault)
         {
 
-            this.model.updateEntity(getPositionX() - 1, getPositionY(),entity);
+            this.model.updateEntity(getPositionX() - 1, getPositionY(),this);
+            this.model.updateEntity(antX, antY,null);
 
-            fall();
+
         }else
         {
-            this.model.updateEntity(getPositionX() + 1, getPositionY(),entity);
+            this.model.updateEntity(getPositionX() + 1, getPositionY(),this);
+            this.model.updateEntity(antX, antY,null);
 
-            fall();
         }
 
 
     }
     public void pathFinder() throws Exception
     {
-        if(getRelativeEntity(getPositionX(), getPositionY()-1) == null)
+        if(getRelativeEntity(0, -1) == null)
         {
             fall();
         }
-        else if(getRelativeEntity(getPositionX()-1, getPositionY()+1) == null && getRelativeEntity(getPositionX()-1,getPositionY())==null && getRelativeEntity(getPositionX()-1,getPositionY()+1) instanceof  SlidingBlock)
+        else if(getRelativeEntity(-1, 1) == null && getRelativeEntity(-1,0)==null && getRelativeEntity(0,1) instanceof  SlidingBlock)
         {
             slide(true);
         }
-        else if(getRelativeEntity(getPositionX()+1, getPositionY()-1) == null)
+        else if(getRelativeEntity(1, 1) == null && getRelativeEntity(1,0)==null && getRelativeEntity(0,1) instanceof  SlidingBlock)
         {
             slide(false);
         }

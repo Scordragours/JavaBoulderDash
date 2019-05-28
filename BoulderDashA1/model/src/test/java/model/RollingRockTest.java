@@ -7,14 +7,18 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class RollingRockTest {
-protected Direction direction;
-protected Entity entite;
-protected Model model;
+public class RollingRockTest extends SlidingBlockTest {
+
     @Before
     public void setUp() throws Exception {
-        this.model = new Model(5,6);
-        this.entite = new RollingRock(model,5,6);
+        this.model = new Model(2,6);
+        for(Entity[] etab : this.model.getWorld())
+            for(Entity e : etab)
+                if(e !=null && e.getType() == EntityType.ROLLINGROCK)
+                {
+                    this.entite = e;
+                    break;
+                }
 
     }
 
@@ -23,25 +27,14 @@ protected Model model;
     }
 
     @Test
-    public void moved() {
-        Entity expected = model.getWorld()[1][0];
-
-        Assert.assertEquals(expected,this.entite.getRelativeEntity(-5,-5));
+    public void moved() throws Exception {
+        ((RollingRock) this.entite).moved(Direction.RIGHT);
+        int expectedX = 3;
+        Assert.assertEquals(expectedX,this.entite.getPositionX());
 
     }
 
 
-    @Test
-    public void RIGHTdirection()
-    {
-        direction = Direction.RIGHT;
-        Assert.assertEquals(Direction.RIGHT, direction);
-    }
-    @Test
-    public void LEFTdirection()
-    {
-        direction = Direction.LEFT;
-        Assert.assertEquals(Direction.LEFT, direction);
-    }
+
 
 }
