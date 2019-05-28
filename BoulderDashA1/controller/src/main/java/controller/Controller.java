@@ -4,7 +4,6 @@ import contract.ControllerOrder;
 import contract.IController;
 import contract.IModel;
 import contract.IView;
-
 /**
  * The class Controller
  * @Author Nathan PORET
@@ -62,13 +61,13 @@ public final class Controller implements IController {
 	private void MotionLessControl(boolean timerActive) {
 		if (timerActive == true) {
 			if (this.timer == 0) {
-				this.timer = this.model.getTime();
+				this.timer = this.model.getRemainingTime();
 			}
-			if (this.timer - this.model.getTime() == 3) {
+			if ((this.timer - this.model.getRemainingTime()) >= 3) {
 				this.view.setStanby(true);
 			}
 		}
-		else{
+		else {
 			this.timer = 0;
 			this.view.setStanby(false);
 		}
@@ -100,7 +99,7 @@ public final class Controller implements IController {
 				MotionLessControl(false);
 				break;
 			case WIN:
-				this.model.isWin(true);
+				this.model.isWin();
 				break;
 			case LOSE:
 				this.model.getPlayer().isAlive(false);
