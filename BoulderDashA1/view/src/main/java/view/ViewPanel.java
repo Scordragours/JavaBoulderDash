@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 
-public class ViewPanelFinal extends JPanel{
+public class ViewPanel extends JPanel{
     private BufferedImage Breakable, Delemitation_Block, Background;
     private int Levels, PlayerX, PlayerY, EtatPlayer = 1, EtatDiamond = 1;
     private boolean Die = true, Live = false, Exploid = true;
@@ -19,7 +19,7 @@ public class ViewPanelFinal extends JPanel{
     private ViewLabel LabelScore, LabelTime, LabelDiamond;
     private ControllerOrder ControlleEtatPlayer = ControllerOrder.STAND_BY;
 
-    public ViewPanelFinal(int Levels){
+    public ViewPanel(int Levels){
         this.Levels = Levels;
         this.Modifie(Levels);
 
@@ -260,19 +260,19 @@ public class ViewPanelFinal extends JPanel{
 
     private BufferedImage AnimationDie(){
         try{
-            BufferedImage Image = ImageIO.read(new File("C:\\Users\\lecra\\Desktop\\Ressource\\Level_"+ this.Levels +"\\Star\\1.png"));
+            BufferedImage Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Star\\1.png"));
             switch(this.getEtatDiamond()){
                 case 1:
-                    Image = ImageIO.read(new File("C:\\Users\\lecra\\Desktop\\Ressource\\Level_"+ this.Levels +"\\Star\\1.png"));
+                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Star\\1.png"));
                     break;
                 case 3:
-                    Image = ImageIO.read(new File("C:\\Users\\lecra\\Desktop\\Ressource\\Level_"+ this.Levels +"\\Star\\2.png"));
+                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Star\\2.png"));
                     break;
                 case 5:
-                    Image = ImageIO.read(new File("C:\\Users\\lecra\\Desktop\\Ressource\\Level_"+ this.Levels +"\\Star\\3.png"));
+                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Star\\3.png"));
                     break;
                 case 7:
-                    Image = ImageIO.read(new File("C:\\Users\\lecra\\Desktop\\Ressource\\Level_"+ this.Levels +"\\Star\\4.png"));
+                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Star\\4.png"));
                     break;
             }
             return Image;
@@ -284,19 +284,19 @@ public class ViewPanelFinal extends JPanel{
 
     private BufferedImage AnimationDiamond(){
         try{
-            BufferedImage Image = ImageIO.read(new File("C:\\Users\\lecra\\Desktop\\Ressource\\Level_"+ this.Levels +"\\Diamond\\1.png"));
+            BufferedImage Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Diamond\\1.png"));
             switch(this.getEtatPlayer()){
                 case 1:
-                    Image = ImageIO.read(new File("C:\\Users\\lecra\\Desktop\\Ressource\\Level_"+ this.Levels +"\\Diamond\\1.png"));
+                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Diamond\\1.png"));
                     break;
                 case 2:
-                    Image = ImageIO.read(new File("C:\\Users\\lecra\\Desktop\\Ressource\\Level_"+ this.Levels +"\\Diamond\\2.png"));
+                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Diamond\\2.png"));
                     break;
                 case 3:
-                    Image = ImageIO.read(new File("C:\\Users\\lecra\\Desktop\\Ressource\\Level_"+ this.Levels +"\\Diamond\\3.png"));
+                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Diamond\\3.png"));
                     break;
                 case 4:
-                    Image = ImageIO.read(new File("C:\\Users\\lecra\\Desktop\\Ressource\\Level_"+ this.Levels +"\\Diamond\\4.png"));
+                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Diamond\\4.png"));
                     break;
             }
             return Image;
@@ -308,19 +308,19 @@ public class ViewPanelFinal extends JPanel{
 
     private BufferedImage AnimationGravity(){
         try{
-            BufferedImage Image = ImageIO.read(new File("C:\\Users\\lecra\\Desktop\\Ressource\\Level_"+ this.Levels +"\\Gravity\\1.png"));
+            BufferedImage Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Gravity\\1.png"));
             switch(this.getEtatPlayer()){
                 case 1:
-                    Image = ImageIO.read(new File("C:\\Users\\lecra\\Desktop\\Ressource\\Level_"+ this.Levels +"\\Gravity\\1.png"));
+                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Gravity\\1.png"));
                     break;
                 case 2:
-                    Image = ImageIO.read(new File("C:\\Users\\lecra\\Desktop\\Ressource\\Level_"+ this.Levels +"\\Gravity\\2.png"));
+                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Gravity\\2.png"));
                     break;
                 case 3:
-                    Image = ImageIO.read(new File("C:\\Users\\lecra\\Desktop\\Ressource\\Level_"+ this.Levels +"\\Gravity\\3.png"));
+                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Gravity\\3.png"));
                     break;
                 case 4:
-                    Image = ImageIO.read(new File("C:\\Users\\lecra\\Desktop\\Ressource\\Level_"+ this.Levels +"\\Gravity\\4.png"));
+                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Gravity\\4.png"));
                     break;
             }
             return Image;
@@ -332,19 +332,19 @@ public class ViewPanelFinal extends JPanel{
 
     private BufferedImage AnimationPeronnage(String Repertory){
         try{
-            BufferedImage Image = ImageIO.read(new File("C:\\Users\\lecra\\Desktop\\Ressource\\Personnage\\"+ Repertory +"\\1.png"));
+            BufferedImage Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Personnage\\"+ Repertory +"\\1.png"));
             switch(this.getEtatPlayer()){
                 case 1:
-                    Image = ImageIO.read(new File("C:\\Users\\lecra\\Desktop\\Ressource\\Personnage\\"+ Repertory +"\\1.png"));
+                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Personnage\\"+ Repertory +"\\1.png"));
                     break;
                 case 2:
-                    Image = ImageIO.read(new File("C:\\Users\\lecra\\Desktop\\Ressource\\Personnage\\"+ Repertory +"\\2.png"));
+                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Personnage\\"+ Repertory +"\\2.png"));
                     break;
                 case 3:
-                    Image = ImageIO.read(new File("C:\\Users\\lecra\\Desktop\\Ressource\\Personnage\\"+ Repertory +"\\3.png"));
+                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Personnage\\"+ Repertory +"\\3.png"));
                     break;
                 case 4:
-                    Image = ImageIO.read(new File("C:\\Users\\lecra\\Desktop\\Ressource\\Personnage\\"+ Repertory +"\\4.png"));
+                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Personnage\\"+ Repertory +"\\4.png"));
                     break;
             }
             return Image;

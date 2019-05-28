@@ -14,21 +14,20 @@ import java.io.IOException;
 import java.util.Observable;
 import java.util.Observer;
 
-public class ViewFrameFinal extends JFrame implements IView, KeyListener, Observer{
+public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
     private int LevelTexture = 3, LevelMaxPlayer = 2;
     private boolean Die, Live;
-    private ViewPanelFinal Panel;
+    private ViewPanel Panel;
     private IController Controller;
     private IModel Model;
 
-
-    public ViewFrameFinal(IModel Model){
+    public ViewFrame(IModel Model){
         this.Model = Model;
-        Model.getObservable().addObserver(this);
+        this.Model.getObservable().addObserver(this);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("Boolder Dash");
         try{
-            this.setIconImage(ImageIO.read(new File("..\\Model\\Ressource\\Personnage\\Left\\1.png")));
+            this.setIconImage(ImageIO.read(new File("..\\model\\Assets\\Ressource\\Personnage\\Left\\1.png")));
         }catch(IOException e){
             e.printStackTrace();
         }
@@ -36,7 +35,7 @@ public class ViewFrameFinal extends JFrame implements IView, KeyListener, Observ
         this.addKeyListener(this);
         this.setSize(512, 512);
         this.setLocationRelativeTo(null);
-        this.Panel = new ViewPanelFinal(this.LevelTexture);
+        this.Panel = new ViewPanel(this.LevelTexture);
         this.setContentPane(this.Panel);
         this.setLayout(null);
         this.setVisible(true);
@@ -120,30 +119,30 @@ public class ViewFrameFinal extends JFrame implements IView, KeyListener, Observ
     }
     public void keyReleased(KeyEvent KeyEvent){}
     public void update(Observable Observable, Object arg){
-        this.Panel.setCurrentWorld(Observable.convertWorld());
+        this.Panel.setCurrentWorld(this.Model.convertWorld());
 
-        this.Panel.setRemainingTime(Observable.getRemainingTime());
-        this.Panel.setRemainingDiamonds(Observable.getRemainingDiamonds());
-        this.Panel.setScore(Observable.getScore());
+        this.Panel.setRemainingTime(this.Model.getRemainingTime());
+        this.Panel.setRemainingDiamonds(this.Model.getRemainingDiamonds());
+        this.Panel.setScore(this.Model.getScore());
 
-        this.setLevelTexture(Observable.getLevelTexture());
-        this.Panel.setLevels(Observable.getLevelTexture());
+        this.setLevelTexture(this.Model.getLevelTexture());
+        this.Panel.setLevels(this.Model.getLevelTexture());
 
-        if(Observable.isWin()){
+        if(this.Model.isWin()){
             this.Panel.setLive(true);
             this.Live = true;
         }
 
-        this.Panel.setPlayerX(Observable.getPlayer().getPositionX());
-        this.Panel.setPlayerY(Observable.getPlayer().getPositionY());
+        this.Panel.setPlayerX(this.Model.getPlayer().getPositionX());
+        this.Panel.setPlayerY(this.Model.getPlayer().getPositionY());
 
-        if(!Observable.getPlayer().isAlive()){
+        if(!(this.Model.getPlayer().isAlive())){
             this.Panel.setDie(true);
             this.Die = true;
         }
 
-        if(!Observable.getExplosions.isEmpty()){
-            this.Panel.setExplosions(Observable.getExplosions);
+        if(!this.Model.getExplosions().isEmpty()){
+            this.Panel.setExplosions(this.Model.getExplosions());
             this.Panel.setExploid(true);
         }
         this.repaint();
