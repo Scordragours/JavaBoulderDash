@@ -1,30 +1,30 @@
 package contract;
 
+import java.util.ArrayList;
 import java.util.Observable;
-
-import entity.HelloWorld;
-
 /**
  * The Interface IModel.
  *
- * @author Jean-Aymeric Diet
+ * @author CANDAT ETIENNE DENEUVE GREGORY
  */
 public interface IModel {
+	int getRemainingTime();
 
-	/**
-	 * Gets the hello world.
-	 *
-	 * @return the helloworld entity
-	 */
-	HelloWorld getHelloWorld();
+	boolean isWin();
 
-	/**
-	 * Load the message.
-	 *
-	 * @param code
-	 *          the code
-	 */
-	void loadHelloWorld(String code);
+	boolean getIsAlivePlayer();
+
+	void setMovePlayer(int x, int y) throws Exception;
+
+	int getRemainingDiamonds();
+
+	int getScore();
+
+	char[][] convertWorld();
+
+	ArrayList<int[]> getExplosions();
+
+	int getLevelTexture();
 
 	/**
 	 * Gets the observable.
