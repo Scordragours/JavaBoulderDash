@@ -30,7 +30,6 @@ public final class Controller implements IController {
 		this.setView(view);
 		this.setModel(model);
 	}
-
 	/**
 	 * 	Set the view.
 	 * @param pview
@@ -47,10 +46,6 @@ public final class Controller implements IController {
 
 	private void setModel(final IModel model) {
 		this.model = model;
-	}
-
-	public void control() {
-
 	}
 
 	/**

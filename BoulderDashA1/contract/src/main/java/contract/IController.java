@@ -3,14 +3,9 @@ package contract;
 /**
  * The Interface IController.
  *
- * @author Jean-Aymeric Diet
+ * @author Nathan PORET
  */
 public interface IController {
-
-	/**
-	 * Control.
-	 */
-	public void control();
 
 	/**
 	 * Order perform.
