@@ -133,11 +133,13 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
             this.Live = true;
         }
 
-        this.Panel.setPlayerX(this.Model.getPlayer().getPositionX());
-        this.Panel.setPlayerY(this.Model.getPlayer().getPositionY());
+        int[] Player = this.Model.getPositionsPlayer();
 
-        if(!(this.Model.getPlayer().isAlive())){
-            this.Panel.setDie(true);
+        this.Panel.setPlayerX(Player[0]);
+        this.Panel.setPlayerY(Player[1]);
+
+        if(!(this.Model.getIsAlivePlayer())){
+            this.Panel.setLive(true);
             this.Die = true;
         }
 
