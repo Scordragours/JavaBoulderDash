@@ -225,9 +225,9 @@ public class ModelTest {
     public void testBuildWorld() throws Exception
     {
         Entity[][] expectedWorld = {
-                {new Wall(this.model, 0,0,EntityType.WALL, false)},
+                {new Wall(this.model, 0,0,EntityType.WALL)},
                 {new Player(this.model,0,1)},
-                {new Wall(this.model,0,2,EntityType.WALL, false)}
+                {new Wall(this.model,0,2,EntityType.WALL)}
         };
 
         Entity[][] currentWorld = null;

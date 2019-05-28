@@ -55,7 +55,7 @@ public abstract class CharacterTest extends EntityTest {
         assertNull(this.entite.getRelativeEntity(-1,-1));
     }
 
-    @Test
+    /*@Test
     public void move() throws Exception
     {
         int[] expectedPosition = new int[]{1,1};
@@ -63,5 +63,5 @@ public abstract class CharacterTest extends EntityTest {
         assertEquals(expectedPosition[1], this.entite.getPositionX());
         assertEquals(expectedPosition[0], this.entite.getPositionY());
         assertNull(this.model.getWorld()[0][1]);
-    }
+    }*/
 }

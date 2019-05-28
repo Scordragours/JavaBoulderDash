@@ -11,13 +11,15 @@ public class RollingRockTest extends SlidingBlockTest {
 
     @Before
     public void setUp() throws Exception {
-        this.model = new Model(2,6);
+        this.model = new Model(40,6);
+
+        outerloop:
         for(Entity[] etab : this.model.getWorld())
             for(Entity e : etab)
-                if(e !=null && e.getType() == EntityType.ROLLINGROCK)
+                if(e != null && e.getType() == EntityType.ROLLINGROCK)
                 {
                     this.entite = e;
-                    break;
+                    break outerloop;
                 }
 
     }
@@ -29,7 +31,7 @@ public class RollingRockTest extends SlidingBlockTest {
     @Test
     public void moved() throws Exception {
         ((RollingRock) this.entite).moved(Direction.RIGHT);
-        int expectedX = 3;
+        int expectedX = 8;
         Assert.assertEquals(expectedX,this.entite.getPositionX());
 
     }

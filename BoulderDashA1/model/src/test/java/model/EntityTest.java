@@ -1,31 +1,41 @@
 package model;
+
+import org.junit.*;
+
+import java.lang.reflect.Field;
+import static org.junit.Assert.*;
+
 /**
  * @author CANDAT ETIENNE AND DENEUVE GREGORY
  * @version 1.0
  */
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-import java.lang.reflect.Field;
+public abstract class EntityTest {
+    protected Entity entite;
+    private static Field[] fields;
+    protected Model model;
 
+    @BeforeClass
+    public static void setUpBeforeClass() throws Exception
+    {
+        Class<?> entiteReflector = Entity.class;
+        fields = entiteReflector.getDeclaredFields();
+        for(Field field : fields)
+        {
+            field.setAccessible(true);
+        }
+    }
 
-
-public  class EntityTest {
-protected Entity entite;
-protected Field[] fields;
-protected Model model;
     @Before
     public void setUp() throws Exception {
-        this.model = new Model(5,6);
-        this.entite = new Dirt(model,5,6);
+        /*this.model = new Model(1,6);
+        this.entite = new Dirt(model,5,6);*/
         //this.entite = this.model.getWorld()[0][0];
-        Class<?> entiteReflector = this.entite.getClass();
+        /*Class<?> entiteReflector = Entity.class;
         this.fields = entiteReflector.getDeclaredFields();
         for(Field field : this.fields)
         {
             field.setAccessible(true);
-        }
+        }*/
 
     }
 
@@ -34,66 +44,71 @@ protected Model model;
     }
 
     @Test
-    public void TestGetPositionX() throws IllegalAccessException {
+    public void testGetPositionX() throws IllegalAccessException {
 
-        int expectedPositionX = 5;
-        for(Field field : this.fields)
+        int expectedPositionX = 0;
+        for(Field field : fields)
         {
             if(field.getName().equals("positionX"))
             {
-                field.get(this.entite);
+                expectedPositionX = (int)field.get(this.entite);
             }
         }
 
-        Assert.assertEquals(expectedPositionX,this.entite.getPositionX());
+        assertEquals(expectedPositionX,this.entite.getPositionX());
     }
 
     @Test
-    public void TestGetPositionY() throws IllegalAccessException {
+    public void testGetPositionY() throws IllegalAccessException {
 
-        int expectedPositionY = 6;
-        for(Field field : this.fields)
+        int expectedPositionY = 0;
+        for(Field field : fields)
         {
             if(field.getName().equals("positionY"))
             {
-                field.get(this.entite);
+                expectedPositionY = (int)field.get(this.entite);
             }
         }
 
-        Assert.assertEquals(expectedPositionY,this.entite.getPositionY());
+        assertEquals(expectedPositionY,this.entite.getPositionY());
     }
 
     @Test
-    public void TestSetPositionX() throws Exception {
+    public void testSetPositionX() throws Exception {
         int expectedX=15;
         this.entite.setPositionX(expectedX);
-        for(Field field : this.fields)
+        int currentX = 0;
+
+        for(Field field : fields)
         {
             if(field.getName().equals("positionX"))
             {
-                field.get(this.entite);
+                currentX = (int)field.get(this.entite);
             }
         }
 
-        Assert.assertEquals(expectedX,this.entite.getPositionX());
+        assertEquals(expectedX,currentX);
     }
 
     @Test
-    public void TestSetPositionY() throws Exception{
+    public void testSetPositionY() throws Exception{
         int expectedY = 10;
         this.entite.setPositionY(expectedY);
-        for(Field field : this.fields)
+        int currentY = 0;
+
+        for(Field field : fields)
         {
             if(field.getName().equals("positionY"))
             {
-                field.get(this.entite);
+                currentY = (int)field.get(this.entite);
             }
         }
-            Assert.assertEquals(expectedY, this.entite.getPositionY());
+
+        assertEquals(expectedY, currentY);
     }
 
     @Test
-    public void TestYNotNegative() throws Exception
+    public void testYNotNegative() throws Exception
     {
      try
      {
@@ -102,11 +117,11 @@ protected Model model;
      }catch(final Exception e)
      {
          final String expected="The Y position cannot be negative";
-         Assert.assertEquals(expected,e.getMessage());
+         assertEquals(expected,e.getMessage());
      }
     }
     @Test
-    public void TestXNotNegative() throws Exception
+    public void testXNotNegative() throws Exception
     {
         try
         {
@@ -114,30 +129,37 @@ protected Model model;
         }catch (final Exception e)
         {
             final String expected="The X position cannot be negative";
-            Assert.assertEquals(expected,e.getMessage());
+            assertEquals(expected,e.getMessage());
         }
     }
+
     @Test
-    public void TestGetType() throws IllegalAccessException
+    public void testGetType() throws IllegalAccessException
     {
-        EntityType expectedType =  EntityType.DIRT;
-        for(Field field : this.fields)
+        EntityType expectedType =  null;
+        for(Field field : fields)
         {
             if(field.getName().equals("type"))
             {
-                field.get(this.entite);
+                expectedType = (EntityType)field.get(this.entite);
             }
         }
 
-        Assert.assertEquals(expectedType,this.entite.getType());
+        assertEquals(expectedType,this.entite.getType());
     }
 
-
-
     @Test
-    public void TestGetRelativeEntity() {
-        Entity expected = model.getWorld()[1][0];
+    public void TestGetRelativeEntity() throws Exception
+    {
+        int entityPosX = 0, entityPosY = 0;
 
-        Assert.assertEquals(expected,this.entite.getRelativeEntity(-5,-5));
+        for(Field field : fields)
+        {
+            if(field.getName().equals("positionX")) { entityPosX = (int)field.get(this.entite); }
+            if(field.getName().equals("positionY")) { entityPosY = (int)field.get(this.entite); }
+        }
+
+        Entity expected = model.getWorld()[entityPosY-1][entityPosX-1];
+        assertEquals(expected,this.entite.getRelativeEntity(-1,-1));
     }
 }

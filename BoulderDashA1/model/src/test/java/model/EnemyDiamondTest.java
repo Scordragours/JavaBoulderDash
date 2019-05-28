@@ -13,7 +13,7 @@ public class EnemyDiamondTest extends EnemyTest {
 
         for(Entity[] etab : this.model.getWorld())
             for(Entity e : etab)
-                if(e.getType() == EntityType.ENEMYDIAMOND)
+                if(e != null && e.getType() == EntityType.ENEMYDIAMOND)
                     this.entite = e;
     }
 

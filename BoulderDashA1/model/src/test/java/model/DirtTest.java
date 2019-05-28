@@ -9,17 +9,17 @@ import java.lang.reflect.Field;
 
 
 public class DirtTest extends EntityTest {
-    @Override
+
     @Before
     public void setUp() throws Exception {
-
+        this.model = new Model(1,6);
         this.entite = new Dirt(model,5,6);
-        Class<?> entiteReflector = this.entite.getClass();
+        /*Class<?> entiteReflector = this.entite.getClass();
         this.fields = entiteReflector.getDeclaredFields();
         for(Field field : this.fields)
         {
             field.setAccessible(true);
-        }
+        }*/
     }
 
 

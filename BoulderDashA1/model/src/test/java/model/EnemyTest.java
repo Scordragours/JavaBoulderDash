@@ -18,12 +18,14 @@ public abstract class EnemyTest extends CharacterTest{
     }
 
     @Test
-    public void move() throws Exception
+    public void testMove() throws Exception
     {
-        int[] expectedPosition = new int[]{1,1};
+        int antX = this.entite.getPositionX(), antY = this.entite.getPositionY();
+        int[] expectedPosition = new int[]{antX + 1, antY};
+
         ((Enemy)this.entite).move(1,0);
-        assertEquals(expectedPosition[1], this.entite.getPositionX());
-        assertEquals(expectedPosition[0], this.entite.getPositionY());
-        assertNull(this.model.getWorld()[0][1]);
+        assertEquals(expectedPosition[0], this.entite.getPositionX());
+        assertEquals(expectedPosition[1], this.entite.getPositionY());
+        assertNull(this.model.getWorld()[antY][antX]);
     }
 }

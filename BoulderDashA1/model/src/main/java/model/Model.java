@@ -83,7 +83,7 @@ public final class Model extends Observable implements IModel {
 						world[y][x] = new Diamond(this, x,y);
 						break;
 					case 'I' :
-						world[y][x] = new Wall(this, x,y, EntityType.WALL, true);
+						world[y][x] = new Wall(this, x,y, EntityType.WALL);
 						break;
 					case '1' :
 						world[y][x] = new EnemyDiamond(this, x,y);
@@ -95,7 +95,7 @@ public final class Model extends Observable implements IModel {
 						world[y][x] = new Exit(this, x,y);
 						break;
 					case 'O' :
-						world[y][x] = new Wall(this, x,y, EntityType.OUTLINE, false);
+						world[y][x] = new Wall(this, x,y, EntityType.OUTLINE);
 						break;
 					default:
 						world[y][x] = null;
