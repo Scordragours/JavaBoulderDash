@@ -4,8 +4,10 @@ import contract.ControllerOrder;
 import contract.IController;
 import contract.IModel;
 import contract.IView;
+
 /**
- * The class Controller
+ * The Controller class.
+ *
  * @Author Nathan PORET
  */
 
@@ -32,6 +34,7 @@ public final class Controller implements IController {
 	}
 	/**
 	 * 	Set the view.
+	 *
 	 * @param pview
 	 */
 
@@ -41,6 +44,7 @@ public final class Controller implements IController {
 
 	/**
 	 *  Set the model.
+	 *
 	 * @param model
 	 */
 
@@ -50,6 +54,7 @@ public final class Controller implements IController {
 
 	/**
 	 * Control if the time when the player is immobile.
+	 *
 	 * @param timerActive
 	 */
 
@@ -58,7 +63,7 @@ public final class Controller implements IController {
 			if (this.timer == 0) {
 				this.timer = this.model.getRemainingTime();
 			}
-			if ((this.timer - this.model.getRemainingTime()) >= 3) {
+			if ((this.timer - this.model.getRemainingTime()) >= 1) {
 				this.view.setStandBy(true);
 			}
 		}
@@ -69,7 +74,7 @@ public final class Controller implements IController {
 	}
 
 	/**
-	 * Look the movement of the player and his status.
+	 * Look the movement of the player.
 	 *
 	 * @param controllerOrder
 	 *            the controller order
