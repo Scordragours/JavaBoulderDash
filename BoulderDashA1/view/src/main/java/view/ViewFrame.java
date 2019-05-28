@@ -58,6 +58,13 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
         return this.Controller;
     }
 
+    public void setStandBy(boolean StandBy){
+        if(StandBy){
+            this.Panel.setControlleEtatPlayer(ControllerOrder.STAND_BY);
+            this.setLevelMaxPlayer(2);
+        }
+    }
+
     public void Run(){
         while(true){
             this.Panel.repaint();
@@ -99,12 +106,7 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
                 return ControllerOrder.STAND_BY;
         }
     }
-    public void setStandBy(boolean StandBy){
-        if(StandBy){
-            this.Panel.setControlleEtatPlayer(ControllerOrder.STAND_BY);
-            this.setLevelMaxPlayer(2);
-        }
-    }
+
     public void keyTyped(KeyEvent KeyEvent){}
     public void keyPressed(KeyEvent KeyEventTouch){
         if(Die||Live){
@@ -118,6 +120,7 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
         }
     }
     public void keyReleased(KeyEvent KeyEvent){}
+
     public void update(Observable Observable, Object arg){
         this.Panel.setCurrentWorld(this.Model.convertWorld());
 

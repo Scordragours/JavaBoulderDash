@@ -107,8 +107,6 @@ public class ViewPanel extends JPanel{
         return this.Explosions;
     }
 
-
-
     protected void setEtatPlayer(int EtatPlayer){
         this.EtatPlayer = EtatPlayer;
     }
@@ -193,7 +191,7 @@ public class ViewPanel extends JPanel{
                     for(int i = 0; i <= this.Explosions.size()-1; i++){
                         int[] ExplosionXY = this.Explosions.get(i);
                         if(!Test){
-                            if((this.Exploid)&&(ExplosionXY[0]*32 == x)&&(ExplosionXY[1]*32 == y)){
+                            if((this.getExploid())&&(ExplosionXY[0]*32 == x)&&(ExplosionXY[1]*32 == y)){
                                 Test = true;
                                 Image = this.AnimationDie();
                             }
@@ -201,14 +199,15 @@ public class ViewPanel extends JPanel{
                     }
                     Graphic.drawImage(Image, x - X1, y - Y1, 32, 32, this);
                     Test = false;
+                }else if(this.getLive()){
+
                 }else{
-                    BufferedImage Image = this.TestCase(this.CurrentWorld[y/32][x/32]);
+                    BufferedImage Image = this.TestCase(this.getCurrentWorldChar(y/32, x/32));
                     Graphic.drawImage(Image, x - X1, y - Y1, 32, 32, this);
                 }
             }
         }
     }
-
 
     private BufferedImage TestCase(char Char){
         BufferedImage Image = null;
@@ -238,21 +237,30 @@ public class ViewPanel extends JPanel{
                         break;
                 }
                 break;
-            case 'a':
+            case 'B':
                 Image = this.Breakable;
                 break;
-            case '0':
+            case 'O':
                 Image = this.Delemitation_Block;
                 break;
-            case '1':
+            case 'I':
                 Image = this.Delemitation_Block;
                 break;
-            case '*':
+            case 'R':
                 Image = this.AnimationGravity();
                 break;
-            case '#':
+            case 'D':
                 Image = this.AnimationDiamond();
                 break;
+            case 'E':
+                // Waiting for Exit.
+                break;
+            case '1':
+                // Waiting for Enemy 1.
+            case '2':
+                // Waiting for Enemy 2.
+            case  ' ':
+                // Nothing.
         }
         return Image;
     }
