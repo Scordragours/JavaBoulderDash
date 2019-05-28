@@ -14,6 +14,8 @@ public interface IModel {
 
 	boolean getIsAlivePlayer();
 
+	int[] getPositionsPlayer();
+
 	void setMovePlayer(int x, int y) throws Exception;
 
 	int getRemainingDiamonds();

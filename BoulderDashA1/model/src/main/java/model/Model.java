@@ -254,4 +254,12 @@ public final class Model extends Observable implements IModel {
     {
         this.getPlayer().move(x, y);
     }
+
+    public int[] getPositionsPlayer()
+	{
+		int[] pos = new int[2];
+		pos[0] = this.getPlayer().getPositionX();
+		pos[1] = this.getPlayer().getPositionY();
+		return pos;
+	}
 }
