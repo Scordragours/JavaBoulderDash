@@ -238,4 +238,14 @@ public final class Model extends Observable implements IModel {
     }
 
     public ArrayList<int[]> getExplosions() { return this.explosions; }
+
+    public boolean getIsAlivePlayer()
+    {
+        return this.getPlayer().isAlive();
+    }
+
+    public void setMovePlayer(int x, int y) throws Exception
+    {
+        this.getPlayer().move(x, y);
+    }
 }

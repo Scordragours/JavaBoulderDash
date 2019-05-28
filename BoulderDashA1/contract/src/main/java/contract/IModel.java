@@ -1,5 +1,4 @@
 package contract;
-import model.Player;
 
 import java.util.ArrayList;
 import java.util.Observable;
@@ -13,7 +12,9 @@ public interface IModel {
 
 	boolean isWin();
 
-	Player getPlayer();
+	boolean getIsAlivePlayer();
+
+	void setMovePlayer(int x, int y) throws Exception;
 
 	int getRemainingDiamonds();
 

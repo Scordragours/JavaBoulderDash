@@ -4,10 +4,9 @@
  */
 package main;
 
-import contract.ControllerOrder;
-import controller.Controller;
 import model.Model;
-import view.View;
+import model.TimeCounter;
+import model.UpdateWorld;
 
 /**
  * The Class Main.
@@ -22,13 +21,12 @@ public abstract class Main {
      * @param args
      *            the arguments
      */
-    public static void main(final String[] args) {
-        final Model model = new Model();
-        final View view = new View(model);
-        final Controller controller = new Controller(view, model);
-        view.setController(controller);
+    public static void main(final String[] args) throws Exception {
+        Model model = new Model(41,1);
 
-        controller.control();
-        controller.orderPerform(ControllerOrder.English);
+        UpdateWorld uw = new UpdateWorld(model);
+        uw.start();
+        TimeCounter tc = new TimeCounter(model);
+        tc.start();
     }
 }

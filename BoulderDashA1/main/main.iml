@@ -63,6 +63,7 @@
     <orderEntry type="library" name="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER" level="application" />
     <orderEntry type="module" module-name="view" />
     <orderEntry type="module" module-name="contract" />
+    <orderEntry type="module" module-name="entity" />
     <orderEntry type="module" module-name="model" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.39" level="project" />
     <orderEntry type="module" module-name="controller" />

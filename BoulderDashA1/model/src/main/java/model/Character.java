@@ -2,7 +2,7 @@ package model;
 
 public abstract class Character extends Entity {
 
-    protected int[][] positions = {
+    protected final int[][] POSITIONS = {
             {0,0},
             {0,1},
             {1,1},
@@ -21,7 +21,7 @@ public abstract class Character extends Entity {
 
     public void explode(boolean generateDiamonds) throws Exception
     {
-        for(int[] pos : this.positions)
+        for(int[] pos : this.POSITIONS)
         {
             if(getRelativeEntity(pos[0], pos[1]) != null)
             {
