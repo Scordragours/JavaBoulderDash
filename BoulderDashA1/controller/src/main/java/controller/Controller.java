@@ -64,12 +64,12 @@ public final class Controller implements IController {
 				this.timer = this.model.getRemainingTime();
 			}
 			if ((this.timer - this.model.getRemainingTime()) >= 3) {
-				this.view.setStanby(true);
+				this.view.setStandBy(true);
 			}
 		}
 		else {
 			this.timer = 0;
-			this.view.setStanby(false);
+			this.view.setStandBy(false);
 		}
 	}
 
@@ -83,19 +83,19 @@ public final class Controller implements IController {
 	public void orderPerform(final ControllerOrder controllerOrder) throws Exception {
 		switch (controllerOrder) {
 			case LEFT:
-				this.model.getPlayer().move(-1,0);
+				this.model.setMovePlayer(-1,0);
 				MotionLessControl(false);
 				break;
 			case RIGHT:
-				this.model.getPlayer().move(1,0);
+				this.model.setMovePlayer(1,0);
 				MotionLessControl(false);
 				break;
 			case UP:
-				this.model.getPlayer().move(0,-1);
+				this.model.setMovePlayer(0,-1);
 				MotionLessControl(false);
 				break;
 			case DOWN:
-				this.model.getPlayer().move(0,1);
+				this.model.setMovePlayer(0,1);
 				MotionLessControl(false);
 				break;
 			default:
