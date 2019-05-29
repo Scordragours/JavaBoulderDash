@@ -14,14 +14,42 @@ import java.io.IOException;
 import java.util.Observable;
 import java.util.Observer;
 
+/**
+ * The class View Frame.
+ *
+ * @author Arthur Lecras
+ * @see javax.swing.JFrame
+ * @see contract.IView
+ * @see java.awt.event.KeyListener
+ * @see java.util.Observer
+ *
+ */
 public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
-    private int LevelTexture = 3, LevelMaxPlayer = 2;
+    /** Texture condition with respect to time. */
+    private int LevelTexture = 5, LevelMaxPlayer = 2;
+
+    /**  */
     private boolean Die, Live, Exit;
+
+    /** View panel */
     private ViewPanel Panel;
+
+    /** Project controller module. */
     private IController Controller;
+
+    /** Project model module. */
     private IModel Model;
+
+    /** Interprets the project path for images. */
     protected static String Chemin = System.getProperty("user.dir") +"\\BoulderDashA1\\model\\src\\main\\resources\\Assets\\";
 
+    /**
+     *
+     * Frame class constructor.
+     *
+     * @param Model Project model module.
+     *
+     */
     public ViewFrame(IModel Model){
         System.out.println(this.Chemin);
         this.Model = Model;
@@ -43,23 +71,61 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
         this.setVisible(true);
     }
 
-
+    /**
+     * Defines the level of the textures.
+     *
+     * @param LevelTexture Number of textures.
+     *
+     */
     private void setLevelTexture(int LevelTexture){
         this.LevelTexture = LevelTexture;
     }
+
+    /**
+     * Defined the character's texture number for annimation.
+     *
+     * @param LevelMaxPlayer Defines the number of animation of the character.
+     *
+     */
     private void setLevelMaxPlayer(int LevelMaxPlayer){
         this.LevelMaxPlayer = LevelMaxPlayer;
     }
+
+    /**
+     * Allows you to retrieve the character's texture number for annimation.
+     *
+     * @return int
+     *
+     */
     private int getLevelMaxPlayer(){
         return this.LevelMaxPlayer;
     }
+
+    /**
+     * Defined the controller.
+     *
+     * @param Controller Defined the controller.
+     *
+     */
     public void setController(IController Controller){
         this.Controller = Controller;
     }
+
+    /**
+     * Allows you to retrieve the controller.
+     *
+     * @return IController
+     *
+     */
     public IController getControler(){
         return this.Controller;
     }
 
+    /**
+     * Define the character in fixed vision.
+     *
+     * @param StandBy Recovers whether the character is fixed or not.
+     */
     public void setStandBy(boolean StandBy){
         if(StandBy){
             this.Panel.setControlleEtatPlayer(ControllerOrder.STAND_BY);
@@ -67,6 +133,10 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
         }
     }
 
+    /**
+     * Allows to start the display of the game every 150 miliseconds.
+     *
+     */
     public void Run(){
         while(true){
             this.Panel.repaint();
@@ -95,7 +165,14 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
             }
         }
     }
-    protected ControllerOrder KeyCodeToControllerOrder(final int keyCode){
+
+    /**
+     * Returns the key code press.
+     *
+     * @return ControllerOrder
+     * @param keyCode Detect key code.
+     */
+    protected ControllerOrder KeyCodeToControllerOrder(int keyCode){
         this.setLevelMaxPlayer(3);
         switch(keyCode){
             case KeyEvent.VK_LEFT:
@@ -118,7 +195,15 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
                 return ControllerOrder.STAND_BY;
         }
     }
+
+    /**
+     * @see java.awt.event.KeyListener
+     */
     public void keyTyped(KeyEvent KeyEvent){}
+
+    /**
+     * @see java.awt.event.KeyListener
+     */
     public void keyPressed(KeyEvent KeyEventTouch){
         if(Die||Live){}else{
             try{
@@ -129,7 +214,15 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
         }
         this.Panel.repaint();
     }
+
+    /**
+     * @see java.awt.event.KeyListener
+     */
     public void keyReleased(KeyEvent KeyEvent){}
+
+    /**
+     * @see java.util.Observer
+     */
     public void update(Observable Observable, Object arg){
         this.Panel.setCurrentWorld(this.Model.convertWorld());
 
@@ -168,6 +261,7 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
             this.Panel.setExploid(false);
         }
 
+        this.Panel.Modifie();
         this.repaint();
     }
 }
