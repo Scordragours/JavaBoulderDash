@@ -52,7 +52,7 @@ public final class Model extends Observable implements IModel {
 	}
 
 	/**
-	 * Load the level from the database
+	 * Load the level from the database.
 	 *
 	 * @param levelID
 	 * 			the ID of the level in the database
@@ -68,7 +68,7 @@ public final class Model extends Observable implements IModel {
 	}
 
 	/**
-	 * Convert the level extracted from the database to an usable Entity array in two dimension
+	 * Convert the level extracted from the database to an usable Entity array in two dimension.
 	 */
 	private void buildWorld()
 	{
@@ -136,15 +136,26 @@ public final class Model extends Observable implements IModel {
 	public Observable getObservable() { return this; }
 
 	/**
-	 * Gets the level texture type
+	 * Gets the level texture type.
 	 *
 	 * @return the level texture type
 	 */
 	public int getLevelTexture() { return this.levelTexture; }
 
-	public Level getLevel() { return this.level; }
+	/**
+	 * Gets the level.
+	 *
+	 * @return the level
+	 */
+	Level getLevel() { return this.level; }
 
-	public void setRemainingTime(int remainingTime)
+	/**
+	 * Sets the remaining time.
+	 *
+	 * @param remainingTime
+	 * 			the remaining time
+	 */
+	void setRemainingTime(int remainingTime)
 	{
 		this.remainingTime = remainingTime;
 
@@ -158,11 +169,22 @@ public final class Model extends Observable implements IModel {
 		notifyObservers();
 	}
 
+	/**
+	 * Gets the remaining time.
+	 *
+	 * @return the remaining time
+	 */
 	public int getRemainingTime() { return this.remainingTime; }
 
-	public void setRemainingDiamonds(int remainingDiamond)
+	/**
+	 * Sets the remaining diamonds.
+	 *
+	 * @param remainingDiamonds
+	 * 			the remaining diamonds
+	 */
+	void setRemainingDiamonds(int remainingDiamonds)
 	{
-		this.remainingDiamonds = remainingDiamond;
+		this.remainingDiamonds = remainingDiamonds;
 
 		if(this.remainingDiamonds <= 0)
         {
@@ -174,15 +196,55 @@ public final class Model extends Observable implements IModel {
 		setChanged();
 		notifyObservers();
 	}
+
+	/**
+	 * Gets the remaining diamonds.
+	 *
+	 * @return the remaining diamonds
+	 */
 	public int getRemainingDiamonds() { return this.remainingDiamonds; }
 
+	/**
+	 * Gets the score.
+	 *
+	 * @return the score
+	 */
 	public int getScore() { return this.score; }
+
+	/**
+	 * Sets the score.
+	 *
+	 * @param score
+	 * 			the score
+	 */
 	public void setScore(int score) { this.score = score; }
 
+	/**
+	 * Gets the world.
+	 *
+	 * @return the world
+	 */
 	public Entity[][] getWorld() { return this.world; }
+
+	/**
+	 * Gets the player.
+	 *
+	 * @return the player
+	 */
 	public Player getPlayer() { return this.player; }
 
-
+	/**
+	 * Update a slot in the world array and notify the observers.
+	 *
+	 * @param x
+	 * 			the x position of the updated slot
+	 * @param y
+	 * 			the y position of the updated slot
+	 * @param entity
+	 * 			the entity put in the slot (can be null)
+	 *
+	 * @throws Exception when a bad position is given in parameter
+	 */
 	public void updateEntity(int x, int y, Entity entity) throws Exception
 	{
 	    if(entity != null)
@@ -197,6 +259,10 @@ public final class Model extends Observable implements IModel {
 		notifyObservers();
 	}
 
+    /**
+     * up
+     * @throws Exception up
+     */
 	public void updateSlidingBlocks() throws Exception
 	{
 		for(Entity[] line : world)
