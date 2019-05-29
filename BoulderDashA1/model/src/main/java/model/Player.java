@@ -82,7 +82,7 @@ public class Player extends Character {
 
     /**
      * Check if player is steel alive
-     * @return
+     * @return A boolean
      */
     public boolean isAlive()
     {
