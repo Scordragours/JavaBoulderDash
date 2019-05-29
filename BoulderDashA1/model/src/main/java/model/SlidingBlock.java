@@ -1,10 +1,11 @@
 package model;
 
 /**
+ * The SliddingBlock class
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
 public abstract class SlidingBlock extends Entity {
-
+    /** The asMoove attribute is whether the entity is in motion or not  */
     public boolean asMove;
 
     public SlidingBlock(Model model,int x, int y, EntityType type)

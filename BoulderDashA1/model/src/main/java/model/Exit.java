@@ -1,9 +1,11 @@
 package model;
 
 /**
+ * Exit class
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
 public class Exit extends Entity {
+    /** Whether the output is visible or not */
     private boolean open;
 
     /**

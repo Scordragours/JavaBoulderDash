@@ -1,17 +1,18 @@
 package model;
 /**
- * The class Controller
+ * The class Entity
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
 
 public abstract class Entity {
-    /**
-     *
-     */
+   /** The model*/
     protected Model model;
+    /** The X position */
     private int positionX;
+    /** The Y position */
     private int positionY;
+    /** The type of entity */
     private EntityType type;
     /**
      * This the entity constructor

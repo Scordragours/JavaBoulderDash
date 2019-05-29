@@ -1,6 +1,7 @@
 package model;
 
 /**
+ * The RollingRock class
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
 public class RollingRock extends SlidingBlock {

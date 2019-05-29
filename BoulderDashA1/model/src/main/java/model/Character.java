@@ -1,10 +1,11 @@
 package model;
 
 /**
+ * Character class
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
 public abstract class Character extends Entity {
-
+    /** This attribute is composed of every position possible */
     protected final int[][] POSITIONS = {
             {0,0},
             {0,1},
@@ -29,6 +30,11 @@ public abstract class Character extends Entity {
         super(model,x,y,type);
     }
 
+    /**
+     * If the entity explode
+     * @param generateDiamonds the boolean allows
+     * @throws Exception if position values is negative
+     */
     public void explode(boolean generateDiamonds) throws Exception
     {
         for(int[] pos : this.POSITIONS)
@@ -61,7 +67,17 @@ public abstract class Character extends Entity {
         }
     }
 
+    /**
+     * The movement of player or enemy
+     * @param x recovers the X position
+     * @param y recovers the Y position
+     * @throws Exception if position values is negative
+     */
     public abstract void move(int x, int y) throws Exception;
 
+    /**
+     * Enemy or player die
+     * @throws Exception if position values is negative
+     */
     public abstract void die() throws Exception;
 }
