@@ -27,7 +27,7 @@ public abstract class Main {
      *          for bad moving assignation
      */
     public static void main(final String[] args) throws Exception {
-        Model model = new Model(1,1);
+        Model model = new Model(1,5);
 
         UpdateWorld uw = new UpdateWorld(model);
         uw.start();

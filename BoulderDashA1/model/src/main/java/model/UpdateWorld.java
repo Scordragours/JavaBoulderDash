@@ -15,7 +15,6 @@ public class UpdateWorld extends Thread {
         {
             try
             {
-                System.out.println("boucle");
                 this.model.updateSlidingBlocks();
 
                 this.model.updateEnemies();

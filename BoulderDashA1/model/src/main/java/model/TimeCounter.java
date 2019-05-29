@@ -18,9 +18,7 @@ public class TimeCounter extends Thread {
                 if(!this.model.isWin() && this.model.getIsAlivePlayer())
                 {
                     Thread.sleep(1000);
-                    System.out.println("sec-1");
-                    this.model.setRemainingTime(this.model.getRemainingTime()-1);
-                    System.out.println("time remaining " + this.model.getRemainingTime());
+                    this.model.setRemainingTime(this.model.getRemainingTime()-1);;
                 }
                 else if(this.model.isWin() && this.model.getIsAlivePlayer())
                 {

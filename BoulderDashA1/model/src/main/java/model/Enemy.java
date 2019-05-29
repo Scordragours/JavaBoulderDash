@@ -66,7 +66,13 @@ public abstract class Enemy extends Character{
         if(!this.hasMove) {
             switch (lastDirection) {
                 case UP:
-                    if (getRelativeEntity(1, 0) == null) {
+                    if (getRelativeEntity(1, 0) == null && getRelativeEntity(0, -1) == null && getRelativeEntity(-1, 0) == null && getRelativeEntity(0, 1) == null && getRelativeEntity(1, 1) == null) {
+                        move(0, -1);
+                        this.lastDirection = Direction.UP;
+                    } else if (getRelativeEntity(1, 0) == null && getRelativeEntity(1, 1) == null) {
+                        move(-1, 0);
+                        this.lastDirection = Direction.LEFT;
+                    } else if (getRelativeEntity(1, 0) == null) {
                         move(1, 0);
                         this.lastDirection = Direction.RIGHT;
                     } else if (getRelativeEntity(0, -1) == null) {
@@ -81,7 +87,13 @@ public abstract class Enemy extends Character{
                     }
                     break;
                 case DOWN:
-                    if (getRelativeEntity(-1, 0) == null) {
+                    if (getRelativeEntity(1, 0) == null && getRelativeEntity(0, -1) == null && getRelativeEntity(-1, 0) == null && getRelativeEntity(0, 1) == null && getRelativeEntity(-1, -1) == null) {
+                        move(0, 1);
+                        this.lastDirection = Direction.DOWN;
+                    } else if (getRelativeEntity(-1, 0) == null && getRelativeEntity(-1, -1) == null) {
+                        move(1, 0);
+                        this.lastDirection = Direction.RIGHT;
+                    } else if (getRelativeEntity(-1, 0) == null) {
                         move(-1, 0);
                         this.lastDirection = Direction.LEFT;
                     } else if (getRelativeEntity(0, 1) == null) {
@@ -96,7 +108,13 @@ public abstract class Enemy extends Character{
                     }
                     break;
                 case LEFT:
-                    if (getRelativeEntity(0, -1) == null) {
+                    if (getRelativeEntity(1, 0) == null && getRelativeEntity(0, -1) == null && getRelativeEntity(-1, 0) == null && getRelativeEntity(0, 1) == null && getRelativeEntity(1, -1) == null) {
+                        move(-1, 0);
+                        this.lastDirection = Direction.LEFT;
+                    } else if (getRelativeEntity(0, -1) == null && getRelativeEntity(1, -1) == null){
+                        move(0, 1);
+                        this.lastDirection = Direction.DOWN;
+                    }else if (getRelativeEntity(0, -1) == null) {
                         move(0, -1);
                         this.lastDirection = Direction.UP;
                     } else if (getRelativeEntity(-1, 0) == null) {
@@ -111,7 +129,13 @@ public abstract class Enemy extends Character{
                     }
                     break;
                 case RIGHT:
-                    if (getRelativeEntity(0, 1) == null) {
+                    if (getRelativeEntity(1, 0) == null && getRelativeEntity(0, -1) == null && getRelativeEntity(-1, 0) == null && getRelativeEntity(0, 1) == null && getRelativeEntity(-1, 1) == null){
+                        move(1, 0);
+                        this.lastDirection = Direction.RIGHT;
+                    } else if(getRelativeEntity(0, 1) == null && getRelativeEntity(-1, 1) == null){
+                        move(0, -1);
+                        this.lastDirection = Direction.UP;
+                    }else if (getRelativeEntity(0, 1) == null) {
                         move(0, 1);
                         this.lastDirection = Direction.DOWN;
                     } else if (getRelativeEntity(1, 0) == null) {
