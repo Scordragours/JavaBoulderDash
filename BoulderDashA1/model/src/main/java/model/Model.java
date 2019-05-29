@@ -12,7 +12,7 @@ import entity.Level;
 /**
  * The Class Model.
  *
- * @author CANDANT ETIENNE AND DENEUVE GR2GORY
+ * @author CANDANT ETIENNE AND DENEUVE GREGORY
  */
 public final class Model extends Observable implements IModel {
 
@@ -25,7 +25,18 @@ public final class Model extends Observable implements IModel {
 	private int levelTexture;
 	private boolean win;
 	private ArrayList<int[]> explosions = new ArrayList<>();
+	private Exit exit;
 
+	/**
+	 * Instantiates a new model.
+	 *
+	 * @param levelID
+	 * 			the ID of the level in the database
+	 * @param levelTexture
+	 * 			the textures wanted
+	 * @throws Exception
+	 * 			when the levelTexture is out of range
+	 */
 	public Model(int levelID, int levelTexture) throws Exception
 	{
 	    if ((levelTexture<1) || (levelTexture>6))
@@ -40,6 +51,12 @@ public final class Model extends Observable implements IModel {
 		this.buildWorld();
 	}
 
+	/**
+	 * Load the level from the database
+	 *
+	 * @param levelID
+	 * 			the ID of the level in the database
+	 */
 	private void loadLevel(final int levelID)
 	{
 		try {
@@ -50,6 +67,9 @@ public final class Model extends Observable implements IModel {
 		}
 	}
 
+	/**
+	 * Convert the level extracted from the database to an usable Entity array in two dimension
+	 */
 	private void buildWorld()
 	{
 		int x = 0;
@@ -93,6 +113,7 @@ public final class Model extends Observable implements IModel {
 						break;
 					case 'E' :
 						world[y][x] = new Exit(this, x,y);
+						this.exit = (Exit)world[y][x];
 						break;
 					case 'O' :
 						world[y][x] = new Wall(this, x,y, EntityType.OUTLINE);
@@ -107,8 +128,18 @@ public final class Model extends Observable implements IModel {
 		}
 	}
 
+	/**
+	 * Gets the observable.
+	 *
+	 * @return the observable
+	 */
 	public Observable getObservable() { return this; }
 
+	/**
+	 * Gets the level texture type
+	 *
+	 * @return the level texture type
+	 */
 	public int getLevelTexture() { return this.levelTexture; }
 
 	public Level getLevel() { return this.level; }
@@ -136,10 +167,8 @@ public final class Model extends Observable implements IModel {
 		if(this.remainingDiamonds <= 0)
         {
             this.remainingDiamonds = 0;
-            for(Entity[] eTab : this.world)
-                for(Entity e : eTab)
-                    if(e != null && e.getType() == EntityType.EXIT)
-                        ((Exit)e).openned();
+
+            this.exit.openned();
         }
 
 		setChanged();
@@ -272,5 +301,10 @@ public final class Model extends Observable implements IModel {
 		pos[0] = this.getPlayer().getPositionX();
 		pos[1] = this.getPlayer().getPositionY();
 		return pos;
+	}
+
+	public boolean getIsOpenExit()
+	{
+		return this.exit.isOpen();
 	}
 }

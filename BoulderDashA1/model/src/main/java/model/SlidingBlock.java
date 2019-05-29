@@ -27,10 +27,15 @@ public abstract class SlidingBlock extends Entity {
         this.model.updateEntity(getPositionX(), getPositionY() + 1,this);
         this.model.updateEntity(antX, antY,null);
 
-        if(getRelativeEntity(0,1) != null && getRelativeEntity(0,1).getType() == EntityType.PLAYER)//this.model.getPlayer().getPositionX() == this.getPositionX()&& this.model.getPlayer().getPositionY()-1 == this.getPositionY())
+        if(getRelativeEntity(0,1) != null && getRelativeEntity(0,1).getType() == EntityType.PLAYER)
         {
             this.model.getPlayer().explode(false);
         }
+        if(getRelativeEntity(0,1) != null && (getRelativeEntity(0,1).getType() == EntityType.ENEMYDIAMOND || getRelativeEntity(0,1).getType() == EntityType.ENEMYPOINT))
+        {
+            ((Enemy)getRelativeEntity(0,1)).die();
+        }
+
         asMove = true;
     }
 
