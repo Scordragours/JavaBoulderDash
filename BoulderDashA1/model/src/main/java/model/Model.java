@@ -177,21 +177,24 @@ public final class Model extends Observable implements IModel {
 	public int getRemainingTime() { return this.remainingTime; }
 
 	/**
-	 * Sets the remaining diamonds.
-	 *
-	 * @param remainingDiamonds
-	 * 			the remaining diamonds
+	 * Decrements the remaining diamonds.
 	 */
-	void setRemainingDiamonds(int remainingDiamonds)
+	void decrementRemainingDiamonds()
 	{
-		this.remainingDiamonds = remainingDiamonds;
+		this.remainingDiamonds--;
 
-		if(this.remainingDiamonds <= 0)
-        {
-            this.remainingDiamonds = 0;
+		if(this.remainingDiamonds < 0)
+		{
+			this.setScore(this.getScore() + 15);
+			this.remainingDiamonds = 0;
 
-            this.exit.openned();
-        }
+
+			this.exit.openned();
+		}
+		else
+		{
+			this.setScore(this.getScore() + 10);
+		}
 
 		setChanged();
 		notifyObservers();
@@ -212,12 +215,16 @@ public final class Model extends Observable implements IModel {
 	public int getScore() { return this.score; }
 
 	/**
-	 * Sets the score.
+	 * Sets the score. Also notify the observers.
 	 *
 	 * @param score
 	 * 			the score
 	 */
-	public void setScore(int score) { this.score = score; }
+	public void setScore(int score) {
+		this.score = score;
+		setChanged();
+		notifyObservers();
+	}
 
 	/**
 	 * Gets the world.
@@ -260,8 +267,9 @@ public final class Model extends Observable implements IModel {
 	}
 
     /**
-     * up
-     * @throws Exception up
+     * Try to update every sliding block in the world if they can move.
+	 *
+     * @throws Exception when there was a bad move
      */
 	public void updateSlidingBlocks() throws Exception
 	{
@@ -288,6 +296,11 @@ public final class Model extends Observable implements IModel {
 		}
 	}
 
+	/**
+	 * Convert the world to a char array in two dimensions.
+	 *
+	 * @return the converted char array
+	 */
 	public char[][] convertWorld()
 	{
 		char[][] cw = new char[26][48];
@@ -340,27 +353,71 @@ public final class Model extends Observable implements IModel {
         return cw;
 	}
 
+	/**
+	 * Gets the win state.
+	 *
+	 * @return the win state
+	 */
 	public boolean isWin() { return this.win; }
 
-	public void winned() { this.win = true; }
+	/**
+	 * Sets the win state to true. Also notify the observers.
+	 */
+	public void winned()
+	{
+		this.win = true;
+		setChanged();
+		notifyObservers();
+	}
 
+	/**
+	 * Add an explosion.
+	 *
+	 * @param coordinates
+	 * 			the coordinates of the explosion
+	 */
 	public void addExplosion(final int[] coordinates)
     {
         this.explosions.add(coordinates);
     }
 
-    public ArrayList<int[]> getExplosions() { return this.explosions; }
+	/**
+	 * Gets the ArrayList of explosions coordinates.
+	 *
+	 * @return the ArrayList of explosions coordinates
+	 */
+	public ArrayList<int[]> getExplosions() { return this.explosions; }
 
+	/**
+	 * Gets the alive state from the player.
+	 *
+	 * @return the alive state from the player
+	 */
     public boolean getIsAlivePlayer()
     {
         return this.getPlayer().isAlive();
     }
 
+	/**
+	 * Try to move the player.
+	 *
+	 * @param x
+	 * 			the x position of the move
+	 * @param y
+	 * 			the y position of the move
+	 *
+	 * @throws Exception when a bad position is given in parameter
+	 */
     public void setMovePlayer(int x, int y) throws Exception
     {
         this.getPlayer().move(x, y);
     }
 
+	/**
+	 * Gets the position of the player.
+	 *
+	 * @return the position of the player
+	 */
     public int[] getPositionsPlayer()
 	{
 		int[] pos = new int[2];
@@ -369,6 +426,11 @@ public final class Model extends Observable implements IModel {
 		return pos;
 	}
 
+	/**
+	 * Gets the open state of the exit.
+	 *
+	 * @return the open state of the exit
+	 */
 	public boolean getIsOpenExit()
 	{
 		return this.exit.isOpen();

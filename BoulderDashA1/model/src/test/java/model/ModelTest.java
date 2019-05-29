@@ -137,10 +137,10 @@ public class ModelTest {
     }
 
     @Test
-    public void testSetRemainingDiamonds() throws Exception
+    public void testDecrementRemainingDiamonds() throws Exception
     {
-        int expectedRemainingDiamonds = 15;
-        this.model.setRemainingDiamonds(15);
+        int expectedRemainingDiamonds = 14;
+        this.model.decrementRemainingDiamonds();
         int remainingDiamonds = 0;
 
         for (Field field : this.fields)
