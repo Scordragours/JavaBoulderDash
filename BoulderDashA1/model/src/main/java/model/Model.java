@@ -259,7 +259,10 @@ public final class Model extends Observable implements IModel {
 		notifyObservers();
 	}
 
-
+    /**
+     * up
+     * @throws Exception up
+     */
 	public void updateSlidingBlocks() throws Exception
 	{
 		for(Entity[] line : world)
@@ -344,12 +347,6 @@ public final class Model extends Observable implements IModel {
 	public void addExplosion(final int[] coordinates)
     {
         this.explosions.add(coordinates);
-
-		setChanged();
-		notifyObservers();
-
-		this.explosions.remove(0);
-
     }
 
     public ArrayList<int[]> getExplosions() { return this.explosions; }

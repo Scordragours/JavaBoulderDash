@@ -51,10 +51,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Model.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="349" column="8" lean-forward="true" selection-start-line="349" selection-start-column="8" selection-end-line="349" selection-end-column="8" />
+            <state relative-caret-position="253">
+              <caret line="345" column="41" selection-start-line="345" selection-start-column="41" selection-end-line="345" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#6544#6545#0" expanded="true" />
+                <element signature="e#6592#6593#0" expanded="true" />
                 <element signature="e#6478#6479#0" expanded="true" />
                 <element signature="e#6527#6528#0" expanded="true" />
                 <element signature="e#6847#6848#0" expanded="true" />
@@ -830,7 +832,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559115504083</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Bug fix">
+      <created>1559118747563</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1559118747563</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -866,7 +875,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109741000" />
+    <option name="totallyTimeSpent" value="109905000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -960,9 +969,9 @@
     <MESSAGE value="Threads implementation" />
     <MESSAGE value="Delete useless method in Controller" />
     <MESSAGE value="Add a JavaDoc commentary" />
-    <MESSAGE value="Bug fix" />
     <MESSAGE value="Exit fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exit fix" />
+    <MESSAGE value="Bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fix" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1330,10 +1339,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Model.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="349" column="8" lean-forward="true" selection-start-line="349" selection-start-column="8" selection-end-line="349" selection-end-column="8" />
+        <state relative-caret-position="253">
+          <caret line="345" column="41" selection-start-line="345" selection-start-column="41" selection-end-line="345" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6544#6545#0" expanded="true" />
+            <element signature="e#6592#6593#0" expanded="true" />
             <element signature="e#6478#6479#0" expanded="true" />
             <element signature="e#6527#6528#0" expanded="true" />
             <element signature="e#6847#6848#0" expanded="true" />
