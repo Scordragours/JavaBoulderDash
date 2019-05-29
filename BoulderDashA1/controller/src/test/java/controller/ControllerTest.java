@@ -45,17 +45,17 @@ public final class ControllerTest extends TestCase {
     @Test
     public void testOrderPerform() throws NullPointerException{
         try {
-            testTrueMotionLessControl();
+            assertTrue(testTrueMotionLessControl());
         } catch (NullPointerException e) {
             System.out.println("Something missing in testTrueMotionLessControl()");
         }
-        assertTrue(testTrueMotionLessControl());
     }
 
     /**
      *  A test for the private method of the Controller
      *
      * @throws NullPointerException Unable to get the value returned by model.getRemainingTime()
+     * @return true
      *
      */
 
@@ -74,7 +74,6 @@ public final class ControllerTest extends TestCase {
         assertTrue("The value of the remaining time cannot be negative",this.model.getRemainingTime() > 0);
         assertTrue("The value of the timer smaller than the remaining time",timer >= this.model.getRemainingTime());
         assertTrue("The subtraction of the timer by the remaining time cannot be negative or equal to zero",timer - this.model.getRemainingTime() > 1);
-
         return true;
     }
 }

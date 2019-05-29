@@ -4,7 +4,6 @@ package model;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Observable;
-
 import contract.IModel;
 import entity.Level;
 
