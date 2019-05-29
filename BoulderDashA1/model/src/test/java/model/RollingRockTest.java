@@ -1,8 +1,5 @@
 package model;
-/**
- * Rolling Rock Test
- * @author DENEUVE GREGORY AND CANDAT ETIENNE
- */
+
 
 import org.junit.Assert;
 import org.junit.Before;

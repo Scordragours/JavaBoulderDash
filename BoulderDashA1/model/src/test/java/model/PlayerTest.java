@@ -1,8 +1,4 @@
 package model;
-/**
- * Player Test
- * @author DENEUVE GREGORY AND CANDAT ETIENNE
- */
 
 import org.junit.Before;
 import org.junit.Test;

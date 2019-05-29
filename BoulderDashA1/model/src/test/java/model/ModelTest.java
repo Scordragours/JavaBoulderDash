@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 /**
+ * Model Test
  * @author CANDAT ETIENNE AND DENEUVE GREGORY
  * @version 1.0
  */

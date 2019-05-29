@@ -1,14 +1,14 @@
 package model;
 
-/**
- * Sliding Block Test
- * @author DENEUVE GREGORY AND CANDAT ETIENNE
- */
 
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
+/**
+ * Sliding Block Test
+ * @author DENEUVE GREGORY AND CANDAT ETIENNE
+ */
 
 public abstract class SlidingBlockTest extends EntityTest{
 

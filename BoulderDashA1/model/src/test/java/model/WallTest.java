@@ -1,9 +1,5 @@
 package model;
 
-/**
- * Wall Test
- * @author DENEUVE GREGORY AND CANDAT ETIENNE
- */
 
 import org.junit.Before;
 
