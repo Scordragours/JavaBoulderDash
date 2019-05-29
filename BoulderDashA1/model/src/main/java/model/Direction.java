@@ -1,7 +1,7 @@
 package model;
 
 /**
- * The enum Direction
+ * The Direction enum.
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */

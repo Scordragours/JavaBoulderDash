@@ -1,21 +1,30 @@
 package model;
 
 /**
- * The RollingRock class
+ * The RollingRock class.
+ *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
 public class RollingRock extends SlidingBlock {
 
+    /**
+     * Instantiates a new RollingRock.
+     *
+     * @param model associate the model
+     * @param x sets the X position
+     * @param y sets the Y position
+     */
     RollingRock(final Model model, final int x, final int y)
     {
         super(model,x,y,EntityType.ROLLINGROCK);
     }
 
     /**
-     * movement of the block by the player
-     * @param direction It is a list that contains the 4 possible directions
-     * @return a boolean to know if the RollingBlock is moved by the player
-     * @throws Exception if the position are negative
+     * Try to move the entity if the player pushes it from the side.
+     *
+     * @param direction sets the direction you try to pushed it
+     * @return true if the entity move is a success and false if not
+     * @throws Exception when the given positions are out of the world
      */
     boolean moved(final Direction direction) throws Exception
     {

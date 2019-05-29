@@ -1,18 +1,21 @@
 package model;
 
 /**
- * Exit class
+ * The Exit class.
+ *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
 public class Exit extends Entity {
-    /** Whether the output is visible or not */
+
+    /** The open state of the exit */
     private boolean open;
 
     /**
-     * Instantiates a new Exit block
-     * @param model recovers the model
-     * @param x it is the length position
-     * @param y it is the height position
+     * Instantiates a new Exit.
+     *
+     * @param model associate the model
+     * @param x sets the X position
+     * @param y sets the Y position
      */
     Exit(final Model model, final int x, final int y)
     {
@@ -20,8 +23,9 @@ public class Exit extends Entity {
     }
 
     /**
+     * Check if the exit is open.
      *
-     * @return Returns an instance of type boolean which corresponds if the exit is true or false.
+     * @return the open state of the exit
      */
     boolean isOpen()
     {
@@ -29,7 +33,7 @@ public class Exit extends Entity {
     }
 
     /**
-     * This method is used to activate the exit.
+     * Sets the open state of the exit to true.
      */
     void openned() { this.open = true; }
 

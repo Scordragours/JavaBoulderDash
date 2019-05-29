@@ -1,15 +1,18 @@
 package model;
 
 /**
- * The enemy diamond class
+ * The EnemyDiamond class.
+ *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
 public class EnemyDiamond extends Enemy {
+
     /**
-     * Constructor of EnemyDiamond
-     * @param model the model
-     * @param x the X position
-     * @param y the Y position
+     * Instantiates a new EnemyDiamond.
+     *
+     * @param model associate the model
+     * @param x sets the X position
+     * @param y sets the Y position
      */
     EnemyDiamond(final Model model, final int x, final int y)
     {
@@ -17,8 +20,9 @@ public class EnemyDiamond extends Enemy {
     }
 
     /**
-     * The enemyDiamond dies
-     * @throws Exception if the position are negative values
+     * Causes the death of the enemy. Instantiates 3x3 diamonds.
+     *
+     * @throws Exception when the given positions are out of the world
      */
     public void die() throws Exception
     {

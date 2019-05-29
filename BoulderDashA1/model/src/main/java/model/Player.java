@@ -1,19 +1,22 @@
 package model;
 
 /**
- * Player class
+ * The Player class.
+ *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
 
 public class Player extends Character {
-    /** allows you to tell if the player is alive or not */
+
+    /** The alive state of the player */
     private boolean alive;
 
     /**
-     * Player Constructor
-     * @param model The model
-     * @param x The X position
-     * @param y The Y position
+     * Instantiates a new Player.
+     *
+     * @param model associate the model
+     * @param x sets the X position
+     * @param y sets the Y position
      */
     Player(final Model model, final int x, final int y)
     {
@@ -22,10 +25,12 @@ public class Player extends Character {
     }
 
     /**
-     * Player move
-     * @param x recovers the X position
-     * @param y recovers the Y position
-     * @throws Exception when bad move
+     * Tries to move the player to a relative place.
+     * Check if the new place is a diamond (picks it up), a rolling rock (pushes her) or an exit (wins if it is open).
+     *
+     * @param x sets the X relative position
+     * @param y sets the Y relative position
+     * @throws Exception when the given positions are out of the world
      */
     public void move(final int x, final int y) throws Exception
     {
@@ -73,7 +78,7 @@ public class Player extends Character {
     }
 
     /**
-     * Player Die
+     * Changes the alive state of the player to false.
      */
     public void die()
     {
@@ -81,8 +86,9 @@ public class Player extends Character {
     }
 
     /**
-     * Check if player is steel alive
-     * @return A boolean
+     * Check if the player is steel alive.
+     *
+     * @return the alive state of the player
      */
     boolean isAlive()
     {

@@ -1,7 +1,7 @@
 package model;
 
 /**
- * The enum EntityType.
+ * The EntityType enum.
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */

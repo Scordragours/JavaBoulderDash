@@ -1,25 +1,28 @@
 package model;
+
 /**
- * The Entity class
+ * The Entity class.
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
-
 public abstract class Entity {
+
    /** The model*/
     protected Model model;
     /** The X position */
     private int positionX;
     /** The Y position */
     private int positionY;
-    /** The type of entity */
+    /** The type of the entity */
     private EntityType type;
+
     /**
-     * This the entity constructor
-     * @param model is a call from model class
-     * @param positionX it is the length position
-     * @param positionY it is the height position
-     * @param type it is the type of entity
+     * Instantiates a new Entity.
+     *
+     * @param model associate the model
+     * @param positionX sets the X position
+     * @param positionY sets the Y position
+     * @param type sets the type of the entity
      */
     public Entity(final Model model, final int positionX, final int positionY, final EntityType type)
     {
@@ -28,9 +31,11 @@ public abstract class Entity {
         this.positionX = positionX;
         this.type = type;
     }
+
     /**
+     * Gets the X position.
      *
-     * @return Returns an instance of type int which corresponds to the length of the entity
+     * @return the X position
      */
     public int getPositionX()
     {
@@ -38,9 +43,10 @@ public abstract class Entity {
     }
 
     /**
-     * Allows to add a position x to the entity
-     * @param x it is the length position
-     * @throws Exception if position values is negative
+     * Sets the X position.
+     *
+     * @param x the new X position
+     * @throws Exception when the given position is out of the world
      */
     void setPositionX(final int x) throws Exception
     {
@@ -52,20 +58,23 @@ public abstract class Entity {
         }
 
     }
+
     /**
+     * Gets the Y position.
      *
-     * @return Returns an instance of type int which corresponds to the height of the entity
+     * @return the Y position
      */
     public int getPositionY()
     {
         return positionY;
     }
-    /**
-     * Allows to add update a position y to the entity
-     * @param y it is the height position
-     * @throws Exception if position values is negative
-     */
 
+    /**
+     * Sets the Y position.
+     *
+     * @param y the new Y position
+     * @throws Exception when the given position is out of the world
+     */
     void setPositionY(final int y) throws Exception
     {
         if(y<0)
@@ -78,8 +87,9 @@ public abstract class Entity {
     }
 
     /**
+     * Gets the type.
      *
-     * @return Returns an instance of type int which corresponds to the type of the entity
+     * @return the type
      */
     public EntityType getType()
     {
@@ -87,10 +97,11 @@ public abstract class Entity {
     }
 
     /**
+     * Gets an entity retrieved in the world with a relative position.
      *
-     * @param x it is length position of entity
-     * @param y it is height position of entity
-     * @return relativePosition around the entity
+     * @param x the X relative position
+     * @param y the Y relative position
+     * @return the entity found
      */
     Entity getRelativeEntity(final int x, final int y)
     {

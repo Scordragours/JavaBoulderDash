@@ -1,11 +1,13 @@
 package model;
 
 /**
- * Character class
+ * The Character class.
+ *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
 public abstract class Character extends Entity {
-    /** This attribute is composed of every position possible */
+
+    /** Every position possible in a one block radius. */
     final int[][] POSITIONS = {
             {0,0},
             {0,1},
@@ -19,11 +21,12 @@ public abstract class Character extends Entity {
     };
 
     /**
-     * Constructor of Character
-     * @param model recovers the model
-     * @param x recovers the X position
-     * @param y recovers the Y position
-     * @param type recovers the type of block
+     * Instantiates a new Character.
+     *
+     * @param model associate the model
+     * @param x sets the X position
+     * @param y sets the Y position
+     * @param type sets the type of the character
      */
     Character(final Model model, final int x, final int y, final EntityType type)
     {
@@ -31,9 +34,12 @@ public abstract class Character extends Entity {
     }
 
     /**
-     * If the entity explode
-     * @param generateDiamonds the boolean allows
-     * @throws Exception if position values is negative
+     * Causes the entity to explode in a one block radius.
+     * Can generate diamonds.
+     * If the player is in the radius, causes its death.
+     *
+     * @param generateDiamonds true to generate diamonds, false otherwise
+     * @throws Exception when the given positions are out of the world
      */
     void explode(final boolean generateDiamonds) throws Exception
     {
@@ -68,16 +74,18 @@ public abstract class Character extends Entity {
     }
 
     /**
-     * The movement of player or enemy
-     * @param x recovers the X position
-     * @param y recovers the Y position
-     * @throws Exception if position values is negative
+     * The move method. Need to be redefined.
+     *
+     * @param x sets the X position
+     * @param y sets the Y position
+     * @throws Exception when the given positions are out of the world
      */
     public abstract void move(final int x, final int y) throws Exception;
 
     /**
-     * Enemy or player die
-     * @throws Exception if position values is negative
+     * The die method. Need to be redefined.
+     *
+     * @throws Exception when the given positions are out of the world
      */
     public abstract void die() throws Exception;
 }

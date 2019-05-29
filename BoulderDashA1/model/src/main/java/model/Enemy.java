@@ -1,21 +1,24 @@
 package model;
 
 /**
- *The enemy class
+ * The Enemy class.
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
 public abstract class Enemy extends Character{
-    /** The last direction of enemy*/
+
+    /** The last direction of the enemy. */
     private Direction lastDirection;
+    /** Used when the entity has moved during an update. */
     private boolean hasMove;
 
     /**
-     * Constructor of Enemy
-     * @param model the model
-     * @param x the X position
-     * @param y the Y position
-     * @param type the Type of entity
+     * Instantiates a new Enemy.
+     *
+     * @param model associate the model
+     * @param x sets the X position
+     * @param y sets the Y position
+     * @param type sets the type of the enemy
      */
     public Enemy(final Model model, final int x, final int y, final EntityType type)
     {
@@ -24,13 +27,18 @@ public abstract class Enemy extends Character{
         this.hasMove = false;
     }
 
+    /**
+     * Resets the hasMove attribute to false.
+     */
     void resetMove() { this.hasMove = false; }
 
     /**
-     * The move method for enemy
-     * @param x recovers the X position
-     * @param y recovers the Y position
-     * @throws Exception if the position are negatives
+     * Tries to move the enemy to a relative position.
+     * If the player is in a range of one block around the enemy, causes its explosion.
+     *
+     * @param x sets the X relative position
+     * @param y sets the Y relative position
+     * @throws Exception when the given positions are out of the world
      */
     public void move(final int x, final int y) throws Exception
     {
@@ -49,8 +57,9 @@ public abstract class Enemy extends Character{
     }
 
     /**
-     * A method that allows an enemy to choose their path
-     * @throws Exception if the position are negatives
+     * Assign a direction to the enemy. Gives it an autonomous behaviour.
+     *
+     * @throws Exception when the given positions are out of the world
      */
     void pathFinder() throws Exception
     {
