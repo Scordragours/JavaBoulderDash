@@ -27,13 +27,14 @@ public abstract class Main {
      *          for bad moving assignation
      */
     public static void main(final String[] args) throws Exception {
-        Model model = new Model(1,5);
+        Model model = new Model(41,5);
 
         UpdateWorld uw = new UpdateWorld(model);
         uw.start();
         TimeCounter tc = new TimeCounter(model);
         tc.start();
-        ViewFrame viewFrame = new ViewFrame(model);
+        ViewFrame viewFrame = new ViewFrame();
+        viewFrame.Observer(model);
         Controller controller = new Controller(viewFrame, model);
         viewFrame.setController(controller);
         viewFrame.Run();

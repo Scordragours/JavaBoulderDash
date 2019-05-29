@@ -43,17 +43,9 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
     /** Interprets the project path for images. */
     protected static String Chemin = System.getProperty("user.dir") +"\\BoulderDashA1\\model\\src\\main\\resources\\Assets\\";
 
-    /**
-     *
-     * Frame class constructor.
-     *
-     * @param Model Project model module.
-     *
-     */
-    public ViewFrame(IModel Model){
-        System.out.println(this.Chemin);
+    /** Frame class constructor. */
+    public ViewFrame(){
         this.Model = Model;
-        this.Model.getObservable().addObserver(this);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("Boulder Dash");
         try{
@@ -65,10 +57,16 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
         this.addKeyListener(this);
         this.setSize(512, 512);
         this.setLocationRelativeTo(null);
-        this.Panel = new ViewPanel(this.LevelTexture);
+        this.Panel = new ViewPanel(this.getLevelTexture());
         this.setContentPane(this.Panel);
         this.setLayout(null);
         this.setVisible(true);
+    }
+
+    /** Defined to observe it from the view. */
+    public void Observer(IModel Model){
+        this.Model = Model;
+        this.Model.getObservable().addObserver(this);
     }
 
     /**
@@ -77,9 +75,20 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
      * @param LevelTexture Number of textures.
      *
      */
-    private void setLevelTexture(int LevelTexture){
+    protected void setLevelTexture(int LevelTexture){
         this.LevelTexture = LevelTexture;
     }
+
+    /**
+     * Recovers the level of the textures.
+     *
+     * @return int
+     *
+     */
+    protected int getLevelTexture(){
+        return this.LevelTexture;
+    }
+
 
     /**
      * Defined the character's texture number for annimation.
@@ -87,7 +96,7 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
      * @param LevelMaxPlayer Defines the number of animation of the character.
      *
      */
-    private void setLevelMaxPlayer(int LevelMaxPlayer){
+    protected void setLevelMaxPlayer(int LevelMaxPlayer){
         this.LevelMaxPlayer = LevelMaxPlayer;
     }
 
@@ -97,9 +106,11 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
      * @return int
      *
      */
-    private int getLevelMaxPlayer(){
+    protected int getLevelMaxPlayer(){
         return this.LevelMaxPlayer;
     }
+
+
 
     /**
      * Defined the controller.
@@ -172,7 +183,7 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
      * @return ControllerOrder
      * @param keyCode Detect key code.
      */
-    protected ControllerOrder KeyCodeToControllerOrder(int keyCode){
+    public ControllerOrder KeyCodeToControllerOrder(int keyCode){
         this.setLevelMaxPlayer(3);
         switch(keyCode){
             case KeyEvent.VK_LEFT:
