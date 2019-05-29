@@ -163,7 +163,7 @@ public class ModelTest {
 
     /**
      * Set remaining Diamonds
-     * Test method for {@link Model#setRemainingDiamonds(int)}
+     * Test method for {@link Model#decrementRemainingDiamonds()}
      * @throws Exception value negative
      */
     @Test
