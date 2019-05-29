@@ -14,7 +14,7 @@ public class Exit extends Entity {
      * @param x it is the length position
      * @param y it is the height position
      */
-    public Exit(Model model,int x, int y)
+    Exit(final Model model, final int x, final int y)
     {
         super(model,x, y,EntityType.EXIT);
     }
@@ -23,7 +23,7 @@ public class Exit extends Entity {
      *
      * @return Returns an instance of type boolean which corresponds if the exit is true or false.
      */
-    public boolean isOpen()
+    boolean isOpen()
     {
         return this.open;
     }
@@ -31,6 +31,6 @@ public class Exit extends Entity {
     /**
      * This method is used to activate the exit.
      */
-    public void openned() { this.open = true; }
+    void openned() { this.open = true; }
 
 }

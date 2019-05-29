@@ -1,25 +1,27 @@
 package model;
 
 /**
- * The SliddingBlock class
+ * The SlidingBlock class
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
 public abstract class SlidingBlock extends Entity {
     /** The asMoove attribute is whether the entity is in motion or not  */
-    public boolean asMove;
+    private boolean hasMove;
 
-    public SlidingBlock(Model model,int x, int y, EntityType type)
+
+    SlidingBlock(final Model model, final int x, final int y, final EntityType type)
     {
         super(model,x,y,type);
-        asMove = false;
+        this.hasMove = false;
     }
+
+    void resetMove() { this.hasMove = false; }
 
     /**
      * Method used when a block falls
      * @throws Exception When the position values are negatives
      */
-
-    public void fall() throws Exception
+    void fall() throws Exception
     {
 
         int antX = getPositionX();
@@ -38,7 +40,7 @@ public abstract class SlidingBlock extends Entity {
             ((Enemy)getRelativeEntity(0,1)).die();
         }
 
-        asMove = true;
+        this.hasMove = true;
     }
 
     /**
@@ -46,7 +48,7 @@ public abstract class SlidingBlock extends Entity {
      * @param isDefault A boolean which allows to know if the block slide to the left or the right
      * @throws Exception When the position values are negatives
      */
-    public void slide(boolean isDefault) throws Exception
+    void slide(final boolean isDefault) throws Exception
     {
         int antX = getPositionX();
         int antY = getPositionY();
@@ -63,7 +65,7 @@ public abstract class SlidingBlock extends Entity {
             this.model.updateEntity(antX, antY,null);
 
         }
-        asMove = true;
+        this.hasMove = true;
 
     }
 
@@ -71,9 +73,9 @@ public abstract class SlidingBlock extends Entity {
      * Method used to determine if the block will slip or fall
      * @throws Exception When the position values are negatives
      */
-    public void pathFinder() throws Exception
+    void pathFinder() throws Exception
     {
-        if(!asMove) {
+        if(!this.hasMove) {
             if (getRelativeEntity(0, 1) == null) {
                 fall();
             } else if (getRelativeEntity(-1, 1) == null && getRelativeEntity(-1, 0) == null && getRelativeEntity(0, 1) instanceof SlidingBlock) {

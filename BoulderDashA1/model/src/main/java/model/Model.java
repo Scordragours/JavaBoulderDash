@@ -37,7 +37,7 @@ public final class Model extends Observable implements IModel {
 	 * @throws Exception
 	 * 			when the levelTexture is out of range
 	 */
-	public Model(int levelID, int levelTexture) throws Exception
+	public Model(final int levelID, final int levelTexture) throws Exception
 	{
 	    if ((levelTexture<1) || (levelTexture>6))
         {
@@ -155,7 +155,7 @@ public final class Model extends Observable implements IModel {
 	 * @param remainingTime
 	 * 			the remaining time
 	 */
-	void setRemainingTime(int remainingTime)
+	void setRemainingTime(final int remainingTime)
 	{
 		this.remainingTime = remainingTime;
 
@@ -220,7 +220,7 @@ public final class Model extends Observable implements IModel {
 	 * @param score
 	 * 			the score
 	 */
-	public void setScore(int score) {
+	void setScore(final int score) {
 		this.score = score;
 		setChanged();
 		notifyObservers();
@@ -252,7 +252,7 @@ public final class Model extends Observable implements IModel {
 	 *
 	 * @throws Exception when a bad position is given in parameter
 	 */
-	public void updateEntity(int x, int y, Entity entity) throws Exception
+	void updateEntity(final int x, final int y, Entity entity) throws Exception
 	{
 	    if(entity != null)
         {
@@ -271,7 +271,7 @@ public final class Model extends Observable implements IModel {
 	 *
      * @throws Exception when there was a bad move
      */
-	public void updateSlidingBlocks() throws Exception
+	void updateSlidingBlocks() throws Exception
 	{
 		for(Entity[] line : world)
 		{
@@ -290,7 +290,37 @@ public final class Model extends Observable implements IModel {
 			{
 				if(e instanceof SlidingBlock)
 				{
-					((SlidingBlock) e).asMove = false;
+					((SlidingBlock) e).resetMove();
+				}
+			}
+		}
+	}
+
+	/**
+	 * Try to update every enemy in the world if they can move.
+	 *
+	 * @throws Exception when there was a bad move
+	 */
+	void updateEnemies() throws Exception
+	{
+		for(Entity[] line : world)
+		{
+			for(Entity e : line)
+			{
+				if(e instanceof Enemy)
+				{
+					((Enemy) e).pathFinder();
+				}
+			}
+		}
+
+		for(Entity[] line : world)
+		{
+			for(Entity e : line)
+			{
+				if(e instanceof Enemy)
+				{
+					((Enemy) e).resetMove();
 				}
 			}
 		}
@@ -363,7 +393,7 @@ public final class Model extends Observable implements IModel {
 	/**
 	 * Sets the win state to true. Also notify the observers.
 	 */
-	public void winned()
+	void winned()
 	{
 		this.win = true;
 		setChanged();
@@ -376,7 +406,7 @@ public final class Model extends Observable implements IModel {
 	 * @param coordinates
 	 * 			the coordinates of the explosion
 	 */
-	public void addExplosion(final int[] coordinates)
+	void addExplosion(final int[] coordinates)
     {
         this.explosions.add(coordinates);
     }
@@ -408,7 +438,7 @@ public final class Model extends Observable implements IModel {
 	 *
 	 * @throws Exception when a bad position is given in parameter
 	 */
-    public void setMovePlayer(int x, int y) throws Exception
+    public void setMovePlayer(final int x, final int y) throws Exception
     {
         this.getPlayer().move(x, y);
     }

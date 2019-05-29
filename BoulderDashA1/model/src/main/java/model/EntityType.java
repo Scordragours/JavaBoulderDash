@@ -1,16 +1,16 @@
 package model;
 
 /**
- * The enum Entity type
+ * The enum EntityType.
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
 public enum EntityType {
-    /** Diamond type */
+    /** Diamond */
     DIAMOND,
-    /** Rolling Rock type */
+    /** Rolling Rock */
     ROLLINGROCK,
-    /** Wall destructible type */
+    /** Wall breakable */
     WALL,
     /** Exit type */
     EXIT,
@@ -18,10 +18,10 @@ public enum EntityType {
     DIRT,
     /** Player type */
     PLAYER,
-    /** Enemy diamond rewards*/
+    /** Enemy with diamond reward */
     ENEMYDIAMOND,
-    /** Enemy point rewards */
+    /** Enemy with point reward */
     ENEMYPOINT,
-    /** Wall no destructible*/
+    /** Wall unbreakable */
     OUTLINE
 }

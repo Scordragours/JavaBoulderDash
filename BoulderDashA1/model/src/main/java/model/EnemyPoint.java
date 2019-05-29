@@ -11,7 +11,7 @@ public class EnemyPoint extends Enemy {
      * @param x the X position
      * @param y the Y position
      */
-    public EnemyPoint(Model model,int x, int y)
+    EnemyPoint(final Model model, final int x, final int y)
     {
         super(model,x,y,EntityType.ENEMYPOINT);
     }

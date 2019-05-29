@@ -21,7 +21,7 @@ public abstract class Entity {
      * @param positionY it is the height position
      * @param type it is the type of entity
      */
-    public Entity(Model model,int positionX, int positionY, EntityType type)
+    public Entity(final Model model, final int positionX, final int positionY, final EntityType type)
     {
         this.model = model;
         this.positionY = positionY;
@@ -42,7 +42,7 @@ public abstract class Entity {
      * @param x it is the length position
      * @throws Exception if position values is negative
      */
-    public void setPositionX(int x) throws Exception
+    void setPositionX(final int x) throws Exception
     {
         if(x<0)
         {
@@ -66,7 +66,7 @@ public abstract class Entity {
      * @throws Exception if position values is negative
      */
 
-    public void setPositionY(int y) throws Exception
+    void setPositionY(final int y) throws Exception
     {
         if(y<0)
         {
@@ -85,13 +85,14 @@ public abstract class Entity {
     {
             return type;
     }
+
     /**
      *
      * @param x it is length position of entity
      * @param y it is height position of entity
      * @return relativePosition around the entity
      */
-    public Entity getRelativeEntity(int x, int y)
+    Entity getRelativeEntity(final int x, final int y)
     {
         return this.model.getWorld()[positionY+y][positionX+x];
     }

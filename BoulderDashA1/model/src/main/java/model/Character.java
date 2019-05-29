@@ -6,7 +6,7 @@ package model;
  */
 public abstract class Character extends Entity {
     /** This attribute is composed of every position possible */
-    protected final int[][] POSITIONS = {
+    final int[][] POSITIONS = {
             {0,0},
             {0,1},
             {1,1},
@@ -25,7 +25,7 @@ public abstract class Character extends Entity {
      * @param y recovers the Y position
      * @param type recovers the type of block
      */
-    public Character(Model model,int x, int y, EntityType type)
+    Character(final Model model, final int x, final int y, final EntityType type)
     {
         super(model,x,y,type);
     }
@@ -35,7 +35,7 @@ public abstract class Character extends Entity {
      * @param generateDiamonds the boolean allows
      * @throws Exception if position values is negative
      */
-    public void explode(boolean generateDiamonds) throws Exception
+    void explode(final boolean generateDiamonds) throws Exception
     {
         for(int[] pos : this.POSITIONS)
         {
@@ -73,7 +73,7 @@ public abstract class Character extends Entity {
      * @param y recovers the Y position
      * @throws Exception if position values is negative
      */
-    public abstract void move(int x, int y) throws Exception;
+    public abstract void move(final int x, final int y) throws Exception;
 
     /**
      * Enemy or player die

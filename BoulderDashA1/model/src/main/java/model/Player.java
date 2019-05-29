@@ -15,7 +15,7 @@ public class Player extends Character {
      * @param x The X position
      * @param y The Y position
      */
-    public Player(Model model,int x, int y)
+    Player(final Model model, final int x, final int y)
     {
         super(model,x,y,EntityType.PLAYER);
         this.alive = true;
@@ -25,9 +25,9 @@ public class Player extends Character {
      * Player move
      * @param x recovers the X position
      * @param y recovers the Y position
-     * @throws Exception
+     * @throws Exception when bad move
      */
-    public void move(int x, int y) throws Exception
+    public void move(final int x, final int y) throws Exception
     {
         int antX = getPositionX();
         int antY = getPositionY();
@@ -84,7 +84,7 @@ public class Player extends Character {
      * Check if player is steel alive
      * @return A boolean
      */
-    public boolean isAlive()
+    boolean isAlive()
     {
         return this.alive;
     }

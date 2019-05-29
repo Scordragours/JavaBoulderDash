@@ -11,7 +11,7 @@ public class Diamond extends SlidingBlock {
      * @param x it is the length position
      * @param y it is the height position
      */
-    public Diamond(Model model,int x, int y)
+    Diamond(final Model model, final int x, final int y)
     {
         super(model,x,y,EntityType.DIAMOND);
     }

@@ -18,10 +18,7 @@ public class UpdateWorld extends Thread {
                 System.out.println("boucle");
                 this.model.updateSlidingBlocks();
 
-                for(Entity[] eTab : this.model.getWorld())
-                    for(Entity e : eTab)
-                        if(e instanceof Enemy)
-                            ((Enemy) e).pathFinder();
+                this.model.updateEnemies();
 
                 Thread.sleep(250);
             }catch (Exception e)

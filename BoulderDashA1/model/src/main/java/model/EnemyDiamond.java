@@ -11,7 +11,7 @@ public class EnemyDiamond extends Enemy {
      * @param x the X position
      * @param y the Y position
      */
-    public EnemyDiamond(Model model,int x, int y)
+    EnemyDiamond(final Model model, final int x, final int y)
     {
         super(model,x,y,EntityType.ENEMYDIAMOND);
     }

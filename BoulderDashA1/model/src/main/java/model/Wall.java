@@ -1,7 +1,7 @@
 package model;
 
 /**
- * @autor DENEUVE GREGORY AND CANDAT ETIENNE
+ * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
 public class Wall extends Entity {
     /**
@@ -11,7 +11,7 @@ public class Wall extends Entity {
      * @param y recovers the Y position
      * @param type recovers the type of block
      */
-    public Wall(Model model,int x, int y, EntityType type)
+    Wall(final Model model, final int x, final int y, final EntityType type)
     {
         super(model,x,y,type);
     }

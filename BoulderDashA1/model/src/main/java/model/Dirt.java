@@ -12,7 +12,7 @@ public class Dirt extends Entity {
      * @param x it is the length position
      * @param y it is the height position
      */
-    public Dirt(Model model,int x, int y)
+    Dirt(final Model model, final int x, final int y)
     {
         super(model,x,y,EntityType.DIRT);
     }
