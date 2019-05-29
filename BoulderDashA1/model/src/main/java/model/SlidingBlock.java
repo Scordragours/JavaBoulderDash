@@ -1,5 +1,8 @@
 package model;
 
+/**
+ * @author DENEUVE GREGORY AND CANDAT ETIENNE
+ */
 public abstract class SlidingBlock extends Entity {
 
 
@@ -9,12 +12,17 @@ public abstract class SlidingBlock extends Entity {
         super(model,x,y,type);
     }
 
+    /**
+     * Method used when a block falls
+     * @throws Exception When the position values are negatives
+     */
+
     public void fall() throws Exception
     {
         int antX = getPositionX();
         int antY = getPositionY();
 
-        //Not sure
+
 
 
         this.model.updateEntity(getPositionX(), getPositionY() + 1,this);
@@ -27,6 +35,11 @@ public abstract class SlidingBlock extends Entity {
 
     }
 
+    /**
+     * Method used when a block slides on another one
+     * @param isDefault A boolean which allows to know if the block slide to the left or the right
+     * @throws Exception When the position values are negatives
+     */
     public void slide(boolean isDefault) throws Exception
     {
         int antX = getPositionX();
@@ -47,6 +60,11 @@ public abstract class SlidingBlock extends Entity {
 
 
     }
+
+    /**
+     * Method used to determine if the block will slip or fall
+     * @throws Exception When the position values are negatives
+     */
     public void pathFinder() throws Exception
     {
         if(getRelativeEntity(0, -1) == null)

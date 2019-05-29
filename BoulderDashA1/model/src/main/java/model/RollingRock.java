@@ -1,5 +1,8 @@
 package model;
 
+/**
+ * @author DENEUVE GREGORY AND CANDAT ETIENNE
+ */
 public class RollingRock extends SlidingBlock {
     protected Player player;
     protected Direction direction;
@@ -9,6 +12,12 @@ public class RollingRock extends SlidingBlock {
         super(model,x,y,EntityType.ROLLINGROCK);
     }
 
+    /**
+     * movement of the block by the player
+     * @param direction It is a list that contains the 4 possible directions
+     * @return a boolean to know if the RollingBlock is moved by the player
+     * @throws Exception if the position are negative
+     */
     public boolean moved(Direction direction) throws Exception
     {
         int antX = getPositionX();
