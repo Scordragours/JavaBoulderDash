@@ -4,11 +4,13 @@ import contract.ControllerOrder;
 import contract.IController;
 import contract.IModel;
 import contract.IView;
+
 /**
  * The class Controller
  *
  * @author Nathan PORET
  */
+
 public final class Controller implements IController {
 
 	/** The  view*/
