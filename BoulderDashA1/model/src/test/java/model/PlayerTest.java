@@ -5,6 +5,10 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+/**
+ * Player Test
+ * @author DENEUVE GREGORY AND CANDAT ETIENNE
+ */
 public class PlayerTest extends CharacterTest {
     /**
      * Instantiation

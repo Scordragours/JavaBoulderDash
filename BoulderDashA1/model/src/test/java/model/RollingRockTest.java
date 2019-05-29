@@ -5,6 +5,10 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+/**
+ * Rolling rock Test
+ * @author DENEUVE GREGORY AND CANDAT ETIENNE
+ */
 
 public class RollingRockTest extends SlidingBlockTest {
     /**
