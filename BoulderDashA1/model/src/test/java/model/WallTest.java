@@ -1,11 +1,11 @@
 package model;
+
+
+import org.junit.Before;
 /**
  * Wall Test
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
-
-import org.junit.Before;
-
 public class WallTest extends EntityTest {
     /**
      * Instantiation
