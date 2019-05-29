@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /** */
 public class ViewPanel extends JPanel{
-    private BufferedImage Breakable, Delemitation_Block, Background, GameOver;
+    private BufferedImage Breakable, Delemitation_Block, Background, GameOver, Win;
     private int Levels, PlayerX, PlayerY, EtatPlayer = 1, EtatDiamond = 1, EtatExit = 1;
     private boolean Die = false, Live = false, Exploid = false;
     private ArrayList<int[]> Explosions = new ArrayList<>();
@@ -163,6 +163,7 @@ public class ViewPanel extends JPanel{
             this.Delemitation_Block = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Outline\\1.png"));
             this.Background = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Background\\1.png"));
             this.GameOver = ImageIO.read(new File(ViewFrame.Chemin +"\\Interface\\Game_Over.png"));
+            this.Win = ImageIO.read(new File(ViewFrame.Chemin +"\\Interface\\Game_Win.png"));
         }catch(IOException e){
             e.printStackTrace();
         }
@@ -214,8 +215,6 @@ public class ViewPanel extends JPanel{
                         Graphic.drawImage(this.TestCase(this.getCurrentWorldChar(x/32, y/32)), x - X1, y - Y1, 32, 32, this);
                     }
                     Test = false;
-                }else if(this.getLive()){
-
                 }else{
                     BufferedImage Image = this.TestCase(this.getCurrentWorldChar(x/32, y/32));
                     Graphic.drawImage(Image, x - X1, y - Y1, 32, 32, this);
@@ -224,6 +223,8 @@ public class ViewPanel extends JPanel{
         }
         if(this.getDie()){
             Graphic.drawImage(this.TestCase('G'), 0, 0, 512, 512, this);
+        }else if(this.getLive()){
+            Graphic.drawImage(this.TestCase('V'), 0, 0, 512, 512, this);
         }
     }
 
@@ -284,6 +285,9 @@ public class ViewPanel extends JPanel{
                 break;
             case 'G':
                 Image = this.GameOver;
+                break;
+            case 'V':
+                Image = this.Win;
                 break;
         }
         return Image;

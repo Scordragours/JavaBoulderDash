@@ -27,7 +27,7 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
         this.Model = Model;
         this.Model.getObservable().addObserver(this);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setTitle("Boolder Dash");
+        this.setTitle("Boulder Dash");
         try{
             this.setIconImage(ImageIO.read(new File(this.Chemin +"Personnage\\Left\\1.png")));
         }catch(IOException e){
