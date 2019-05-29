@@ -230,7 +230,7 @@ public class ModelTest {
     /**
      * Get World
      * Test method for {@link Model#getWorld()}
-     * @throws Exception
+     * @throws Exception negative values
      */
     @Test
     public void testGetWorld() throws Exception
