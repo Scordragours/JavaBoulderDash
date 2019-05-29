@@ -180,6 +180,17 @@ public final class Model extends Observable implements IModel {
 				}
 			}
 		}
+
+		for(Entity[] line : world)
+		{
+			for(Entity e : line)
+			{
+				if(e instanceof SlidingBlock)
+				{
+					((SlidingBlock) e).asMove = false;
+				}
+			}
+		}
 	}
 
 	public char[][] convertWorld()

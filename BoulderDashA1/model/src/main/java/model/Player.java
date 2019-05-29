@@ -51,6 +51,13 @@ public class Player extends Character {
             this.lastMove = System.currentTimeMillis();
             this.model.winned();
         }
+        else if(getRelativeEntity(x,y) != null && getRelativeEntity(x,y).getType() == EntityType.DIAMOND)
+        {
+            this.model.updateEntity(getPositionX()+x, getPositionY()+y, this);
+            this.model.updateEntity(antX, antY, null);
+            this.lastMove = System.currentTimeMillis();
+            this.model.setRemainingDiamonds(this.model.getRemainingDiamonds()-1);
+        }
     }
 
     public void die()

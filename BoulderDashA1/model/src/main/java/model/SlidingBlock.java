@@ -5,11 +5,12 @@ package model;
  */
 public abstract class SlidingBlock extends Entity {
 
-
+    public boolean asMove;
 
     public SlidingBlock(Model model,int x, int y, EntityType type)
     {
         super(model,x,y,type);
+        asMove = false;
     }
 
     /**
@@ -23,8 +24,6 @@ public abstract class SlidingBlock extends Entity {
         int antY = getPositionY();
 
 
-
-
         this.model.updateEntity(getPositionX(), getPositionY() + 1,this);
         this.model.updateEntity(antX, antY,null);
 
@@ -32,7 +31,7 @@ public abstract class SlidingBlock extends Entity {
         {
             this.model.getPlayer().explode(false);
         }
-
+        asMove = true;
     }
 
     /**
@@ -57,7 +56,7 @@ public abstract class SlidingBlock extends Entity {
             this.model.updateEntity(antX, antY,null);
 
         }
-
+        asMove = true;
 
     }
 
@@ -67,17 +66,14 @@ public abstract class SlidingBlock extends Entity {
      */
     public void pathFinder() throws Exception
     {
-        if(getRelativeEntity(0, -1) == null)
-        {
-            fall();
-        }
-        else if(getRelativeEntity(-1, 1) == null && getRelativeEntity(-1,0)==null && getRelativeEntity(0,1) instanceof  SlidingBlock)
-        {
-            slide(true);
-        }
-        else if(getRelativeEntity(1, 1) == null && getRelativeEntity(1,0)==null && getRelativeEntity(0,1) instanceof  SlidingBlock)
-        {
-            slide(false);
+        if(!asMove) {
+            if (getRelativeEntity(0, 1) == null) {
+                fall();
+            } else if (getRelativeEntity(-1, 1) == null && getRelativeEntity(-1, 0) == null && getRelativeEntity(0, 1) instanceof SlidingBlock) {
+                slide(true);
+            } else if (getRelativeEntity(1, 1) == null && getRelativeEntity(1, 0) == null && getRelativeEntity(0, 1) instanceof SlidingBlock) {
+                slide(false);
+            }
         }
     }
 }

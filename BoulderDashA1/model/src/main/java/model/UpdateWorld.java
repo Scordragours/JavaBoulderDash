@@ -23,7 +23,7 @@ public class UpdateWorld extends Thread {
                         if(e instanceof Enemy)
                             ((Enemy) e).pathFinder();
 
-                Thread.sleep(150);
+                Thread.sleep(250);
             }catch (Exception e)
             {
                 e.printStackTrace();
