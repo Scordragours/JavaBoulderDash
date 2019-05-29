@@ -1,6 +1,10 @@
 package model;
+/**
+ * Enemy Test
+ * @author DENEUVE GREGORY AND CANDAT ETIENNE
+ */
 
-import org.junit.After;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -13,10 +17,11 @@ public abstract class EnemyTest extends CharacterTest{
 
     }
 
-    @After
-    public void tearDown() throws Exception {
-    }
 
+    /**
+     * Test method for {@link Enemy#move(int, int)}
+     * @throws Exception values are negatives
+     */
     @Test
     public void testMove() throws Exception
     {

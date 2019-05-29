@@ -1,5 +1,9 @@
 package model;
 
+/**
+ * The Diamond Class
+ * @author DENEUVE GREGORY AND CANDAT ETIENNE
+ */
 public class Diamond extends SlidingBlock {
     /**
      *Instantiates a new Diamond Block

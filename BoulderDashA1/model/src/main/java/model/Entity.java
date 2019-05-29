@@ -1,6 +1,6 @@
 package model;
 /**
- * The class Entity
+ * The Entity class
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */

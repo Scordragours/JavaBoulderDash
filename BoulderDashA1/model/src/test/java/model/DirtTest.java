@@ -1,15 +1,22 @@
 package model;
+/**
+ * Test Dirt
+ * @author DENEUVE GREGORY AND CANDAT ETIENNE
+ */
 
-import org.junit.After;
+
 import org.junit.Before;
 
 
-import java.lang.reflect.Field;
+
 
 
 
 public class DirtTest extends EntityTest {
-
+    /**
+     * Instantiation and recovery of a dirt type entity in the level
+     * @throws Exception if the position values are negatives
+     */
     @Before
     public void setUp() throws Exception {
         this.model = new Model(38,6);
@@ -23,7 +30,5 @@ public class DirtTest extends EntityTest {
     }
 
 
-    @After
-    public void tearDown() throws Exception {
-    }
+
 }

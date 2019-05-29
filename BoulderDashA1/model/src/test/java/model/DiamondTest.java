@@ -1,12 +1,18 @@
 package model;
 
-import org.junit.After;
+
 import org.junit.Before;
 
-import static org.junit.Assert.*;
 
+/**
+ * Diamond Test
+ * @author DENEUVE GREGORY AND CANDAT ETIENNE
+ */
 public class DiamondTest extends SlidingBlockTest {
-
+    /**
+     * Instantiation and recovery of a diamond type entity in the level
+     * @throws Exception if position values is negatives
+     */
     @Before
     public void setUp() throws Exception {
         this.model = new Model(40,6);
@@ -21,7 +27,5 @@ public class DiamondTest extends SlidingBlockTest {
                 }
     }
 
-    @After
-    public void tearDown() throws Exception {
-    }
+
 }

@@ -6,6 +6,7 @@ import java.lang.reflect.Field;
 import static org.junit.Assert.*;
 
 /**
+ * Entity Test
  * @author CANDAT ETIENNE AND DENEUVE GREGORY
  * @version 1.0
  */
@@ -14,6 +15,10 @@ public abstract class EntityTest {
     private static Field[] fields;
     protected Model model;
 
+    /**
+     * Use the reflexion in Java
+     * @throws Exception if the position are negatives
+     */
     @BeforeClass
     public static void setUpBeforeClass() throws Exception
     {
@@ -27,15 +32,7 @@ public abstract class EntityTest {
 
     @Before
     public void setUp() throws Exception {
-        /*this.model = new Model(1,6);
-        this.entite = new Dirt(model,5,6);*/
-        //this.entite = this.model.getWorld()[0][0];
-        /*Class<?> entiteReflector = Entity.class;
-        this.fields = entiteReflector.getDeclaredFields();
-        for(Field field : this.fields)
-        {
-            field.setAccessible(true);
-        }*/
+
 
     }
 
@@ -43,6 +40,10 @@ public abstract class EntityTest {
     public void tearDown() throws Exception {
     }
 
+    /**
+     * Test method for {@link Entity#getPositionX()} ()}
+     * @throws IllegalAccessException reflexion
+     */
     @Test
     public void testGetPositionX() throws IllegalAccessException {
 
@@ -58,6 +59,10 @@ public abstract class EntityTest {
         assertEquals(expectedPositionX,this.entite.getPositionX());
     }
 
+    /**
+     * Test method for {@link Entity#getPositionY()}
+     * @throws IllegalAccessException reflexion
+     */
     @Test
     public void testGetPositionY() throws IllegalAccessException {
 
@@ -73,6 +78,10 @@ public abstract class EntityTest {
         assertEquals(expectedPositionY,this.entite.getPositionY());
     }
 
+    /**
+     * Test method for {@link Entity#setPositionX(int)}
+     * @throws Exception value negative
+     */
     @Test
     public void testSetPositionX() throws Exception {
         int expectedX=15;
@@ -90,6 +99,10 @@ public abstract class EntityTest {
         assertEquals(expectedX,currentX);
     }
 
+    /**
+     * Test method for {@link Entity#setPositionY(int)}
+     * @throws Exception value negative
+     */
     @Test
     public void testSetPositionY() throws Exception{
         int expectedY = 10;
@@ -107,6 +120,10 @@ public abstract class EntityTest {
         assertEquals(expectedY, currentY);
     }
 
+    /**
+     * Test if Y position is negative
+     * @throws Exception value negative
+     */
     @Test
     public void testYNotNegative() throws Exception
     {
@@ -120,6 +137,11 @@ public abstract class EntityTest {
          assertEquals(expected,e.getMessage());
      }
     }
+
+    /**
+     * Test if X is not negative
+     * @throws Exception value negative
+     */
     @Test
     public void testXNotNegative() throws Exception
     {
@@ -133,6 +155,10 @@ public abstract class EntityTest {
         }
     }
 
+    /**
+     * Test method for {@link Entity#getType()}
+     * @throws IllegalAccessException reflexion
+     */
     @Test
     public void testGetType() throws IllegalAccessException
     {
@@ -148,6 +174,10 @@ public abstract class EntityTest {
         assertEquals(expectedType,this.entite.getType());
     }
 
+    /**
+     * Test method for {@link Entity#getRelativeEntity(int, int)}
+     * @throws Exception values not negatives
+     */
     @Test
     public void TestGetRelativeEntity() throws Exception
     {

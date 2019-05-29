@@ -1,12 +1,17 @@
 package model;
+/**
+ * Enemy Diamond Test
+ * @author DENEUVE GREGORY AND CANDAT ETIENNE
+ */
 
-import org.junit.After;
+
 import org.junit.Before;
 
-import static org.junit.Assert.*;
-
 public class EnemyDiamondTest extends EnemyTest {
-
+    /**
+     * Instantiation and recovery of a enemy diamond type entity in the level
+     * @throws Exception if the position are negatives
+     */
     @Before
     public void setUp() throws Exception {
         this.model = new Model(39,1);
@@ -17,7 +22,5 @@ public class EnemyDiamondTest extends EnemyTest {
                     this.entite = e;
     }
 
-    @After
-    public void tearDown() throws Exception {
-    }
+
 }

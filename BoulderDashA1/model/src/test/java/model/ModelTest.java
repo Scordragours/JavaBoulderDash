@@ -1,8 +1,6 @@
 package model;
 
 import entity.Level;
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -17,16 +15,16 @@ import static org.junit.Assert.*;
  * @version 1.0
  */
 public class ModelTest {
+   /**  Model declaration */
     private Model model;
+    /** Field declaration */
     private Field[] fields;
 
     @BeforeClass
     public static void setUpBeforeClass() throws Exception {
     }
 
-    @AfterClass
-    public static void tearDownAfterClass() throws Exception {
-    }
+
 
     @Before
     public void setUp() throws Exception
@@ -39,10 +37,9 @@ public class ModelTest {
         }
     }
 
-    @After
-    public void tearDown() throws Exception {
-    }
-
+    /**
+     * Min range for the level texture
+     */
     @Test
     public void excepLevelTextureMinRange()
     {
@@ -56,7 +53,9 @@ public class ModelTest {
             assertEquals(excepted, e.getMessage());
         }
     }
-
+    /**
+     * Max range for the level texture
+     */
     @Test
     public void excepLevelTextureMaxRange()
     {
@@ -70,7 +69,10 @@ public class ModelTest {
             assertEquals(excepted, e.getMessage());
         }
     }
-
+    /**
+     * Get Observable
+     * Test method for {@link Model#getObservable()}
+     */
     @Test
     public void testGetObservable()
     {
@@ -79,6 +81,11 @@ public class ModelTest {
         assertEquals(expectedModel, this.model.getObservable());
     }
 
+    /**
+     * Get Level
+     * Test method for {@link Model#getLevel()}
+     * @throws Exception value negative
+     */
     @Test
     public void testGetLevel() throws Exception
     {
@@ -95,6 +102,11 @@ public class ModelTest {
         assertEquals(expectedLevel, this.model.getLevel());
     }
 
+    /**
+     * Get Level Texture
+     * Test method for {@link Model#getLevelTexture()}
+     * @throws Exception value negative
+     */
     @Test
     public void testGetLevelTexture() throws Exception
     {
@@ -103,6 +115,10 @@ public class ModelTest {
         assertEquals(expectedLevelTexture, this.model.getLevelTexture());
     }
 
+    /**
+     * Get Remaining time
+     * Test method for {@link Model#getRemainingTime()}
+     */
     @Test
     public void testGetRemainingTime()
     {
@@ -111,6 +127,11 @@ public class ModelTest {
         assertEquals(expectedRemainingTime, this.model.getRemainingTime());
     }
 
+    /**
+     * Set remaining time
+     * Test method for {@link Model#setRemainingTime(int)}
+     * @throws Exception value negative
+     */
     @Test
     public void testSetRemainingTime() throws Exception
     {
@@ -128,6 +149,10 @@ public class ModelTest {
         assertEquals(expectedRemainingTime, remainingTime);
     }
 
+    /**
+     * Get remaining time
+     * Test method for {@link Model#getRemainingDiamonds()}
+     */
     @Test
     public void testGetRemainingDiamonds()
     {
@@ -136,6 +161,11 @@ public class ModelTest {
         assertEquals(expectedRemainingDiamonds, this.model.getRemainingDiamonds());
     }
 
+    /**
+     * Set remaining Diamonds
+     * Test method for {@link Model#setRemainingDiamonds(int)}
+     * @throws Exception value negative
+     */
     @Test
     public void testSetRemainingDiamonds() throws Exception
     {
@@ -153,6 +183,11 @@ public class ModelTest {
         assertEquals(expectedRemainingDiamonds, remainingDiamonds);
     }
 
+    /**
+     * Get Score
+     * Test method for {@link Model#getScore()}
+     * @throws Exception value negative
+     */
     @Test
     public void testGetScore() throws Exception
     {
@@ -169,6 +204,11 @@ public class ModelTest {
         assertEquals(expectedScore, this.model.getScore());
     }
 
+    /**
+     * Set Score
+     * Test method for {@link Model#setScore(int)}
+     * @throws Exception value negative
+     */
     @Test
     public void testSetScore() throws Exception
     {
@@ -186,6 +226,11 @@ public class ModelTest {
         assertEquals(expectedScore, score);
     }
 
+    /**
+     * Get World
+     * Test method for {@link Model#getWorld()}
+     * @throws Exception
+     */
     @Test
     public void testGetWorld() throws Exception
     {
@@ -201,7 +246,11 @@ public class ModelTest {
         assertEquals(expectedWorld, this.model.getWorld());
     }
 
-
+    /**
+     * Load Level
+     * Test method for {@link Model#loadLevel(int)}
+     * @throws Exception value negative
+     */
     @Test
     public void testLoadLevel() throws Exception
     {
@@ -221,6 +270,11 @@ public class ModelTest {
         assertEquals(expectedLevel.getTime(), currentLevel.getTime());
     }
 
+    /**
+     * Build World
+     * Test method for {@link Model#buildWorld()}
+     * @throws Exception value negative
+     */
     @Test
     public void testBuildWorld() throws Exception
     {
@@ -252,6 +306,11 @@ public class ModelTest {
         assertEquals(expectedWorld[2][0].getPositionY(), currentWorld[2][0].getPositionY());
     }
 
+    /**
+     * Get Player
+     * Test method for {@link Model#getPlayer()}
+     * @throws Exception value negative
+     */
     @Test
     public void testGetPlayer() throws Exception
     {
@@ -265,6 +324,10 @@ public class ModelTest {
         assertEquals(expectedPlayer, this.model.getPlayer());
     }
 
+    /**
+     * Convert world
+     * Test method for {@link Model#convertWorld()}
+     */
     @Test
     public void testConvertWorld()
     {
@@ -279,6 +342,12 @@ public class ModelTest {
         assertArrayEquals(expectedConvertedWorld, this.model.convertWorld());
     }
 
+    /**
+     *
+     * Update entity
+     * Test method for {@link Model#updateEntity(int, int, Entity)}
+     * @throws Exception value negative
+     */
     @Test
     public void testUpdateEntity() throws Exception
     {
@@ -292,6 +361,11 @@ public class ModelTest {
 
     }
 
+    /**
+     * Add an explosion
+     * Test method for {@link Model#addExplosion(int[])}
+     * @throws Exception value negative
+     */
     @Test
     public void testAddExplosion() throws Exception
     {
@@ -308,6 +382,11 @@ public class ModelTest {
         assertArrayEquals(expected, currentCoords);
     }
 
+    /**
+     * Get Explosion
+     * Test method for {@link Model#getExplosions()}
+     * @throws Exception value negative
+     */
     @Test
     public void testGetExplosion() throws Exception
     {
