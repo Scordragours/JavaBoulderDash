@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ced6bba6-f76a-41f8-a65d-ecf6fea6b4a9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoulderDashA1/contract/src/main/java/contract/IModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoulderDashA1/contract/src/main/java/contract/IModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/SlidingBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/SlidingBlock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewPanel.java" afterDir="false" />
     </list>
@@ -50,29 +48,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Model.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="807">
-              <caret line="307" column="34" selection-start-line="307" selection-start-column="34" selection-end-line="307" selection-end-column="34" />
+            <state relative-caret-position="321">
+              <caret line="349" column="8" lean-forward="true" selection-start-line="349" selection-start-column="8" selection-end-line="349" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5636#5637#0" expanded="true" />
-                <element signature="e#5684#5685#0" expanded="true" />
-                <element signature="e#5802#5803#0" expanded="true" />
-                <element signature="e#5851#5852#0" expanded="true" />
-                <element signature="e#6134#6135#0" expanded="true" />
-                <element signature="e#6151#6152#0" expanded="true" />
+                <element signature="e#6478#6479#0" expanded="true" />
+                <element signature="e#6527#6528#0" expanded="true" />
+                <element signature="e#6847#6848#0" expanded="true" />
+                <element signature="e#6879#6880#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BoulderDashA1/contract/src/main/java/contract/IModel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="629">
-              <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+              <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,8 +106,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BoulderDashA1/main/src/main/java/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+            <state relative-caret-position="323">
+              <caret line="34" column="19" lean-forward="true" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -222,14 +218,14 @@
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Enemy.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/contract/src/main/java/contract/IView.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewFrameFinal.java" />
-        <option value="$PROJECT_DIR$/BoulderDashA1/main/src/main/java/main/Main.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/controller/src/main/java/controller/Controller.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Entity.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/RollingRock.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Diamond.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/SlidingBlock.java" />
-        <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Model.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/contract/src/main/java/contract/IModel.java" />
+        <option value="$PROJECT_DIR$/BoulderDashA1/main/src/main/java/main/Main.java" />
+        <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Model.java" />
       </list>
     </option>
   </component>
@@ -259,9 +255,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-327" />
-    <option name="y" value="-15" />
-    <option name="width" value="1920" />
+    <option name="x" value="953" />
+    <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -828,7 +823,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559112839132</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Exit fix">
+      <created>1559115504083</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1559115504083</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -864,13 +866,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106807000" />
+    <option name="totallyTimeSpent" value="109741000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20255864" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20255864" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -880,7 +882,7 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.43445286" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43445286" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -959,7 +961,8 @@
     <MESSAGE value="Delete useless method in Controller" />
     <MESSAGE value="Add a JavaDoc commentary" />
     <MESSAGE value="Bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug fix" />
+    <MESSAGE value="Exit fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exit fix" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1229,16 +1232,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/main/src/main/java/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/UpdateWorld.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1315,28 +1308,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Model.java">
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/contract/src/main/java/contract/IModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="807">
-          <caret line="307" column="34" selection-start-line="307" selection-start-column="34" selection-end-line="307" selection-end-column="34" />
+        <state relative-caret-position="629">
+          <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5636#5637#0" expanded="true" />
-            <element signature="e#5684#5685#0" expanded="true" />
-            <element signature="e#5802#5803#0" expanded="true" />
-            <element signature="e#5851#5852#0" expanded="true" />
-            <element signature="e#6134#6135#0" expanded="true" />
-            <element signature="e#6151#6152#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/contract/src/main/java/contract/IModel.java">
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/main/src/main/java/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+        <state relative-caret-position="323">
+          <caret line="34" column="19" lean-forward="true" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="349" column="8" lean-forward="true" selection-start-line="349" selection-start-column="8" selection-end-line="349" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6478#6479#0" expanded="true" />
+            <element signature="e#6527#6528#0" expanded="true" />
+            <element signature="e#6847#6848#0" expanded="true" />
+            <element signature="e#6879#6880#0" expanded="true" />
           </folding>
         </state>
       </provider>
