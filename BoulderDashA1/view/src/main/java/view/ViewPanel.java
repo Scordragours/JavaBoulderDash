@@ -1,6 +1,7 @@
 package view;
 
 import contract.ControllerOrder;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -9,36 +10,36 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-
+/** */
 public class ViewPanel extends JPanel{
-    private BufferedImage Breakable, Delemitation_Block, Background;
-    private int Levels, PlayerX, PlayerY, EtatPlayer = 1, EtatDiamond = 1;
-    private boolean Die = true, Live = false, Exploid = true;
-    private ArrayList<int[]> Explosions;
-    private char[][] CurrentWorld;
+    private BufferedImage Breakable, Delemitation_Block, Background, GameOver;
+    private int Levels, PlayerX, PlayerY, EtatPlayer = 1, EtatDiamond = 1, EtatExit = 1;
+    private boolean Die = false, Live = false, Exploid = false;
+    private ArrayList<int[]> Explosions = new ArrayList<>();
+    private char[][] CurrentWorld = new char[26][48];
     private ViewLabel LabelScore, LabelTime, LabelDiamond;
     private ControllerOrder ControlleEtatPlayer = ControllerOrder.STAND_BY;
 
     public ViewPanel(int Levels){
         this.Levels = Levels;
-        this.Modifie(Levels);
+        this.Modifie();
 
         Font FontLabel = new Font("TimesRoman", Font.BOLD, 25);
 
-        this.LabelScore = new ViewLabel("000000", 150, 40, "C:\\Users\\lecra\\Desktop\\Ressource\\Interface\\ScoreBoard.png");
+        this.LabelScore = new ViewLabel("000000", 150, 40, ViewFrame.Chemin +"Interface\\ScoreBoard.png");
         this.LabelScore.setHorizontalAlignment(SwingConstants.CENTER);
         this.LabelScore.setBounds(188, 10, 150, 40);
         this.LabelScore.setFont(FontLabel);
         this.LabelScore.setForeground(Color.WHITE);
         this.add(this.LabelScore);
 
-        this.LabelTime = new ViewLabel("        000", 113, 40, "C:\\Users\\lecra\\Desktop\\Ressource\\Interface\\DiamondBoard.png");
+        this.LabelTime = new ViewLabel("        000", 113, 40, ViewFrame.Chemin +"\\Interface\\ClockBoard.png");
         this.LabelTime.setBounds(7, 64, 113, 40);
         this.LabelTime.setFont(FontLabel);
         this.LabelTime.setForeground(Color.WHITE);
         this.add(LabelTime);
 
-        this.LabelDiamond = new ViewLabel("        060", 113, 40, "C:\\Users\\lecra\\Desktop\\Ressource\\Interface\\ClockBoard.png");
+        this.LabelDiamond = new ViewLabel("        060", 113, 40, ViewFrame.Chemin +"\\Interface\\DiamondBoard.png");
         this.LabelDiamond.setBounds(7, 112, 113, 40);
         this.LabelDiamond.setFont(FontLabel);
         this.LabelDiamond.setForeground(Color.WHITE);
@@ -127,12 +128,22 @@ public class ViewPanel extends JPanel{
         return this.EtatDiamond;
     }
 
+    protected void setEtatExit(int EtatExit){
+        this.EtatExit = EtatExit;
+    }
+    protected void setEtatExitIncrement(){
+        this.EtatExit++;
+    }
+    protected int getEtatExit(){
+        return this.EtatExit;
+    }
+
 
     protected void setRemainingTime(int RemainingTime){
         this.LabelTime.setText("        "+ RemainingTime);
     }
     protected void setRemainingDiamonds(int RemainingDiamonds){
-        this.LabelDiamond.setText("     "+ RemainingDiamonds);
+        this.LabelDiamond.setText("        "+ RemainingDiamonds);
     }
     protected void setScore(int Score){
         this.LabelScore.setText(""+ Score);
@@ -146,11 +157,12 @@ public class ViewPanel extends JPanel{
     }
 
 
-    protected void Modifie(int Levels){
+    protected void Modifie(){
         try{
-            this.Breakable = ImageIO.read(new File("C:\\Users\\lecra\\Desktop\\Ressource\\Level_"+ this.Levels +"\\Breakable\\1.png"));
-            this.Delemitation_Block = ImageIO.read(new File("C:\\Users\\lecra\\Desktop\\Ressource\\Level_"+ this.Levels +"\\Outline\\1.png"));
-            this.Background = ImageIO.read(new File("C:\\Users\\lecra\\Desktop\\Ressource\\Level_"+ this.Levels +"\\Background\\1.png"));
+            this.Breakable = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Breakable\\1.png"));
+            this.Delemitation_Block = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Outline\\1.png"));
+            this.Background = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Background\\1.png"));
+            this.GameOver = ImageIO.read(new File(ViewFrame.Chemin +"\\Interface\\Game_Over.png"));
         }catch(IOException e){
             e.printStackTrace();
         }
@@ -186,7 +198,7 @@ public class ViewPanel extends JPanel{
         for(int y = Y1; y < Y2; y += 32){
             for(int x = X1; x < X2; x += 32){
                 if(this.Explosions.size() != 0){
-                    BufferedImage Image = this.TestCase(this.CurrentWorld[y/32][x/32]);
+                    BufferedImage Image = this.TestCase(this.getCurrentWorldChar(x/32, y/32));
                     boolean Test = false;
                     for(int i = 0; i <= this.Explosions.size()-1; i++){
                         int[] ExplosionXY = this.Explosions.get(i);
@@ -198,14 +210,20 @@ public class ViewPanel extends JPanel{
                         }
                     }
                     Graphic.drawImage(Image, x - X1, y - Y1, 32, 32, this);
+                    if((this.getExploid())&&(this.getPlayerX() == x/32)&&(this.getPlayerY() == y/32)){
+                        Graphic.drawImage(this.TestCase(this.getCurrentWorldChar(x/32, y/32)), x - X1, y - Y1, 32, 32, this);
+                    }
                     Test = false;
                 }else if(this.getLive()){
 
                 }else{
-                    BufferedImage Image = this.TestCase(this.getCurrentWorldChar(y/32, x/32));
+                    BufferedImage Image = this.TestCase(this.getCurrentWorldChar(x/32, y/32));
                     Graphic.drawImage(Image, x - X1, y - Y1, 32, 32, this);
                 }
             }
+        }
+        if(this.getDie()){
+            Graphic.drawImage(this.TestCase('G'), 0, 0, 512, 512, this);
         }
     }
 
@@ -253,34 +271,87 @@ public class ViewPanel extends JPanel{
                 Image = this.AnimationDiamond();
                 break;
             case 'E':
-                // Waiting for Exit.
+                Image = this.AnimationExit();
                 break;
             case '1':
-                // Waiting for Enemy 1.
+                Image = this.AnimationEnnemy(1);
+                break;
             case '2':
-                // Waiting for Enemy 2.
-            case  ' ':
+                Image = this.AnimationEnnemy(2);
+                break;
+            case ' ':
                 // Nothing.
+                break;
+            case 'G':
+                Image = this.GameOver;
+                break;
         }
         return Image;
     }
 
+    private BufferedImage AnimationExit(){
+        try{
+            BufferedImage Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Delemitation_Block_1\\1.png"));
+            switch(this.getEtatExit()){
+                case 1:
+                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Delemitation_Block_1\\1.png"));
+                    break;
+                case 3:
+                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Delemitation_Block_1\\2.png"));
+                    break;
+                case 5:
+                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Delemitation_Block_1\\3.png"));
+                    break;
+                case 7:
+                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Delemitation_Block_1\\4.png"));
+                    break;
+            }
+            return Image;
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    private BufferedImage AnimationEnnemy(int N){
+        try{
+            BufferedImage Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Enemy\\"+ N +"\\1.png"));
+            switch(this.getEtatDiamond()){
+                case 1:
+                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Enemy\\"+ N +"\\1.png"));
+                    break;
+                case 3:
+                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Enemy\\"+ N +"\\2.png"));
+                    break;
+                case 5:
+                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Enemy\\"+ N +"\\3.png"));
+                    break;
+                case 7:
+                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Enemy\\"+ N +"\\4.png"));
+                    break;
+            }
+            return Image;
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
 
     private BufferedImage AnimationDie(){
         try{
-            BufferedImage Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Star\\1.png"));
-            switch(this.getEtatDiamond()){
+            BufferedImage Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Star\\1.png"));
+            switch(this.getEtatPlayer()){
                 case 1:
-                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Star\\1.png"));
+                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Star\\1.png"));
                     break;
                 case 3:
-                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Star\\2.png"));
+                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Star\\2.png"));
                     break;
                 case 5:
-                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Star\\3.png"));
+                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Star\\3.png"));
                     break;
                 case 7:
-                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Star\\4.png"));
+                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Star\\4.png"));
                     break;
             }
             return Image;
@@ -292,19 +363,19 @@ public class ViewPanel extends JPanel{
 
     private BufferedImage AnimationDiamond(){
         try{
-            BufferedImage Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Diamond\\1.png"));
-            switch(this.getEtatPlayer()){
+            BufferedImage Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Diamond\\1.png"));
+            switch(this.getEtatDiamond()){
                 case 1:
-                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Diamond\\1.png"));
-                    break;
-                case 2:
-                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Diamond\\2.png"));
+                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Diamond\\1.png"));
                     break;
                 case 3:
-                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Diamond\\3.png"));
+                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Diamond\\2.png"));
                     break;
-                case 4:
-                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Diamond\\4.png"));
+                case 5:
+                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Diamond\\3.png"));
+                    break;
+                case 7:
+                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Diamond\\4.png"));
                     break;
             }
             return Image;
@@ -316,19 +387,19 @@ public class ViewPanel extends JPanel{
 
     private BufferedImage AnimationGravity(){
         try{
-            BufferedImage Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Gravity\\1.png"));
+            BufferedImage Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Gravity\\1.png"));
             switch(this.getEtatPlayer()){
                 case 1:
-                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Gravity\\1.png"));
+                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Gravity\\1.png"));
                     break;
                 case 2:
-                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Gravity\\2.png"));
+                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Gravity\\2.png"));
                     break;
                 case 3:
-                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Gravity\\3.png"));
+                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Gravity\\3.png"));
                     break;
                 case 4:
-                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Level_"+ this.Levels +"\\Gravity\\4.png"));
+                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Gravity\\4.png"));
                     break;
             }
             return Image;
@@ -340,19 +411,19 @@ public class ViewPanel extends JPanel{
 
     private BufferedImage AnimationPeronnage(String Repertory){
         try{
-            BufferedImage Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Personnage\\"+ Repertory +"\\1.png"));
+            BufferedImage Image = ImageIO.read(new File(ViewFrame.Chemin +"Personnage\\"+ Repertory +"\\1.png"));
             switch(this.getEtatPlayer()){
                 case 1:
-                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Personnage\\"+ Repertory +"\\1.png"));
+                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Personnage\\"+ Repertory +"\\1.png"));
                     break;
                 case 2:
-                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Personnage\\"+ Repertory +"\\2.png"));
+                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Personnage\\"+ Repertory +"\\2.png"));
                     break;
                 case 3:
-                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Personnage\\"+ Repertory +"\\3.png"));
+                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Personnage\\"+ Repertory +"\\3.png"));
                     break;
                 case 4:
-                    Image = ImageIO.read(new File("..\\model\\Assets\\Ressource\\Personnage\\"+ Repertory +"\\4.png"));
+                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Personnage\\"+ Repertory +"\\4.png"));
                     break;
             }
             return Image;
