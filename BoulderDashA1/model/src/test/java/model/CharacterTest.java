@@ -3,9 +3,7 @@ package model;
 
 import org.junit.Before;
 import org.junit.Test;
-
 import java.util.ArrayList;
-
 import static org.junit.Assert.*;
 
 /**
@@ -19,8 +17,6 @@ public abstract class CharacterTest extends EntityTest {
     {
 
     }
-
-
 
     /**
      * Test method for {@link model.Character#explode(boolean)}.

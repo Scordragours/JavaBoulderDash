@@ -1,14 +1,12 @@
 package model;
-/**
- * Enemy Point Test
- * @author DENEUVE GREGORY AND ETIENNE CANDAT
- */
-
 
 import org.junit.Before;
 import org.junit.Test;
 
-
+/**
+ * Enemy Point Test
+ * @author DENEUVE GREGORY AND ETIENNE CANDAT
+ */
 
 public class EnemyPointTest extends EnemyTest {
     /**

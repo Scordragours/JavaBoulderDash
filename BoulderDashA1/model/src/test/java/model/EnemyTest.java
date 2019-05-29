@@ -1,15 +1,12 @@
 package model;
+
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.*;
 /**
  * Enemy Test
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
-
-
-import org.junit.Before;
-import org.junit.Test;
-
-import static org.junit.Assert.*;
-
 public abstract class EnemyTest extends CharacterTest{
 
     @Before

@@ -1,12 +1,11 @@
 package model;
-/**
- * Exit Test
- * @autor DENEUVE GREGORY
- */
-
 
 import org.junit.Before;
 
+/**
+ * Exit Test
+ * @author DENEUVE GREGORY AND CANDAT ETIENNE
+ */
 
 
 public class ExitTest extends EntityTest {

@@ -1,17 +1,11 @@
 package model;
+
+import org.junit.Before;
+
 /**
  * Test Dirt
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
-
-
-import org.junit.Before;
-
-
-
-
-
-
 public class DirtTest extends EntityTest {
     /**
      * Instantiation and recovery of a dirt type entity in the level

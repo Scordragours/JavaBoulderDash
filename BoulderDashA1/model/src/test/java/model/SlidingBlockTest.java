@@ -1,6 +1,10 @@
 package model;
 
-import org.junit.After;
+/**
+ * Sliding Block Test
+ * @author DENEUVE GREGORY AND CANDAT ETIENNE
+ */
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -13,10 +17,12 @@ public abstract class SlidingBlockTest extends EntityTest{
 
     }
 
-    @After
-    public void tearDown() throws Exception {
-    }
 
+    /**
+     * Fall
+     * Method use for {@link SlidingBlock#fall()}
+     * @throws Exception value negative
+     */
     @Test
     public void testFall() throws Exception
     {
@@ -36,6 +42,11 @@ public abstract class SlidingBlockTest extends EntityTest{
         }
     }
 
+    /**
+     * Sliding Entity
+     * Method use for {@link SlidingBlock#slide(boolean)}
+     * @throws Exception value negative
+     */
     @Test
     public void testSlide() throws Exception
     {

@@ -1,18 +1,22 @@
 package model;
+/**
+ * Rolling Rock Test
+ * @author DENEUVE GREGORY AND CANDAT ETIENNE
+ */
 
-import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
 
 public class RollingRockTest extends SlidingBlockTest {
-
+    /**
+     * Instantiation and recovery of a Rolling Rock type entity in the level
+     * @throws Exception value negative
+     */
     @Before
     public void setUp() throws Exception {
         this.model = new Model(40,6);
-
         outerloop:
         for(Entity[] etab : this.model.getWorld())
             for(Entity e : etab)
@@ -24,10 +28,12 @@ public class RollingRockTest extends SlidingBlockTest {
 
     }
 
-    @After
-    public void tearDown() throws Exception {
-    }
 
+    /**
+     * Moved
+     * Method use for {@link RollingRock#moved(Direction)}
+     * @throws Exception value negative
+     */
     @Test
     public void moved() throws Exception {
         ((RollingRock) this.entite).moved(Direction.RIGHT);

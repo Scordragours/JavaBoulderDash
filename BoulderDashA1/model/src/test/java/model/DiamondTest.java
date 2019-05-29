@@ -1,8 +1,6 @@
 package model;
 
-
 import org.junit.Before;
-
 
 /**
  * Diamond Test

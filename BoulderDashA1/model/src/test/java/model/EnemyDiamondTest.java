@@ -1,11 +1,9 @@
 package model;
+import org.junit.Before;
 /**
  * Enemy Diamond Test
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
-
-
-import org.junit.Before;
 
 public class EnemyDiamondTest extends EnemyTest {
     /**

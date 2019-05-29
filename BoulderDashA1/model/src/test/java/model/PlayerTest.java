@@ -1,27 +1,30 @@
 package model;
+/**
+ * Player Test
+ * @author DENEUVE GREGORY AND CANDAT ETIENNE
+ */
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class PlayerTest extends CharacterTest {
-
+    /**
+     * Instantiation
+     * @throws Exception value negative
+     */
     @Before
     public void setUp() throws Exception {
         this.model = new Model(39,1);
         this.entite = this.model.getPlayer();
     }
 
-    @After
-    public void tearDown() throws Exception {
-    }
-
-    @Test
-    public void getLastMove() {
-    }
-
+    /**
+     * Player Move
+     * Method use for {@link Player#move(int, int)}
+     * @throws Exception value negative
+     */
     @Test
     public void testMove() throws Exception
     {
