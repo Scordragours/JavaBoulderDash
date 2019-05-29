@@ -6,13 +6,15 @@ package model;
  */
 
 public abstract class Entity {
-
+    /**
+     *
+     */
     protected Model model;
     private int positionX;
     private int positionY;
     private EntityType type;
     /**
-     * The constructor of entity
+     * This the entity constructor
      * @param model is a call from model class
      * @param positionX it is the length position
      * @param positionY it is the height position

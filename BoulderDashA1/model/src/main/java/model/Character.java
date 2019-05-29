@@ -1,5 +1,8 @@
 package model;
 
+/**
+ * @author DENEUVE GREGORY AND CANDAT ETIENNE
+ */
 public abstract class Character extends Entity {
 
     protected final int[][] POSITIONS = {
@@ -14,6 +17,13 @@ public abstract class Character extends Entity {
             {1,-1}
     };
 
+    /**
+     * Constructor of Character
+     * @param model recovers the model
+     * @param x recovers the X position
+     * @param y recovers the Y position
+     * @param type recovers the type of block
+     */
     public Character(Model model,int x, int y, EntityType type)
     {
         super(model,x,y,type);

@@ -20,6 +20,7 @@ public abstract class SlidingBlock extends Entity {
 
     public void fall() throws Exception
     {
+
         int antX = getPositionX();
         int antY = getPositionY();
 
