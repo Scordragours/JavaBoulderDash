@@ -28,7 +28,7 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
     /** Texture condition with respect to time. */
     private int LevelTexture = 5, LevelMaxPlayer = 2;
 
-    /**  */
+    /**  States of the game. */
     private boolean Die, Live, Exit;
 
     /** View panel */
@@ -87,7 +87,6 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
     protected int getLevelTexture(){
         return this.LevelTexture;
     }
-
 
     /**
      * Defined the character's texture number for annimation.
@@ -167,7 +166,6 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
                     this.Panel.setStateExit(1);
                 }
             }
-
             try{
                 Thread.sleep(150);
             }catch(InterruptedException e){
@@ -272,7 +270,7 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
             this.Panel.setExploid(false);
         }
 
-        this.Panel.Modifie();
+        this.Panel.Modify();
         this.repaint();
     }
 }

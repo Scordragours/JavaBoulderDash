@@ -56,7 +56,7 @@ public class ViewPanel extends JPanel{
      */
     public ViewPanel(int Levels){
         this.Levels = Levels;
-        this.Modifie();
+        this.Modify();
 
         Font FontLabel = new Font("TimesRoman", Font.BOLD, 25);
 
@@ -344,12 +344,12 @@ public class ViewPanel extends JPanel{
      *
      * @return ControllerOrder
      */
-    protected ControllerOrder getControlleEtatPlayer(){
+    protected ControllerOrder getControlleStatePlayer(){
         return this.ControlleEtatPlayer;
     }
 
     /** Changes the location of the recovered images. */
-    protected void Modifie(){
+    protected void Modify(){
         try{
             this.Breakable = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Breakable\\1.png"));
             this.Delemitation_Block = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Outline\\1.png"));
@@ -428,7 +428,7 @@ public class ViewPanel extends JPanel{
         BufferedImage Image = null;
         switch(Char){
             case 'P':
-                switch(this.getControlleEtatPlayer()){
+                switch(this.getControlleStatePlayer()){
                     case LEFT:
                         Image = this.AnimationPeronnage("Left");
                         break;
@@ -606,17 +606,17 @@ public class ViewPanel extends JPanel{
     private BufferedImage AnimationGravity(){
         try{
             BufferedImage Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Gravity\\1.png"));
-            switch(this.getStatePlayer()){
+            switch(this.getStateDiamond()){
                 case 1:
                     Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Gravity\\1.png"));
                     break;
-                case 2:
+                case 3:
                     Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Gravity\\2.png"));
                     break;
-                case 3:
+                case 5:
                     Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Gravity\\3.png"));
                     break;
-                case 4:
+                case 7:
                     Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Gravity\\4.png"));
                     break;
             }
