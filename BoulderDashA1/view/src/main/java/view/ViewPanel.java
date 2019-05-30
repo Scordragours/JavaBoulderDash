@@ -288,7 +288,13 @@ public class ViewPanel extends JPanel{
      * @param RemainingTime Remaining Time.
      */
     protected void setRemainingTime(int RemainingTime){
-        this.LabelTime.setText("        "+ RemainingTime);
+        if(RemainingTime < 10){
+            this.LabelTime.setText("        00"+ RemainingTime);
+        }else if(RemainingTime < 100){
+            this.LabelTime.setText("        0"+ RemainingTime);
+        }else{
+            this.LabelTime.setText("        "+ RemainingTime);
+        }
     }
     /**
      * Defines the display of the number of diamonds.
@@ -296,7 +302,13 @@ public class ViewPanel extends JPanel{
      * @param RemainingDiamonds Remaining diamonds.
      * */
     protected void setRemainingDiamonds(int RemainingDiamonds){
-        this.LabelDiamond.setText("        "+ RemainingDiamonds);
+        if(RemainingDiamonds < 10){
+            this.LabelDiamond.setText("        00"+ RemainingDiamonds);
+        }else if(RemainingDiamonds < 100){
+            this.LabelDiamond.setText("        0"+ RemainingDiamonds);
+        }else{
+            this.LabelDiamond.setText("        "+ RemainingDiamonds);
+        }
     }
     /**
      * Defines the display of the score.
@@ -304,7 +316,19 @@ public class ViewPanel extends JPanel{
      * @param Score The score.
      */
     protected void setScore(int Score){
-        this.LabelScore.setText(""+ Score);
+        if(Score < 10){
+            this.LabelScore.setText("00000"+ Score);
+        }else if(Score < 100){
+            this.LabelScore.setText("0000"+ Score);
+        }else if(Score < 1000){
+            this.LabelScore.setText("000"+ Score);
+        }else if(Score < 10000){
+            this.LabelScore.setText("00"+ Score);
+        }else if(Score < 100000){
+            this.LabelScore.setText("0"+ Score);
+        }else{
+            this.LabelScore.setText(""+ Score);
+        }
     }
 
     /**
