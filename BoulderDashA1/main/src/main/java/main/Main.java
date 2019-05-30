@@ -1,7 +1,3 @@
-/**
- * @author Jean-Aymeric DIET jadiet@cesi.fr
- * @version 1.0
- */
 package main;
 
 import controller.Controller;
@@ -13,7 +9,7 @@ import view.ViewFrame;
 /**
  * The Class Main.
  *
- * @author Jean-Aymeric Diet
+ * @author Everyone in the groupe one
  */
 public abstract class Main {
 
@@ -24,10 +20,10 @@ public abstract class Main {
      *            the arguments
      *
      * @throws Exception
-     *          for bad moving assignation
+     *          all exception in model, view or controller
      */
     public static void main(final String[] args) throws Exception {
-        Model model = new Model(41,5);
+        Model model = new Model(1,2);
 
         UpdateWorld uw = new UpdateWorld(model);
         uw.start();
@@ -36,6 +32,7 @@ public abstract class Main {
         ViewFrame viewFrame = new ViewFrame();
         viewFrame.Observer(model);
         Controller controller = new Controller(viewFrame, model);
+        controller.start();
         viewFrame.setController(controller);
         viewFrame.Run();
     }

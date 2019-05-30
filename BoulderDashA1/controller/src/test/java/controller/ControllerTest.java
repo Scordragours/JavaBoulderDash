@@ -103,9 +103,8 @@ public class ControllerTest {
     }
 
     /**
-     * Test method for {@link Controller#orderPerform(ControllerOrder)}
-     * when we use default switch case and so when Controller#MotionLessControl(boolean)
-     * have "true" set as parameter.
+     * Test method for {@link Controller#run()}
+     * when the player don't move
      *
      * @throws Exception for bad direction assign to the player
      *

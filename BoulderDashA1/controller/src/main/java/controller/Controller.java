@@ -11,7 +11,7 @@ import contract.IView;
  * @author Nathan PORET
  */
 
-public final class Controller implements IController {
+public final class Controller extends Thread implements IController {
 
 	/** The  view*/
 	private IView view;
@@ -19,6 +19,9 @@ public final class Controller implements IController {
 	private IModel model;
 	/** A timer*/
 	private int timer = 0;
+	/** Last position of the player */
+	private int[] lastPositionPlayer = new int[2];
+
 
 	/**
 	 * Instantiates a new controller.
@@ -31,6 +34,8 @@ public final class Controller implements IController {
 	public Controller(final IView view, final IModel model) {
 		this.setView(view);
 		this.setModel(model);
+		this.lastPositionPlayer[0] = 0;
+		this.lastPositionPlayer[1] = 0;
 	}
 	/**
 	 * 	Set the view.
@@ -88,23 +93,43 @@ public final class Controller implements IController {
 		switch (controllerOrder) {
 			case LEFT:
 				this.model.setMovePlayer(-1,0);
-				MotionLessControl(false);
 				break;
 			case RIGHT:
 				this.model.setMovePlayer(1,0);
-				MotionLessControl(false);
 				break;
 			case UP:
 				this.model.setMovePlayer(0,-1);
-				MotionLessControl(false);
 				break;
 			case DOWN:
 				this.model.setMovePlayer(0,1);
-				MotionLessControl(false);
 				break;
 			default:
-				MotionLessControl(true);
 				break;
+		}
+	}
+
+	/**
+	 * Look if the player move every 150 milliseconds.
+	 *
+	 */
+
+	public void run() {
+		while(true) {
+			if (this.model.getPositionsPlayer()[0] != this.lastPositionPlayer[0] || this.model.getPositionsPlayer()[1] != this.lastPositionPlayer[1]) {
+				this.lastPositionPlayer[0] = this.model.getPositionsPlayer()[0];
+				this.lastPositionPlayer[1] = this.model.getPositionsPlayer()[1];
+				MotionLessControl(false);
+			}
+
+			else if (this.model.getPositionsPlayer()[0] == this.lastPositionPlayer[0] && this.model.getPositionsPlayer()[1] == this.lastPositionPlayer[1]){
+				MotionLessControl(true);
+			}
+
+			try{
+				Thread.sleep(300);
+			}catch(InterruptedException e){
+				e.printStackTrace();
+			}
 		}
 	}
 }
