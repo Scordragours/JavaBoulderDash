@@ -41,30 +41,29 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
     private IModel Model;
 
     /** Interprets the project path for images. */
-    protected static String Chemin = System.getProperty("user.dir") +"\\BoulderDashA1\\model\\src\\main\\resources\\Assets\\";
+    private static String Path = System.getProperty("user.dir") +"\\BoulderDashA1\\model\\src\\main\\resources\\Assets\\";
 
     /** Frame class constructor. */
     public ViewFrame(){
-        this.Model = Model;
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("Boulder Dash");
-        try{
-            this.setIconImage(ImageIO.read(new File(this.Chemin +"Personnage\\Left\\1.png")));
-        }catch(IOException e){
-            e.printStackTrace();
-        }
         this.setResizable(false);
         this.addKeyListener(this);
         this.setSize(512, 512);
         this.setLocationRelativeTo(null);
-        this.Panel = new ViewPanel(this.getLevelTexture());
-        this.setContentPane(this.Panel);
-        this.setLayout(null);
-        this.setVisible(true);
     }
 
     /** Defined to observe it from the view. */
     public void Observer(IModel Model){
+        try{
+            this.setIconImage(ImageIO.read(new File(this.Path +"\\Personnage\\Left\\1.png")));
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+        this.Panel = new ViewPanel(this.getLevelTexture());
+        this.setContentPane(this.Panel);
+        this.setLayout(null);
+        this.setVisible(true);
         this.Model = Model;
         this.Model.getObservable().addObserver(this);
     }
@@ -110,8 +109,6 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
         return this.LevelMaxPlayer;
     }
 
-
-
     /**
      * Defined the controller.
      *
@@ -141,6 +138,8 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
         if(StandBy){
             this.Panel.setControlleEtatPlayer(ControllerOrder.STAND_BY);
             this.setLevelMaxPlayer(2);
+            this.Panel.setStatePlayer(1);
+            this.repaint();
         }
     }
 
@@ -151,21 +150,21 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
     public void Run(){
         while(true){
             this.Panel.repaint();
-            this.Panel.setEtatPlayerIncrement();
-            this.Panel.setEtatDiamondIncrement();
+            this.Panel.setStatePlayerIncrement();
+            this.Panel.setStateDiamondIncrement();
 
-            if(this.Panel.getEtatPlayer() > this.getLevelMaxPlayer()){
-                this.Panel.setEtatPlayer(1);
+            if(this.Panel.getStatePlayer() > this.getLevelMaxPlayer()){
+                this.Panel.setStatePlayer(1);
             }
 
-            if(this.Panel.getEtatDiamond() > 8){
-                this.Panel.setEtatDiamond(1);
+            if(this.Panel.getStateDiamond() > 8){
+                this.Panel.setStateDiamond(1);
             }
 
             if(Exit){
-                this.Panel.setEtatExitIncrement();
-                if(this.Panel.getEtatExit() > 8){
-                    this.Panel.setEtatExit(1);
+                this.Panel.setStateExitIncrement();
+                if(this.Panel.getStateExit() > 8){
+                    this.Panel.setStateExit(1);
                 }
             }
 
@@ -185,6 +184,7 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
      */
     public ControllerOrder KeyCodeToControllerOrder(int keyCode){
         this.setLevelMaxPlayer(3);
+        this.Panel.setStatePlayer(1);
         switch(keyCode){
             case KeyEvent.VK_LEFT:
                 this.Panel.setControlleEtatPlayer(ControllerOrder.LEFT);
@@ -246,7 +246,7 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
 
         if(this.Model.isWin()){
             this.setLevelMaxPlayer(2);
-            this.Panel.setEtatPlayer(1);
+            this.Panel.setStatePlayer(1);
             this.Panel.setControlleEtatPlayer(ControllerOrder.WIN);
             this.Panel.setLive(true);
             this.Live = true;
@@ -259,7 +259,7 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
 
         if(!(this.Model.getIsAlivePlayer())){
             this.setLevelMaxPlayer(2);
-            this.Panel.setEtatPlayer(1);
+            this.Panel.setStatePlayer(1);
             this.Panel.setControlleEtatPlayer(ControllerOrder.LOSE);
             this.Panel.setDie(true);
             this.Die = true;

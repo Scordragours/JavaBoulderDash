@@ -27,7 +27,7 @@ public class ViewPanel extends JPanel{
     private int PlayerX, PlayerY;
 
     /** Status for animations. */
-    private int EtatPlayer = 1, EtatDiamond = 1, EtatExit = 1;
+    private int StatePlayer = 1, StateDiamond = 1, StateExit = 1;
 
     /** State of the game. */
     private boolean Die = false, Live = false, Exploid = false;
@@ -44,6 +44,10 @@ public class ViewPanel extends JPanel{
     /** Defined the player's state. */
     private ControllerOrder ControlleEtatPlayer = ControllerOrder.STAND_BY;
 
+    /** Interprets the project path for images. */
+    private static String Path = System.getProperty("user.dir") +"\\BoulderDashA1\\model\\src\\main\\resources\\Assets\\";
+
+
     /**
      *
      * Frame class constructor.
@@ -56,20 +60,20 @@ public class ViewPanel extends JPanel{
 
         Font FontLabel = new Font("TimesRoman", Font.BOLD, 25);
 
-        this.LabelScore = new ViewLabel("000000", 150, 40, ViewFrame.Chemin +"Interface\\ScoreBoard.png");
+        this.LabelScore = new ViewLabel("000000", 150, 40, this.Path +"Interface\\ScoreBoard.png");
         this.LabelScore.setHorizontalAlignment(SwingConstants.CENTER);
         this.LabelScore.setBounds(188, 10, 150, 40);
         this.LabelScore.setFont(FontLabel);
         this.LabelScore.setForeground(Color.WHITE);
         this.add(this.LabelScore);
 
-        this.LabelTime = new ViewLabel("        000", 113, 40, ViewFrame.Chemin +"\\Interface\\ClockBoard.png");
+        this.LabelTime = new ViewLabel("        000", 113, 40, this.Path +"\\Interface\\ClockBoard.png");
         this.LabelTime.setBounds(7, 64, 113, 40);
         this.LabelTime.setFont(FontLabel);
         this.LabelTime.setForeground(Color.WHITE);
         this.add(LabelTime);
 
-        this.LabelDiamond = new ViewLabel("        060", 113, 40, ViewFrame.Chemin +"\\Interface\\DiamondBoard.png");
+        this.LabelDiamond = new ViewLabel("        060", 113, 40, this.Path +"\\Interface\\DiamondBoard.png");
         this.LabelDiamond.setBounds(7, 112, 113, 40);
         this.LabelDiamond.setFont(FontLabel);
         this.LabelDiamond.setForeground(Color.WHITE);
@@ -218,43 +222,43 @@ public class ViewPanel extends JPanel{
     /**
      * Defines the player's state.
      *
-     * @param EtatPlayer States of player.
+     * @param StatePlayer States of player.
      */
-    protected void setEtatPlayer(int EtatPlayer){
-        this.EtatPlayer = EtatPlayer;
+    protected void setStatePlayer(int StatePlayer){
+        this.StatePlayer = StatePlayer;
     }
     /** Increments the player's status. */
-    protected void setEtatPlayerIncrement(){
-        this.EtatPlayer++;
+    protected void setStatePlayerIncrement(){
+        this.StatePlayer++;
     }
     /**
      * Recovers the player's status.
      *
      * @return int
      */
-    protected int getEtatPlayer(){
-        return this.EtatPlayer;
+    protected int getStatePlayer(){
+        return this.StatePlayer;
     }
 
     /**
      * Defines the diamond's state.
      *
-     * @param EtatDiamond States of diamonds.
+     * @param StateDiamond States of diamonds.
      */
-    protected void setEtatDiamond(int EtatDiamond){
-        this.EtatDiamond = EtatDiamond;
+    protected void setStateDiamond(int StateDiamond){
+        this.StateDiamond = StateDiamond;
     }
     /** Increments the diamond's status. */
-    protected void setEtatDiamondIncrement(){
-        this.EtatDiamond++;
+    protected void setStateDiamondIncrement(){
+        this.StateDiamond++;
     }
     /**
      * Recovers the diamond's status.
      *
      * @return int
      */
-    protected int getEtatDiamond(){
-        return this.EtatDiamond;
+    protected int getStateDiamond(){
+        return this.StateDiamond;
     }
 
     /**
@@ -262,20 +266,20 @@ public class ViewPanel extends JPanel{
      *
      * @param EtatExit States of Win.
      */
-    protected void setEtatExit(int EtatExit){
-        this.EtatExit = EtatExit;
+    protected void setStateExit(int EtatExit){
+        this.StateExit = EtatExit;
     }
     /** Increments the exit's status. */
-    protected void setEtatExitIncrement(){
-        this.EtatExit++;
+    protected void setStateExitIncrement(){
+        this.StateExit++;
     }
     /**
      * Recovers the exit's status.
      *
      * @return int
      */
-    protected int getEtatExit(){
-        return this.EtatExit;
+    protected int getStateExit(){
+        return this.StateExit;
     }
 
     /**
@@ -323,14 +327,12 @@ public class ViewPanel extends JPanel{
     /** Changes the location of the recovered images. */
     protected void Modifie(){
         try{
-            this.Breakable = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Breakable\\1.png"));
-            this.Delemitation_Block = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Outline\\1.png"));
-            this.Background = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Background\\1.png"));
-            this.GameOver = ImageIO.read(new File(ViewFrame.Chemin +"\\Interface\\Game_Over.png"));
-            this.Win = ImageIO.read(new File(ViewFrame.Chemin +"\\Interface\\Game_Win.png"));
-        }catch(IOException e){
-            e.printStackTrace();
-        }
+            this.Breakable = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Breakable\\1.png"));
+            this.Delemitation_Block = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Outline\\1.png"));
+            this.Background = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Background\\1.png"));
+            this.GameOver = ImageIO.read(new File(this.Path +"\\Interface\\Game_Over.png"));
+            this.Win = ImageIO.read(new File(this.Path +"\\Interface\\Game_Win.png"));
+        }catch(IOException e){}
     }
     /** @see javax.swing.JComponent */
     protected void paintComponent(Graphics Graphic){
@@ -470,25 +472,23 @@ public class ViewPanel extends JPanel{
      */
     private BufferedImage AnimationExit(){
         try{
-            BufferedImage Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Delemitation_Block_1\\1.png"));
-            switch(this.getEtatExit()){
+            BufferedImage Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Delemitation_Block_1\\1.png"));
+            switch(this.getStateExit()){
                 case 1:
-                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Delemitation_Block_1\\1.png"));
+                    Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Delemitation_Block_1\\1.png"));
                     break;
                 case 3:
-                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Delemitation_Block_1\\2.png"));
+                    Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Delemitation_Block_1\\2.png"));
                     break;
                 case 5:
-                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Delemitation_Block_1\\3.png"));
+                    Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Delemitation_Block_1\\3.png"));
                     break;
                 case 7:
-                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Delemitation_Block_1\\4.png"));
+                    Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Delemitation_Block_1\\4.png"));
                     break;
             }
             return Image;
-        }catch(IOException e){
-            e.printStackTrace();
-        }
+        }catch(IOException e){}
         return null;
     }
 
@@ -500,25 +500,23 @@ public class ViewPanel extends JPanel{
      */
     private BufferedImage AnimationEnnemy(int N){
         try{
-            BufferedImage Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Enemy\\"+ N +"\\1.png"));
-            switch(this.getEtatDiamond()){
+            BufferedImage Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Enemy\\"+ N +"\\1.png"));
+            switch(this.getStateDiamond()){
                 case 1:
-                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Enemy\\"+ N +"\\1.png"));
+                    Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Enemy\\"+ N +"\\1.png"));
                     break;
                 case 3:
-                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Enemy\\"+ N +"\\2.png"));
+                    Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Enemy\\"+ N +"\\2.png"));
                     break;
                 case 5:
-                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Enemy\\"+ N +"\\3.png"));
+                    Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Enemy\\"+ N +"\\3.png"));
                     break;
                 case 7:
-                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Enemy\\"+ N +"\\4.png"));
+                    Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Enemy\\"+ N +"\\4.png"));
                     break;
             }
             return Image;
-        }catch(IOException e){
-            e.printStackTrace();
-        }
+        }catch(IOException e){}
         return null;
     }
 
@@ -529,25 +527,23 @@ public class ViewPanel extends JPanel{
      */
     private BufferedImage AnimationDie(){
         try{
-            BufferedImage Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Star\\1.png"));
-            switch(this.getEtatPlayer()){
+            BufferedImage Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Star\\1.png"));
+            switch(this.getStatePlayer()){
                 case 1:
-                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Star\\1.png"));
+                    Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Star\\1.png"));
                     break;
                 case 3:
-                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Star\\2.png"));
+                    Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Star\\2.png"));
                     break;
                 case 5:
-                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Star\\3.png"));
+                    Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Star\\3.png"));
                     break;
                 case 7:
-                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Star\\4.png"));
+                    Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Star\\4.png"));
                     break;
             }
             return Image;
-        }catch(IOException e){
-            e.printStackTrace();
-        }
+        }catch(IOException e){}
         return null;
     }
 
@@ -558,25 +554,23 @@ public class ViewPanel extends JPanel{
      */
     private BufferedImage AnimationDiamond(){
         try{
-            BufferedImage Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Diamond\\1.png"));
-            switch(this.getEtatDiamond()){
+            BufferedImage Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Diamond\\1.png"));
+            switch(this.getStateDiamond()){
                 case 1:
-                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Diamond\\1.png"));
+                    Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Diamond\\1.png"));
                     break;
                 case 3:
-                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Diamond\\2.png"));
+                    Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Diamond\\2.png"));
                     break;
                 case 5:
-                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Diamond\\3.png"));
+                    Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Diamond\\3.png"));
                     break;
                 case 7:
-                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Diamond\\4.png"));
+                    Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Diamond\\4.png"));
                     break;
             }
             return Image;
-        }catch(IOException e){
-            e.printStackTrace();
-        }
+        }catch(IOException e){}
         return null;
     }
 
@@ -587,25 +581,23 @@ public class ViewPanel extends JPanel{
      */
     private BufferedImage AnimationGravity(){
         try{
-            BufferedImage Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Gravity\\1.png"));
-            switch(this.getEtatPlayer()){
+            BufferedImage Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Gravity\\1.png"));
+            switch(this.getStatePlayer()){
                 case 1:
-                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Gravity\\1.png"));
+                    Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Gravity\\1.png"));
                     break;
                 case 2:
-                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Gravity\\2.png"));
+                    Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Gravity\\2.png"));
                     break;
                 case 3:
-                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Gravity\\3.png"));
+                    Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Gravity\\3.png"));
                     break;
                 case 4:
-                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Level_"+ this.Levels +"\\Gravity\\4.png"));
+                    Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Gravity\\4.png"));
                     break;
             }
             return Image;
-        }catch(IOException e){
-            e.printStackTrace();
-        }
+        }catch(IOException e){}
         return null;
     }
 
@@ -617,25 +609,23 @@ public class ViewPanel extends JPanel{
      */
     private BufferedImage AnimationPeronnage(String Repertory){
         try{
-            BufferedImage Image = ImageIO.read(new File(ViewFrame.Chemin +"Personnage\\"+ Repertory +"\\1.png"));
-            switch(this.getEtatPlayer()){
+            BufferedImage Image = ImageIO.read(new File(this.Path +"Personnage\\"+ Repertory +"\\1.png"));
+            switch(this.getStatePlayer()){
                 case 1:
-                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Personnage\\"+ Repertory +"\\1.png"));
+                    Image = ImageIO.read(new File(this.Path +"Personnage\\"+ Repertory +"\\1.png"));
                     break;
                 case 2:
-                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Personnage\\"+ Repertory +"\\2.png"));
+                    Image = ImageIO.read(new File(this.Path +"Personnage\\"+ Repertory +"\\2.png"));
                     break;
                 case 3:
-                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Personnage\\"+ Repertory +"\\3.png"));
+                    Image = ImageIO.read(new File(this.Path +"Personnage\\"+ Repertory +"\\3.png"));
                     break;
                 case 4:
-                    Image = ImageIO.read(new File(ViewFrame.Chemin +"Personnage\\"+ Repertory +"\\4.png"));
+                    Image = ImageIO.read(new File(this.Path +"Personnage\\"+ Repertory +"\\4.png"));
                     break;
             }
             return Image;
-        }catch(IOException e){
-            e.printStackTrace();
-        }
+        }catch(IOException e){}
         return null;
     }
 }
