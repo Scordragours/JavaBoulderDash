@@ -49,11 +49,19 @@ public abstract class Enemy extends Character{
             this.model.updateEntity(antX, antY, null);
 
             this.hasMove = true;
+            if(this.model.isWin()) //the enemies disappear if the player wins
+            {
+                this.model.updateEntity(getPositionX(),getPositionY() ,null);
+            }
         }
 
-        for (int[] pos : this.POSITIONS)
-            if (this.getRelativeEntity(pos[0], pos[1]) != null && this.getRelativeEntity(pos[0], pos[1]).getType() == EntityType.PLAYER)
+        for (int[] pos : this.POSITIONS) {
+            if (this.getRelativeEntity(pos[0], pos[1]) != null && this.getRelativeEntity(pos[0], pos[1]).getType() == EntityType.PLAYER) {
                 this.die();
+            }
+        }
+
+
     }
 
     /**

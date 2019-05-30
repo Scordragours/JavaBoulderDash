@@ -185,7 +185,7 @@ public final class Model extends Observable implements IModel {
 	{
 		this.remainingDiamonds--;
 
-		if(this.remainingDiamonds < 0)
+		if(this.remainingDiamonds <= 0)
 		{
 			this.setScore(this.getScore() + 15);
 			this.remainingDiamonds = 0;

@@ -82,6 +82,7 @@ public class Player extends Character {
      */
     public void die()
     {
+       
         this.alive = false;
     }
 
