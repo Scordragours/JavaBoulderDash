@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- *
+ * The class View Panel.
  * @author Arthur Lecras
  * @see javax.swing.JPanel
  *
@@ -73,7 +73,7 @@ public class ViewPanel extends JPanel{
         this.LabelTime.setForeground(Color.WHITE);
         this.add(LabelTime);
 
-        this.LabelDiamond = new ViewLabel("        060", 113, 40, this.Path +"\\Interface\\DiamondBoard.png");
+        this.LabelDiamond = new ViewLabel("        000", 113, 40, this.Path +"\\Interface\\DiamondBoard.png");
         this.LabelDiamond.setBounds(7, 112, 113, 40);
         this.LabelDiamond.setFont(FontLabel);
         this.LabelDiamond.setForeground(Color.WHITE);

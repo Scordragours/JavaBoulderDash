@@ -18,10 +18,10 @@ import java.io.IOException;
  */
 public class ViewLabel extends JLabel{
     /** Label size. */
-    int Width, Height;
+    private int Width, Height;
 
     /** Image location  */
-    String URL;
+    private String URL;
 
     /**
      * Label class constructor.
@@ -33,12 +33,73 @@ public class ViewLabel extends JLabel{
      *
      * */
     public ViewLabel(String Text, int Width, int Height, String URL){
-        this.URL = URL;
-        this.Width = Width;
-        this.Height = Height;
+        this.setURL(URL);
+        this.setWidth(Width);
+        this.setHeight(Height);
         this.setText(Text);
         setOpaque(false);
     }
+
+    /**
+     * Defines the size of the label.
+     *
+     * @param Width Width of the label.
+     *
+     */
+    protected void setWidth(int Width){
+        this.Width = Width;
+    }
+
+    /**
+     * Recovers the size of the label.
+     *
+     * @return int
+     *
+     */
+    public int getWidth(){
+        return this.Width;
+    }
+
+    /**
+     * Defines the size of the label.
+     *
+     * @param Height Height of the label.
+     *
+     */
+    protected void setHeight(int Height){
+        this.Height = Height;
+    }
+
+    /**
+     * Recovers the size of the label.
+     *
+     * @return int
+     *
+     */
+    public int getHeight(){
+        return this.Height;
+    }
+
+    /**
+     * Defines the background of the label.
+     *
+     * @param URL Path of the background.
+     *
+     */
+    protected void setURL(String URL){
+        this.URL = URL;
+    }
+
+    /**
+     * Recovers the background of the label.
+     *
+     * @return String
+     *
+     */
+    public String getURL(){
+        return this.URL;
+    }
+
 
     /**
      * Allows to paint a background in the label.
@@ -46,17 +107,17 @@ public class ViewLabel extends JLabel{
      * @see java.awt.TexturePaint
      * @return TexturePaint
      *
-     * */
+     */
     private TexturePaint BackgroundPaint(){
-        BufferedImage im = new BufferedImage(this.Width, this.Height, BufferedImage.TYPE_INT_ARGB);
+        BufferedImage im = new BufferedImage(this.getWidth(), this.getHeight(), BufferedImage.TYPE_INT_ARGB);
         Graphics2D imG2d = im.createGraphics();
         try{
-            imG2d.drawImage(ImageIO.read(new File(this.URL)), 0, 0, this.Width, this.Height, this);
+            imG2d.drawImage(ImageIO.read(new File(this.URL)), 0, 0, this.getWidth(), this.getHeight(), this);
         }catch (IOException e){
             e.printStackTrace();
         }
         imG2d.dispose();
-        Rectangle2D rect = new Rectangle2D.Double(0,0, this.Width, this.Height);
+        Rectangle2D rect = new Rectangle2D.Double(0,0, this.getWidth(), this.getHeight());
         return new TexturePaint(im, rect);
     }
 
@@ -69,7 +130,7 @@ public class ViewLabel extends JLabel{
     protected void paintComponent(Graphics g){
         Graphics2D g2d = (Graphics2D) g;
         g2d.setPaint(BackgroundPaint());
-        g2d.fill(new RoundRectangle2D.Double(0, 0, this.Width, this.Height,0,0));
+        g2d.fill(new RoundRectangle2D.Double(0, 0, this.getWidth(), this.getHeight(),0,0));
         super.paintComponent(g2d);
     }
 

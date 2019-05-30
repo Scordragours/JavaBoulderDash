@@ -26,7 +26,7 @@ import java.util.Observer;
  */
 public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
     /** Texture condition with respect to time. */
-    private int LevelTexture = 5, LevelMaxPlayer = 2;
+    private int LevelTexture = 1, LevelMaxPlayer = 2;
 
     /**  States of the game. */
     private boolean Die, Live, Exit;
@@ -116,6 +116,26 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
      */
     public void setController(IController Controller){
         this.Controller = Controller;
+    }
+
+    /**
+     * Allows you to retrieve the model.
+     *
+     * @return IController
+     *
+     */
+    public IModel getModel(){
+        return this.Model;
+    }
+
+    /**
+     * Defined the model.
+     *
+     * @param Model Defined the model.
+     *
+     */
+    public void setModel(IModel Model){
+        this.Model = Model;
     }
 
     /**
