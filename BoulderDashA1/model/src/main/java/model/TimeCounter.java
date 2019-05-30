@@ -18,13 +18,17 @@ public class TimeCounter extends Thread {
                 if(!this.model.isWin() && this.model.getIsAlivePlayer())
                 {
                     Thread.sleep(1000);
-                    this.model.setRemainingTime(this.model.getRemainingTime()-1);;
+                    this.model.setRemainingTime(this.model.getRemainingTime()-1);
                 }
                 else if(this.model.isWin() && this.model.getIsAlivePlayer())
                 {
                     Thread.sleep(20);
                     this.model.setRemainingTime(this.model.getRemainingTime()-1);
                     this.model.setScore(this.model.getScore()+1);
+                    if(this.model.getRemainingTime() == 0)
+                    {
+                        break;
+                    }
                 }
                 else
                 {

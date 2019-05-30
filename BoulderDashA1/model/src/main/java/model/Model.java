@@ -158,11 +158,14 @@ public final class Model extends Observable implements IModel {
 	{
 		this.remainingTime = remainingTime;
 
-		if(this.remainingTime <= 0)
+		if(!this.isWin() && this.remainingTime <= 0)
         {
             this.remainingTime = 0;
             this.getPlayer().die();
-        }
+        }else if(this.isWin())
+		{
+			this.winned();
+		}
 
 		setChanged();
 		notifyObservers();
