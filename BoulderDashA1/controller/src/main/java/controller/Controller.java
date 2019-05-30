@@ -122,7 +122,9 @@ public final class Controller extends Thread implements IController {
 			}
 
 			else if (this.model.getPositionsPlayer()[0] == this.lastPositionPlayer[0] && this.model.getPositionsPlayer()[1] == this.lastPositionPlayer[1]){
-				MotionLessControl(true);
+				if (!this.model.isWin() && this.model.getIsAlivePlayer()) {
+                    MotionLessControl(true);
+                }
 			}
 
 			try{
