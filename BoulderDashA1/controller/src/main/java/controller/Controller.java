@@ -109,7 +109,7 @@ public final class Controller extends Thread implements IController {
 	}
 
 	/**
-	 * Look if the player move every 150 milliseconds.
+	 * Look if the player move every 300 milliseconds.
 	 *
 	 */
 
