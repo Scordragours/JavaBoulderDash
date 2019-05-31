@@ -53,7 +53,12 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
         this.setLocationRelativeTo(null);
     }
 
-    /** Defined to observe it from the view. */
+    /**
+     * Defined to observe it from the view.
+     *
+     * @param Model Defines the model and Observer. {@link contract.IModel}
+     *
+     */
     public void Observer(IModel Model){
         try{
             this.setIconImage(ImageIO.read(new File(this.Path +"\\Personnage\\Left\\1.png")));

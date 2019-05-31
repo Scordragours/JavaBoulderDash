@@ -111,7 +111,7 @@ public class ViewPanel extends JPanel{
     /**
      *  Texture condition with respect to time.
      *
-     * @param Levels
+     * @param Levels Texture condition with respect to time.
      */
     protected void setLevels(int Levels){
         this.Levels = Levels;
@@ -206,7 +206,7 @@ public class ViewPanel extends JPanel{
     /**
      * Defines the state of the game for an explosion to occur.
      *
-     * @param Exploid
+     * @param Exploid Defines the state of the game for an explosion to occur.
      *
      */
     protected void setExploid(boolean Exploid){
@@ -232,7 +232,7 @@ public class ViewPanel extends JPanel{
     /**
      * Recovers the position table of the explosions.
      *
-     * @return ArrayList<int[]>
+     * @return ArrayList {@link java.util.ArrayList}
      */
     protected ArrayList<int[]> getExplosions(){
         return this.Explosions;

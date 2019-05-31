@@ -18,9 +18,11 @@ public class ViewFrameTest{
 
     private Field[] fields;
 
-    /** SetUp the junit tests of ViewFrame class. */
+    /**
+     * SetUp the junit tests of ViewFrame class.
+     */
     @Before
-    public void setUp() throws Exception{
+    public void setUp(){
         this.Model = new IModel(){
             @Override
             public int getRemainingTime() {
