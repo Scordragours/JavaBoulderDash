@@ -82,6 +82,16 @@ public class ViewPanel extends JPanel{
     }
 
     /**
+     * Adds an explosion to the explosion array.
+     *
+     * @param explosion the explosion
+     */
+    public void addExplosion(int[] explosion)
+    {
+        this.Explosions.add(explosion);
+    }
+
+    /**
      * Defines the received map to display it.
      *
      * @param CurrentWorld The received map.
@@ -417,6 +427,11 @@ public class ViewPanel extends JPanel{
                             if((this.getExploid())&&(ExplosionXY[0]*32 == x)&&(ExplosionXY[1]*32 == y)){
                                 Test = true;
                                 Image = this.AnimationDie();
+                                this.Explosions.get(i)[2] = this.Explosions.get(i)[2]+1;
+                                if(this.Explosions.get(i)[2] >= 10)
+                                {
+                                    this.Explosions.remove(i);
+                                }
                             }
                         }
                     }
@@ -576,7 +591,7 @@ public class ViewPanel extends JPanel{
     private BufferedImage AnimationDie(){
         try{
             BufferedImage Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Star\\1.png"));
-            switch(this.getStatePlayer()){
+            switch(this.getStateDiamond()){
                 case 1:
                     Image = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Star\\1.png"));
                     break;

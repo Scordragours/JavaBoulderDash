@@ -25,7 +25,7 @@ public class Player extends Character {
 
     /**
      * Tries to move the player to a relative place.
-     * Check if the new place is a diamond (picks it up), a rolling rock (pushes her) or an exit (wins if it is open).
+     * Checks if the new place is a diamond (picks it up), a rolling rock (pushes her) or an exit (wins if it is open).
      *
      * @param x sets the X relative position
      * @param y sets the Y relative position

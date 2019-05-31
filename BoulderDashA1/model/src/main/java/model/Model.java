@@ -35,6 +35,8 @@ public final class Model extends Observable implements IModel {
 	private ArrayList<int[]> explosions = new ArrayList<>();
 	/** The exit entity of the level. */
 	private Exit exit;
+	/** Used to control the display frequency and avoid performance issues */
+	private boolean canUpdate;
 
 	/**
 	 * Instantiates a new model.
@@ -58,6 +60,7 @@ public final class Model extends Observable implements IModel {
 		this.remainingTime = this.level.getTime();
 		this.score = 0;
 		this.buildWorld();
+		this.canUpdate = true;
 	}
 
 	/**
@@ -275,8 +278,12 @@ public final class Model extends Observable implements IModel {
 
 		world[y][x] = entity;
 
-		setChanged();
-		notifyObservers();
+	    if(canUpdate)
+		{
+			setChanged();
+			notifyObservers();
+		}
+
 	}
 
     /**
@@ -286,6 +293,7 @@ public final class Model extends Observable implements IModel {
      */
 	void updateSlidingBlocks() throws Exception
 	{
+		canUpdate = false;
 		for(Entity[] line : world)
 		{
 			for(Entity e : line)
@@ -307,6 +315,9 @@ public final class Model extends Observable implements IModel {
 				}
 			}
 		}
+		setChanged();
+		notifyObservers();
+		canUpdate = true;
 	}
 
 	/**
@@ -316,6 +327,7 @@ public final class Model extends Observable implements IModel {
 	 */
 	void updateEnemies() throws Exception
 	{
+		canUpdate = false;
 		for(Entity[] line : world)
 		{
 			for(Entity e : line)
@@ -337,6 +349,9 @@ public final class Model extends Observable implements IModel {
 				}
 			}
 		}
+		setChanged();
+		notifyObservers();
+		canUpdate = true;
 	}
 
 	/**

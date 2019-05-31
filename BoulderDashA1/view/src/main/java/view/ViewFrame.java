@@ -292,11 +292,11 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
             this.Die = true;
         }
 
-        if(!this.Model.getExplosions().isEmpty()){
-            this.Panel.setExplosions(this.Model.getExplosions());
+        while(!this.Model.getExplosions().isEmpty())
+        {
+            int[] removedExp = this.Model.getExplosions().remove(0);
+            this.Panel.addExplosion(new int[]{removedExp[0],removedExp[1],1});
             this.Panel.setExploid(true);
-        }else{
-            this.Panel.setExploid(false);
         }
 
         this.Panel.Modify();

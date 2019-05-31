@@ -67,7 +67,7 @@ public abstract class Enemy extends Character{
      */
     void pathFinder() throws Exception
     {
-        if(!this.hasMove && !this.model.isWin()) {
+        if(!this.hasMove) {
             switch (lastDirection) {
                 case UP:
                     if (getRelativeEntity(1, 0) == null && getRelativeEntity(0, -1) == null && getRelativeEntity(-1, 0) == null && getRelativeEntity(0, 1) == null && getRelativeEntity(1, 1) == null) {

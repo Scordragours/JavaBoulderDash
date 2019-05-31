@@ -30,12 +30,12 @@ public class UpdateWorld extends Thread {
         {
             try
             {
+                if(this.model.isWin() || !this.model.getPlayer().isAlive())
+                {
+                    break;
+                }
                 this.model.updateSlidingBlocks();
-
                 this.model.updateEnemies();
-
-                //this.model.updateWorld();
-
                 Thread.sleep(100);
                 this.model.updateSlidingBlocks();
                 Thread.sleep(100);
