@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 /**
  * The class View Panel.
+ *
  * @author Arthur Lecras
  * @see javax.swing.JPanel
  *
@@ -358,6 +359,7 @@ public class ViewPanel extends JPanel{
             this.Win = ImageIO.read(new File(this.Path +"\\Interface\\Game_Win.png"));
         }catch(IOException e){}
     }
+
     /** @see javax.swing.JComponent */
     protected void paintComponent(Graphics Graphic){
         for(int y = 0; y < 526; y+= 32){
@@ -421,7 +423,7 @@ public class ViewPanel extends JPanel{
     /**
      * Gives the right image in relation to a character.
      *
-     * @return BufferedImage
+     * @return BufferedImage {@link java.awt.image.BufferedImage}
      * @param Char Character.
      */
     private BufferedImage TestCase(char Char){
@@ -492,7 +494,7 @@ public class ViewPanel extends JPanel{
     /**
      * Victory animation.
      *
-     * @return BufferedImage
+     * @return BufferedImage {@link java.awt.image.BufferedImage}
      */
     private BufferedImage AnimationExit(){
         try{
@@ -519,7 +521,7 @@ public class ViewPanel extends JPanel{
     /**
      * Animation of an moving enemy.
      *
-     * @return BufferedImage
+     * @return BufferedImage {@link java.awt.image.BufferedImage}
      * @param N The number of the enemy.
      */
     private BufferedImage AnimationEnnemy(int N){
@@ -547,7 +549,7 @@ public class ViewPanel extends JPanel{
     /**
      * Animation at the death of the player.
      *
-     * @return BufferedImage
+     * @return BufferedImage {@link java.awt.image.BufferedImage}
      */
     private BufferedImage AnimationDie(){
         try{
@@ -574,7 +576,7 @@ public class ViewPanel extends JPanel{
     /**
      * Animation of the flashing diamond.
      *
-     * @return BufferedImage
+     * @return BufferedImage {@link java.awt.image.BufferedImage}
      */
     private BufferedImage AnimationDiamond(){
         try{
@@ -601,7 +603,7 @@ public class ViewPanel extends JPanel{
     /**
      * Animation of the stone.
      *
-     * @return BufferedImage
+     * @return BufferedImage {@link java.awt.image.BufferedImage}
      */
     private BufferedImage AnimationGravity(){
         try{
@@ -628,7 +630,7 @@ public class ViewPanel extends JPanel{
     /**
      * Animation of the player.
      *
-     * @return BufferedImage
+     * @return BufferedImage {@link java.awt.image.BufferedImage}
      * @param Repertory Respertory of the player's states.
      */
     private BufferedImage AnimationPeronnage(String Repertory){

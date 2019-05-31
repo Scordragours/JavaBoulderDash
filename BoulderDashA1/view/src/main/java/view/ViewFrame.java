@@ -111,7 +111,7 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
     /**
      * Defined the controller.
      *
-     * @param Controller Defined the controller.
+     * @param Controller Defined the controller. {@link contract.IController}
      *
      */
     public void setController(IController Controller){
@@ -121,7 +121,7 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
     /**
      * Allows you to retrieve the model.
      *
-     * @return IController
+     * @return IController {@link contract.IModel}
      *
      */
     public IModel getModel(){
@@ -131,7 +131,7 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
     /**
      * Defined the model.
      *
-     * @param Model Defined the model.
+     * @param Model Defined the model. {@link contract.IModel}
      *
      */
     public void setModel(IModel Model){
@@ -141,7 +141,7 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
     /**
      * Allows you to retrieve the controller.
      *
-     * @return IController
+     * @return IController {@link contract.IController}
      *
      */
     public IController getControler(){
@@ -198,7 +198,7 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
      * Returns the key code press.
      *
      * @return ControllerOrder
-     * @param keyCode Detect key code.
+     * @param keyCode Detect key code. {@link contract.ControllerOrder}
      */
     public ControllerOrder KeyCodeToControllerOrder(int keyCode){
         this.setLevelMaxPlayer(3);
