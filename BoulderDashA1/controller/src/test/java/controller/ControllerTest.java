@@ -27,11 +27,10 @@ public class ControllerTest {
      * instantiate the controller class
      * Use the reflexion in Java
      *
-     * @throws NullPointerException Something missing in controller.orderPerform()
      */
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         this.model = new IModel() {
             @Override
             public int getRemainingTime() {

@@ -26,7 +26,7 @@ public class EnemyPointTest extends EnemyTest {
 
 
     /**
-     * Test method for {@link EnemyPoint#die()}.
+     * Test method for {@link EnemyPoint#die(boolean)}.
      */
     @Test
     public void die() {
