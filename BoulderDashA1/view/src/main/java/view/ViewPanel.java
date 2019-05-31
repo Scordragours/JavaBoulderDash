@@ -43,7 +43,7 @@ public class ViewPanel extends JPanel{
     private ViewLabel LabelScore, LabelTime, LabelDiamond;
 
     /** Defined the player's state. */
-    private ControllerOrder ControlleEtatPlayer = ControllerOrder.STAND_BY;
+    private ControllerOrder ControlleStatePlayer = ControllerOrder.STAND_BY;
 
     /** Interprets the project path for images. */
     private static String Path = System.getProperty("user.dir") +"\\BoulderDashA1\\model\\src\\main\\resources\\Assets\\";
@@ -265,10 +265,10 @@ public class ViewPanel extends JPanel{
     /**
      * Defines the exit's state.
      *
-     * @param EtatExit States of Win.
+     * @param StateExit States of Win.
      */
-    protected void setStateExit(int EtatExit){
-        this.StateExit = EtatExit;
+    protected void setStateExit(int StateExit){
+        this.StateExit = StateExit;
     }
     /** Increments the exit's status. */
     protected void setStateExitIncrement(){
@@ -337,8 +337,8 @@ public class ViewPanel extends JPanel{
      *
      * @param ControllerOrder State of the character.
      */
-    protected void setControlleEtatPlayer(ControllerOrder ControllerOrder){
-        this.ControlleEtatPlayer = ControllerOrder;
+    protected void setControlleStatePlayer(ControllerOrder ControllerOrder){
+        this.ControlleStatePlayer = ControllerOrder;
     }
     /**
      * Recovers the state of the character.
@@ -346,7 +346,7 @@ public class ViewPanel extends JPanel{
      * @return ControllerOrder
      */
     protected ControllerOrder getControlleStatePlayer(){
-        return this.ControlleEtatPlayer;
+        return this.ControlleStatePlayer;
     }
 
     /** Changes the location of the recovered images. */

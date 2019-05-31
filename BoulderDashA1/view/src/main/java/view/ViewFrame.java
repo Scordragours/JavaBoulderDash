@@ -155,7 +155,7 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
      */
     public void setStandBy(boolean StandBy){
         if(StandBy){
-            this.Panel.setControlleEtatPlayer(ControllerOrder.STAND_BY);
+            this.Panel.setControlleStatePlayer(ControllerOrder.STAND_BY);
             this.setLevelMaxPlayer(2);
             this.Panel.setStatePlayer(1);
             this.repaint();
@@ -205,22 +205,22 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
         this.Panel.setStatePlayer(1);
         switch(keyCode){
             case KeyEvent.VK_LEFT:
-                this.Panel.setControlleEtatPlayer(ControllerOrder.LEFT);
+                this.Panel.setControlleStatePlayer(ControllerOrder.LEFT);
                 return ControllerOrder.LEFT;
             case KeyEvent.VK_RIGHT:
-                this.Panel.setControlleEtatPlayer(ControllerOrder.RIGHT);
+                this.Panel.setControlleStatePlayer(ControllerOrder.RIGHT);
                 return ControllerOrder.RIGHT;
             case KeyEvent.VK_UP:
                 this.setLevelMaxPlayer(4);
-                this.Panel.setControlleEtatPlayer(ControllerOrder.UP);
+                this.Panel.setControlleStatePlayer(ControllerOrder.UP);
                 return ControllerOrder.UP;
             case KeyEvent.VK_DOWN:
                 this.setLevelMaxPlayer(4);
-                this.Panel.setControlleEtatPlayer(ControllerOrder.DOWN);
+                this.Panel.setControlleStatePlayer(ControllerOrder.DOWN);
                 return ControllerOrder.DOWN;
             default:
                 this.setLevelMaxPlayer(2);
-                this.Panel.setControlleEtatPlayer(ControllerOrder.STAND_BY);
+                this.Panel.setControlleStatePlayer(ControllerOrder.STAND_BY);
                 return ControllerOrder.STAND_BY;
         }
     }
@@ -265,7 +265,7 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
         if(this.Model.isWin()){
             this.setLevelMaxPlayer(2);
             this.Panel.setStatePlayer(1);
-            this.Panel.setControlleEtatPlayer(ControllerOrder.WIN);
+            this.Panel.setControlleStatePlayer(ControllerOrder.WIN);
             this.Panel.setLive(true);
             this.Live = true;
         }
@@ -278,7 +278,7 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
         if(!(this.Model.getIsAlivePlayer())){
             this.setLevelMaxPlayer(2);
             this.Panel.setStatePlayer(1);
-            this.Panel.setControlleEtatPlayer(ControllerOrder.LOSE);
+            this.Panel.setControlleStatePlayer(ControllerOrder.LOSE);
             this.Panel.setDie(true);
             this.Die = true;
         }
