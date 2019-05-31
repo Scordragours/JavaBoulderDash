@@ -257,6 +257,10 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
 
         this.Panel.setRemainingTime(this.Model.getRemainingTime());
         this.Panel.setRemainingDiamonds(this.Model.getRemainingDiamonds());
+        if(this.Model.getRemainingDiamonds() == 0){
+            this.Panel.setExitPossible(true);
+            this.Exit = true;
+        }
         this.Panel.setScore(this.Model.getScore());
 
         this.setLevelTexture(this.Model.getLevelTexture());
@@ -266,7 +270,7 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
             this.setLevelMaxPlayer(2);
             this.Panel.setStatePlayer(1);
             this.Panel.setControlleStatePlayer(ControllerOrder.WIN);
-            this.Panel.setLive(true);
+            this.Panel.setWinBoolean(true);
             this.Live = true;
         }
 

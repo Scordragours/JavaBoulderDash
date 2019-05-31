@@ -31,7 +31,7 @@ public class ViewPanel extends JPanel{
     private int StatePlayer = 1, StateDiamond = 1, StateExit = 1;
 
     /** State of the game. */
-    private boolean Die = false, Live = false, Exploid = false;
+    private boolean Die = false, WinBoolean = false, Exploid = false, ExitPossible = false;
 
     /** Defines the table containing the positions of the explosions. */
     private ArrayList<int[]> Explosions = new ArrayList<>();
@@ -152,6 +152,24 @@ public class ViewPanel extends JPanel{
     }
 
     /**
+     * Define the state of the game exit.
+     *
+     * @param ExitPossible Define the state of the game exit.
+     */
+    protected void setExitPossible(boolean ExitPossible){
+        this.ExitPossible = ExitPossible;
+    }
+    /**
+     * Recovers the state of the game.
+     *
+     * @return boolean
+     */
+    protected boolean getExitPossible(){
+        return this.ExitPossible;
+    }
+
+
+    /**
      * Defined the state of the game.
      *
      * @param Die Define the state of the game on death.
@@ -171,18 +189,18 @@ public class ViewPanel extends JPanel{
     /**
      *  Recovers the state of the game.
      *
-     * @param Live Define the state of the game on victory.
+     * @param WinBoolean Define the state of the game on victory.
      */
-    protected void setLive(boolean Live){
-        this.Live = Live;
+    protected void setWinBoolean(boolean WinBoolean){
+        this.WinBoolean = WinBoolean;
     }
     /**
      * Recovers the state of the game.
      *
      * @return boolean
      */
-    protected boolean getLive(){
-        return this.Live;
+    protected boolean getWinBoolean(){
+        return this.WinBoolean;
     }
 
     /**
@@ -415,7 +433,7 @@ public class ViewPanel extends JPanel{
         }
         if(this.getDie()){
             Graphic.drawImage(this.TestCase('G'), 0, 0, 512, 512, this);
-        }else if(this.getLive()){
+        }else if(this.getWinBoolean()){
             Graphic.drawImage(this.TestCase('V'), 0, 0, 512, 512, this);
         }
     }
@@ -470,7 +488,11 @@ public class ViewPanel extends JPanel{
                 Image = this.AnimationDiamond();
                 break;
             case 'E':
-                Image = this.AnimationExit();
+                if(this.getExitPossible()){
+                    Image = this.AnimationExit();
+                }else{
+                    Image = this.Delemitation_Block;
+                }
                 break;
             case '1':
                 Image = this.AnimationEnnemy(1);

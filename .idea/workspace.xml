@@ -67,22 +67,22 @@
     <session id="-610453972">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="387" />
-          <entry key="txt" value="37" />
+          <entry key="java" value="565" />
+          <entry key="txt" value="41" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="387" />
-          <entry key="PLAIN_TEXT" value="37" />
+          <entry key="JAVA" value="565" />
+          <entry key="PLAIN_TEXT" value="41" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -100,12 +100,24 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4488">
-              <caret line="280" column="46" selection-start-line="280" selection-start-column="46" selection-end-line="280" selection-end-column="46" />
+            <state relative-caret-position="-9">
+              <caret line="261" column="29" selection-start-line="261" selection-start-column="29" selection-end-line="261" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewLabel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="102" selection-start-line="102" selection-end-line="102" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -114,24 +126,14 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewLabel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="106" column="33" selection-start-line="106" selection-start-column="33" selection-end-line="106" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2717">
-              <caret line="351" column="56" lean-forward="true" selection-start-line="351" selection-start-column="56" selection-end-line="351" selection-end-column="56" />
+            <state relative-caret-position="185">
+              <caret line="191" column="24" selection-start-line="191" selection-start-column="24" selection-end-line="191" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4594#4595#0" expanded="true" />
+                <element signature="e#4621#4622#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -174,6 +176,9 @@
       <find>obs</find>
       <find>this.model.getObservable().addObserver(this);</find>
       <find>etat</find>
+      <find>WinBoolean</find>
+      <find>Exit</find>
+      <find>setW</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -231,8 +236,8 @@
         <option value="$PROJECT_DIR$/BoulderDashA1/contract/src/main/java/contract/IView.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewLabel.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/controller/src/main/java/controller/Controller.java" />
-        <option value="$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewPanel.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewFrame.java" />
+        <option value="$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewPanel.java" />
       </list>
     </option>
   </component>
@@ -295,6 +300,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -341,7 +347,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -458,7 +463,8 @@
       <workItem from="1559074723292" duration="7334000" />
       <workItem from="1559201084981" duration="38395000" />
       <workItem from="1559287371748" duration="8609000" />
-      <workItem from="1559301165006" duration="921000" />
+      <workItem from="1559301165006" duration="1141000" />
+      <workItem from="1559316276825" duration="1633000" />
     </task>
     <task id="LOCAL-00001" summary="First class declaration">
       <created>1558697629087</created>
@@ -719,7 +725,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559294573589</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Modification of the ViewPanel and ViewFrame.">
+      <created>1559306662204</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1559306662204</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -755,13 +768,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189409000" />
+    <option name="totallyTimeSpent" value="191262000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20202559" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20415778" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -771,7 +783,7 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" weight="0.30260304" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49840087" visible="true" weight="0.30260304" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -836,7 +848,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adding the database" />
     <MESSAGE value="First Entity test implementation" />
     <MESSAGE value="Add BlockTest and DirtTest" />
     <MESSAGE value="Fix bug and errors on test" />
@@ -861,7 +872,8 @@
     <MESSAGE value="Modification of IView." />
     <MESSAGE value="Modification of the javadoc for the ViewLabel." />
     <MESSAGE value="Modification of the javadoc for the ViewPanel and ViewFrame." />
-    <option name="LAST_COMMIT_MESSAGE" value="Modification of the javadoc for the ViewPanel and ViewFrame." />
+    <MESSAGE value="Modification of the ViewPanel and ViewFrame." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modification of the ViewPanel and ViewFrame." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1234,10 +1246,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewPanel.java">
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewLabel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2717">
-          <caret line="351" column="56" lean-forward="true" selection-start-line="351" selection-start-column="56" selection-end-line="351" selection-end-column="56" />
+        <state relative-caret-position="227">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1246,20 +1258,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4488">
-          <caret line="280" column="46" selection-start-line="280" selection-start-column="46" selection-end-line="280" selection-end-column="46" />
+        <state relative-caret-position="-9">
+          <caret line="261" column="29" selection-start-line="261" selection-start-column="29" selection-end-line="261" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewLabel.java">
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="106" column="33" selection-start-line="106" selection-start-column="33" selection-end-line="106" selection-end-column="33" />
+        <state relative-caret-position="185">
+          <caret line="191" column="24" selection-start-line="191" selection-start-column="24" selection-end-line="191" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4594#4595#0" expanded="true" />
+            <element signature="e#4621#4622#0" expanded="true" />
           </folding>
         </state>
       </provider>
