@@ -20,16 +20,16 @@ public class ViewLabel extends JLabel{
     /** Label size. */
     private int Width, Height;
 
-    /** Image location  */
+    /** Image location.  {@link java.lang.String}*/
     private String URL;
 
     /**
      * Label class constructor.
      *
-     * @param Text Text displayed in the label.
+     * @param Text Text displayed in the label. {@link java.lang.String}
      * @param Width Label width.
      * @param Height Label height.
-     * @param URL Image Location
+     * @param URL Image Location. {@link java.lang.String}
      *
      * */
     public ViewLabel(String Text, int Width, int Height, String URL){
@@ -83,7 +83,7 @@ public class ViewLabel extends JLabel{
     /**
      * Defines the background of the label.
      *
-     * @param URL Path of the background.
+     * @param URL Path of the background. {@link java.lang.String}
      *
      */
     protected void setURL(String URL){
@@ -93,7 +93,7 @@ public class ViewLabel extends JLabel{
     /**
      * Recovers the background of the label.
      *
-     * @return String
+     * @return String {@link java.lang.String}
      *
      */
     public String getURL(){
@@ -105,7 +105,7 @@ public class ViewLabel extends JLabel{
      * Allows to paint a background in the label.
      *
      * @see java.awt.TexturePaint
-     * @return TexturePaint
+     * @return TexturePaint {@link java.awt.TexturePaint}
      *
      */
     private TexturePaint BackgroundPaint(){
@@ -124,7 +124,8 @@ public class ViewLabel extends JLabel{
     /**
      * Applies the background image.
      *
-     * @param g Graphic object.
+     * @see javax.swing.JComponent
+     * @param g Graphic object. {@link java.awt.Graphics}
      *
      */
     protected void paintComponent(Graphics g){
@@ -137,7 +138,8 @@ public class ViewLabel extends JLabel{
     /**
      * Applies a border.
      *
-     * @param g Graphic object.
+     * @see javax.swing.JComponent
+     * @param g Graphic object. {@link java.awt.Graphics}
      *
      */
     protected void paintBorder(Graphics g){}
