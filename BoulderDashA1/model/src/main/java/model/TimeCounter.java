@@ -1,14 +1,29 @@
 package model;
 
+/**
+ * The TimeCounter class. Use a Thread.
+ *
+ * @author ETIENNE CANDAT AND GREGORY DENEUVE
+ */
 public class TimeCounter extends Thread {
 
+    /** The model to which the thread is attached */
     private Model model;
 
+    /**
+     * Instantiates a new TimeCounter thread.
+     *
+     * @param model sets the model attached
+     */
     public TimeCounter (Model model)
     {
         this.model = model;
     }
 
+    /**
+     * The run method of a thread.
+     * In this one, the remaining time is updated.
+     */
     public void run()
     {
         while(true)

@@ -15,15 +15,25 @@ import entity.Level;
  */
 public final class Model extends Observable implements IModel {
 
+	/** The level. */
 	private Level level;
+	/** The current remaining time. */
 	private int remainingTime;
+	/** The current remaining diamonds to unlock the exit. */
 	private int remainingDiamonds;
+	/** The world as an Entity array in two dimensions. */
 	private Entity[][] world = new Entity[26][48];
+	/** The current score. */
 	private int score;
+	/** The player entity of the level. */
 	private Player player;
+	/** The type of texture to display for the level. */
 	private int levelTexture;
+	/** The win state of the game. */
 	private boolean win;
+	/** The explosions is the game are registered here. */
 	private ArrayList<int[]> explosions = new ArrayList<>();
+	/** The exit entity of the level. */
 	private Exit exit;
 
 	/**
@@ -51,7 +61,7 @@ public final class Model extends Observable implements IModel {
 	}
 
 	/**
-	 * Load the level from the database.
+	 * Loads the level from the database.
 	 *
 	 * @param levelID
 	 * 			the ID of the level in the database
@@ -67,7 +77,7 @@ public final class Model extends Observable implements IModel {
 	}
 
 	/**
-	 * Convert the level extracted from the database to an usable Entity array in two dimension.
+	 * Converts the level extracted from the database to an usable Entity array in two dimension.
 	 */
 	private void buildWorld()
 	{
@@ -244,7 +254,7 @@ public final class Model extends Observable implements IModel {
 	public Player getPlayer() { return this.player; }
 
 	/**
-	 * Update a slot in the world array and notify the observers.
+	 * Updates a slot in the world array and notify the observers.
 	 *
 	 * @param x
 	 * 			the x position of the updated slot
@@ -253,7 +263,7 @@ public final class Model extends Observable implements IModel {
 	 * @param entity
 	 * 			the entity put in the slot (can be null)
 	 *
-	 * @throws Exception when a bad position is given in parameter
+	 * @throws Exception when the given positions are out of the world
 	 */
 	void updateEntity(final int x, final int y, Entity entity) throws Exception
 	{
@@ -270,9 +280,9 @@ public final class Model extends Observable implements IModel {
 	}
 
     /**
-     * Try to update every sliding block in the world if they can move.
+     * Tries to update every sliding block in the world if they can move.
 	 *
-     * @throws Exception when there was a bad move
+     * @throws Exception when the given positions are out of the world
      */
 	void updateSlidingBlocks() throws Exception
 	{
@@ -300,9 +310,9 @@ public final class Model extends Observable implements IModel {
 	}
 
 	/**
-	 * Try to update every enemy in the world if they can move.
+	 * Tries to update every enemy in the world if they can move.
 	 *
-	 * @throws Exception when there was a bad move
+	 * @throws Exception when the given positions are out of the world
 	 */
 	void updateEnemies() throws Exception
 	{
@@ -329,41 +339,8 @@ public final class Model extends Observable implements IModel {
 		}
 	}
 
-	void updateWorld() throws Exception
-	{
-		for(Entity[] line : world)
-		{
-			for(Entity e : line)
-			{
-				if(e instanceof SlidingBlock)
-				{
-					((SlidingBlock) e).pathFinder();
-				}
-				else if (e instanceof Enemy)
-				{
-					((Enemy) e).pathFinder();
-				}
-			}
-		}
-
-		for(Entity[] line : world)
-		{
-			for(Entity e : line)
-			{
-				if(e instanceof SlidingBlock)
-				{
-					((SlidingBlock) e).resetMove();
-				}
-				else if(e instanceof Enemy)
-				{
-					((Enemy) e).resetMove();
-				}
-			}
-		}
-	}
-
 	/**
-	 * Convert the world to a char array in two dimensions.
+	 * Converts the world to a char array in two dimensions.
 	 *
 	 * @return the converted char array
 	 */
@@ -437,7 +414,7 @@ public final class Model extends Observable implements IModel {
 	}
 
 	/**
-	 * Add an explosion.
+	 * Adds an explosion.
 	 *
 	 * @param coordinates
 	 * 			the coordinates of the explosion
@@ -465,14 +442,14 @@ public final class Model extends Observable implements IModel {
     }
 
 	/**
-	 * Try to move the player.
+	 * Tries to move the player to a relative location.
 	 *
 	 * @param x
-	 * 			the x position of the move
+	 * 			the relative X position
 	 * @param y
-	 * 			the y position of the move
+	 * 			the relative Y position
 	 *
-	 * @throws Exception when a bad position is given in parameter
+	 * @throws Exception when the given positions are out of the world
 	 */
     public void setMovePlayer(final int x, final int y) throws Exception
     {
