@@ -5,7 +5,6 @@ package model;
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
-
 public class Player extends Character {
 
     /** The alive state of the player */
@@ -42,7 +41,7 @@ public class Player extends Character {
             this.model.updateEntity(antX, antY, null);
 
         }
-        else if(getRelativeEntity(x,y) != null && getRelativeEntity(x,y).getType() == EntityType.ROLLINGROCK)
+        else if(getRelativeEntity(x,y) != null && getRelativeEntity(x,y).getType() == EntityType.ROLLINGROCK && !((SlidingBlock)getRelativeEntity(x,y)).isFalling())
         {
             if(x < 0)
             {
@@ -69,7 +68,7 @@ public class Player extends Character {
             this.model.updateEntity(antX, antY, null);
             this.model.winned();
         }
-        else if(getRelativeEntity(x,y) != null && getRelativeEntity(x,y).getType() == EntityType.DIAMOND)
+        else if(getRelativeEntity(x,y) != null && getRelativeEntity(x,y).getType() == EntityType.DIAMOND && !((SlidingBlock)getRelativeEntity(x,y)).isFalling())
         {
             this.model.updateEntity(getPositionX()+x, getPositionY()+y, this);
             this.model.updateEntity(antX, antY, null);
@@ -79,15 +78,21 @@ public class Player extends Character {
 
     /**
      * Changes the alive state of the player to false.
+     *
+     * @param dontExplode false if the player explode, true if not
+     * @throws Exception when the given positions are out of the world
      */
-    public void die()
+    public void die(boolean dontExplode) throws Exception
     {
-       
+        if(!dontExplode)
+        {
+            this.explode(false);
+        }
         this.alive = false;
     }
 
     /**
-     * Check if the player is steel alive.
+     * Checks if the player is steel alive.
      *
      * @return the alive state of the player
      */
@@ -95,5 +100,4 @@ public class Player extends Character {
     {
         return this.alive;
     }
-
 }

@@ -19,7 +19,11 @@ public class UpdateWorld extends Thread {
 
                 this.model.updateEnemies();
 
-                Thread.sleep(250);
+                //this.model.updateWorld();
+
+                Thread.sleep(100);
+                this.model.updateSlidingBlocks();
+                Thread.sleep(100);
             }catch (Exception e)
             {
                 e.printStackTrace();

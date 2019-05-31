@@ -244,7 +244,7 @@ public class ModelTest {
                 expectedWorld = (Entity[][])field.get(this.model);
             }
         }
-        assertEquals(expectedWorld, this.model.getWorld());
+        assertArrayEquals(expectedWorld, this.model.getWorld());
     }
 
     /**

@@ -8,7 +8,7 @@ package model;
 public abstract class Character extends Entity {
 
     /** Every position possible in a one block radius. */
-    final int[][] POSITIONS = {
+    private final int[][] POSITIONS = {
             {0,0},
             {0,1},
             {1,1},
@@ -47,9 +47,13 @@ public abstract class Character extends Entity {
         {
             if(getRelativeEntity(pos[0], pos[1]) != null)
             {
-                if(getRelativeEntity(pos[0], pos[1]).getType() != EntityType.OUTLINE)
+                if(getRelativeEntity(pos[0], pos[1]).getType() != EntityType.OUTLINE && getRelativeEntity(pos[0], pos[1]).getType() != EntityType.EXIT)
                 {
-                    this.model.addExplosion(new int[]{getPositionX()+pos[0],getPositionY()+pos[1]});
+                    if(!generateDiamonds)
+                    {
+                        this.model.addExplosion(new int[]{getPositionX()+pos[0],getPositionY()+pos[1]});
+                    }
+
                     if(getRelativeEntity(pos[0], pos[1]).getType() != EntityType.PLAYER)
                     {
                         if(generateDiamonds)
@@ -62,12 +66,19 @@ public abstract class Character extends Entity {
                     }
                     else
                     {
-                        this.model.getPlayer().die();
+                        this.model.getPlayer().die(true);
                     }
                 }
             }else
             {
-                this.model.addExplosion(new int[]{getPositionX()+pos[0],getPositionY()+pos[1]});
+                if(!generateDiamonds)
+                {
+                    this.model.addExplosion(new int[]{getPositionX()+pos[0],getPositionY()+pos[1]});
+                }
+                else
+                {
+                    this.model.updateEntity(getPositionX() + pos[0], getPositionY() + pos[1], new Diamond(this.model, 0,0));
+                }
             }
 
         }
@@ -85,7 +96,8 @@ public abstract class Character extends Entity {
     /**
      * The die method. Need to be redefined.
      *
+     * @param suicide true if it's a suicide, false if it's a kill
      * @throws Exception when the given positions are out of the world
      */
-    public abstract void die() throws Exception;
+    public abstract void die(boolean suicide) throws Exception;
 }

@@ -153,15 +153,16 @@ public final class Model extends Observable implements IModel {
 	 *
 	 * @param remainingTime
 	 * 			the remaining time
+	 * @throws Exception when the given positions are out of the world
 	 */
-	void setRemainingTime(final int remainingTime)
+	void setRemainingTime(final int remainingTime) throws Exception
 	{
 		this.remainingTime = remainingTime;
 
 		if(!this.isWin() && this.remainingTime <= 0)
         {
             this.remainingTime = 0;
-            this.getPlayer().die();
+            this.getPlayer().die(false);
         }else if(this.isWin())
 		{
 			this.winned();
@@ -321,6 +322,39 @@ public final class Model extends Observable implements IModel {
 			for(Entity e : line)
 			{
 				if(e instanceof Enemy)
+				{
+					((Enemy) e).resetMove();
+				}
+			}
+		}
+	}
+
+	void updateWorld() throws Exception
+	{
+		for(Entity[] line : world)
+		{
+			for(Entity e : line)
+			{
+				if(e instanceof SlidingBlock)
+				{
+					((SlidingBlock) e).pathFinder();
+				}
+				else if (e instanceof Enemy)
+				{
+					((Enemy) e).pathFinder();
+				}
+			}
+		}
+
+		for(Entity[] line : world)
+		{
+			for(Entity e : line)
+			{
+				if(e instanceof SlidingBlock)
+				{
+					((SlidingBlock) e).resetMove();
+				}
+				else if(e instanceof Enemy)
 				{
 					((Enemy) e).resetMove();
 				}

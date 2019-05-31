@@ -9,6 +9,8 @@ public abstract class SlidingBlock extends Entity {
 
     /** Used when the entity has moved during an update. */
     private boolean hasMove;
+    /** Used when the entity fell at the last update */
+    private boolean falling;
 
     /**
      * Instantiates a new SlidingBlock.
@@ -22,6 +24,7 @@ public abstract class SlidingBlock extends Entity {
     {
         super(model,x,y,type);
         this.hasMove = false;
+        this.falling = false;
     }
 
     /**
@@ -44,14 +47,14 @@ public abstract class SlidingBlock extends Entity {
         this.model.updateEntity(getPositionX(), getPositionY() + 1,this);
         this.model.updateEntity(antX, antY,null);
 
-        if(getRelativeEntity(0,1) != null && getRelativeEntity(0,1).getType() == EntityType.PLAYER)
+        /*if(getRelativeEntity(0,1) != null && getRelativeEntity(0,1).getType() == EntityType.PLAYER && this.model.getPlayer().isAlive())
         {
             this.model.getPlayer().explode(false);
         }
         if(getRelativeEntity(0,1) != null && (getRelativeEntity(0,1).getType() == EntityType.ENEMYDIAMOND || getRelativeEntity(0,1).getType() == EntityType.ENEMYPOINT))
         {
-            ((Enemy)getRelativeEntity(0,1)).die();
-        }
+            ((Enemy)getRelativeEntity(0,1)).die(false);
+        }*/
 
         this.hasMove = true;
     }
@@ -91,13 +94,28 @@ public abstract class SlidingBlock extends Entity {
     void pathFinder() throws Exception
     {
         if(!this.hasMove) {
-            if (getRelativeEntity(0, 1) == null) {
+            if(falling && getRelativeEntity(0, 1) instanceof Character){
+                ((Character)getRelativeEntity(0, 1)).die(false);
+            } else if(falling && getRelativeEntity(0, 1) != null){
+                this.falling = false;
+            } else if (getRelativeEntity(0, 1) == null) {
+                this.falling = true;
                 fall();
-            } else if (getRelativeEntity(-1, 1) == null && getRelativeEntity(-1, 0) == null && getRelativeEntity(0, 1) instanceof SlidingBlock) {
+            } else if (getRelativeEntity(-1, 1) == null && getRelativeEntity(-1, 0) == null && (getRelativeEntity(0, 1) instanceof SlidingBlock || getRelativeEntity(0, 1) instanceof Wall || getRelativeEntity(0, 1) instanceof Exit)) {
                 slide(true);
-            } else if (getRelativeEntity(1, 1) == null && getRelativeEntity(1, 0) == null && getRelativeEntity(0, 1) instanceof SlidingBlock) {
+            } else if (getRelativeEntity(1, 1) == null && getRelativeEntity(1, 0) == null && (getRelativeEntity(0, 1) instanceof SlidingBlock || getRelativeEntity(0, 1) instanceof Wall || getRelativeEntity(0, 1) instanceof Exit)) {
                 slide(false);
             }
         }
+    }
+
+    /**
+     * Checks if the sliding block is falling.
+     *
+     * @return the falling state
+     */
+    boolean isFalling()
+    {
+        return this.falling;
     }
 }

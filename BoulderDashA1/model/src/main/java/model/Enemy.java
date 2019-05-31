@@ -42,6 +42,8 @@ public abstract class Enemy extends Character{
      */
     public void move(final int x, final int y) throws Exception
     {
+        final int[][] detectRange = {{0,0}, {1,0}, {-1,0}, {0,1}, {0,-1}};
+
         if (getRelativeEntity(x, y) == null) {
             int antX = getPositionX();
             int antY = getPositionY();
@@ -49,19 +51,13 @@ public abstract class Enemy extends Character{
             this.model.updateEntity(antX, antY, null);
 
             this.hasMove = true;
-            if(this.model.isWin()) //the enemies disappear if the player wins
-            {
-                this.model.updateEntity(getPositionX(),getPositionY() ,null);
-            }
         }
 
-        for (int[] pos : this.POSITIONS) {
+        for (int[] pos : detectRange) {
             if (this.getRelativeEntity(pos[0], pos[1]) != null && this.getRelativeEntity(pos[0], pos[1]).getType() == EntityType.PLAYER) {
-                this.die();
+                this.die(true);
             }
         }
-
-
     }
 
     /**
@@ -71,7 +67,7 @@ public abstract class Enemy extends Character{
      */
     void pathFinder() throws Exception
     {
-        if(!this.hasMove) {
+        if(!this.hasMove && !this.model.isWin()) {
             switch (lastDirection) {
                 case UP:
                     if (getRelativeEntity(1, 0) == null && getRelativeEntity(0, -1) == null && getRelativeEntity(-1, 0) == null && getRelativeEntity(0, 1) == null && getRelativeEntity(1, 1) == null) {
@@ -83,6 +79,8 @@ public abstract class Enemy extends Character{
                     } else if (getRelativeEntity(1, 0) == null) {
                         move(1, 0);
                         this.lastDirection = Direction.RIGHT;
+                    } else if(getRelativeEntity(0, -1) instanceof SlidingBlock){
+                        break;
                     } else if (getRelativeEntity(0, -1) == null) {
                         move(0, -1);
                         this.lastDirection = Direction.UP;
@@ -110,6 +108,8 @@ public abstract class Enemy extends Character{
                     } else if (getRelativeEntity(1, 0) == null) {
                         move(1, 0);
                         this.lastDirection = Direction.RIGHT;
+                    } else if(getRelativeEntity(0, -1) instanceof SlidingBlock){
+                        break;
                     } else if (getRelativeEntity(0, -1) == null) {
                         move(0, -1);
                         this.lastDirection = Direction.UP;
@@ -122,7 +122,9 @@ public abstract class Enemy extends Character{
                     } else if (getRelativeEntity(0, -1) == null && getRelativeEntity(1, -1) == null){
                         move(0, 1);
                         this.lastDirection = Direction.DOWN;
-                    }else if (getRelativeEntity(0, -1) == null) {
+                    } else if(getRelativeEntity(0, -1) instanceof SlidingBlock){
+                        break;
+                    } else if (getRelativeEntity(0, -1) == null) {
                         move(0, -1);
                         this.lastDirection = Direction.UP;
                     } else if (getRelativeEntity(-1, 0) == null) {
@@ -149,6 +151,8 @@ public abstract class Enemy extends Character{
                     } else if (getRelativeEntity(1, 0) == null) {
                         move(1, 0);
                         this.lastDirection = Direction.RIGHT;
+                    } else if(getRelativeEntity(0, -1) instanceof SlidingBlock){
+                        break;
                     } else if (getRelativeEntity(0, -1) == null) {
                         move(0, -1);
                         this.lastDirection = Direction.UP;

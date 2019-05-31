@@ -32,13 +32,9 @@ public abstract class SlidingBlockTest extends EntityTest{
             ((SlidingBlock)this.entite).fall();
             assertEquals(expectedY, this.entite.getPositionY());
 
-            assertEquals(EntityType.PLAYER, this.model.getPlayer().getType());
-            assertTrue(this.model.getPlayer().isAlive());
-
             ((SlidingBlock)this.entite).fall();
 
-            assertFalse(this.model.getPlayer().isAlive());
-            assertNull(this.model.getWorld()[this.entite.getPositionY()][this.entite.getPositionX()]);
+            assertNull(this.model.getWorld()[this.entite.getPositionY()-1][this.entite.getPositionX()]);
         }
     }
 

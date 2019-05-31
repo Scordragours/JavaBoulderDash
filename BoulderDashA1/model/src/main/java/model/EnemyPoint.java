@@ -22,11 +22,16 @@ public class EnemyPoint extends Enemy {
     /**
      * Causes the death of the enemy. Increments the score by 250 points.
      *
+     * @param suicide true if it's a suicide, false if it's a kill
      * @throws Exception when the given positions are out of the world
      */
-    public void die() throws Exception
+    public void die(boolean suicide) throws Exception
     {
-        this.model.setScore(this.model.getScore() + 250);
+        if(!suicide)
+        {
+            this.model.setScore(this.model.getScore() + 250);
+        }
+
         this.explode(false);
     }
 }
