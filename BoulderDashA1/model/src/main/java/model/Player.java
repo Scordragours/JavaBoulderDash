@@ -66,7 +66,7 @@ public class Player extends Character {
         {
             this.model.updateEntity(getPositionX()+x, getPositionY()+y, this);
             this.model.updateEntity(antX, antY, null);
-            this.model.winned();
+            this.model.won();
         }
         else if(getRelativeEntity(x,y) != null && getRelativeEntity(x,y).getType() == EntityType.DIAMOND && !((SlidingBlock)getRelativeEntity(x,y)).isFalling())
         {

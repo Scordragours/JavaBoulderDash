@@ -7,19 +7,6 @@ package model;
  */
 public abstract class Character extends Entity {
 
-    /** Every position possible in a one block radius. */
-    private final int[][] POSITIONS = {
-            {0,0},
-            {0,1},
-            {1,1},
-            {1,0},
-            {-1,1},
-            {-1,0},
-            {-1,-1},
-            {0,-1},
-            {1,-1}
-    };
-
     /**
      * Instantiates a new Character.
      *
@@ -43,7 +30,19 @@ public abstract class Character extends Entity {
      */
     void explode(final boolean generateDiamonds) throws Exception
     {
-        for(int[] pos : this.POSITIONS)
+        final int[][] POSITIONS = {
+                {0,0},
+                {0,1},
+                {1,1},
+                {1,0},
+                {-1,1},
+                {-1,0},
+                {-1,-1},
+                {0,-1},
+                {1,-1}
+        };
+
+        for(int[] pos : POSITIONS)
         {
             if(getRelativeEntity(pos[0], pos[1]) != null)
             {
@@ -96,8 +95,8 @@ public abstract class Character extends Entity {
     /**
      * The die method. Need to be redefined.
      *
-     * @param suicide true if it's a suicide, false if it's a kill
+     * @param option true to active option, false so as not to
      * @throws Exception when the given positions are out of the world
      */
-    public abstract void die(boolean suicide) throws Exception;
+    public abstract void die(boolean option) throws Exception;
 }

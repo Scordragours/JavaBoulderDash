@@ -175,10 +175,7 @@ public final class Model extends Observable implements IModel {
 		if(!this.isWin() && this.remainingTime <= 0)
         {
             this.remainingTime = 0;
-            this.getPlayer().die(false);
-        }else if(this.isWin())
-		{
-			this.winned();
+            this.getPlayer().die(true);
 		}
 
 		setChanged();
@@ -421,7 +418,7 @@ public final class Model extends Observable implements IModel {
 	/**
 	 * Sets the win state to true. Also notify the observers.
 	 */
-	void winned()
+	void won()
 	{
 		this.win = true;
 		setChanged();
