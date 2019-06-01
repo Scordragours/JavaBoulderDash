@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ced6bba6-f76a-41f8-a65d-ecf6fea6b4a9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/SlidingBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/SlidingBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/UpdateWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/UpdateWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoulderDashA1/main/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoulderDashA1/main/src/main/java/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewPanel.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/BoulderDashA1/bin/" />
     <ignored path="$PROJECT_DIR$/BoulderDashA1/target/" />
@@ -50,57 +45,59 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-610453972">
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="262" />
+          <entry key="txt" value="14" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="262" />
+          <entry key="PLAIN_TEXT" value="14" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Model.java">
+        <entry file="file://$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3434">
-              <caret line="42" column="6" lean-forward="true" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+            <state relative-caret-position="427">
+              <caret line="63" column="33" lean-forward="true" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
               <folding>
-                <element signature="e#8547#8548#0" expanded="true" />
-                <element signature="e#8927#8928#0" expanded="true" />
-                <element signature="e#9698#9699#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/SlidingBlockTest.java">
+        <entry file="file://$PROJECT_DIR$/BoulderDashA1/main/src/main/java/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/SlidingBlock.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="99" column="37" lean-forward="true" selection-start-line="99" selection-start-column="37" selection-end-line="99" selection-end-column="37" />
-              <folding>
-                <element signature="e#3800#3801#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Character.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="51" column="41" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Player.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-357">
-              <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+            <state relative-caret-position="469">
+              <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -108,60 +105,67 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="432" column="60" selection-start-line="432" selection-start-column="60" selection-end-line="432" selection-end-column="60" />
+            <state relative-caret-position="9860">
+              <caret line="647" column="39" selection-start-line="647" selection-start-column="24" selection-end-line="647" selection-end-column="39" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2842#2843#0" expanded="true" />
-                <element signature="e#2888#2889#0" expanded="true" />
-                <element signature="e#3441#3442#0" expanded="true" />
-                <element signature="e#3487#3488#0" expanded="true" />
-                <element signature="e#5948#5949#0" expanded="true" />
-                <element signature="e#5983#5984#0" expanded="true" />
-                <element signature="e#6601#6602#0" expanded="true" />
-                <element signature="e#6647#6648#0" expanded="true" />
-                <element signature="e#6736#6737#0" expanded="true" />
-                <element signature="e#6770#6771#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/UpdateWorld.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/TimeCounter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Enemy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="70" column="36" lean-forward="true" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="688">
-              <caret line="299" column="9" selection-start-line="299" selection-start-column="9" selection-end-line="299" selection-end-column="9" />
-              <folding>
-                <element signature="e#2593#2594#0" expanded="true" />
-                <element signature="e#2645#2646#0" expanded="true" />
+                <element signature="e#2904#2905#0" expanded="true" />
+                <element signature="e#2950#2951#0" expanded="true" />
+                <element signature="e#3125#3126#0" expanded="true" />
+                <element signature="e#3173#3174#0" expanded="true" />
+                <element signature="e#3307#3308#0" expanded="true" />
+                <element signature="e#3347#3348#0" expanded="true" />
+                <element signature="e#3568#3569#0" expanded="true" />
+                <element signature="e#3614#3615#0" expanded="true" />
+                <element signature="e#3789#3790#0" expanded="true" />
+                <element signature="e#3825#3826#0" expanded="true" />
+                <element signature="e#3993#3994#0" expanded="true" />
+                <element signature="e#4031#4032#0" expanded="true" />
+                <element signature="e#4146#4147#0" expanded="true" />
+                <element signature="e#4181#4182#0" expanded="true" />
+                <element signature="e#4349#4350#0" expanded="true" />
+                <element signature="e#4387#4388#0" expanded="true" />
+                <element signature="e#4502#4503#0" expanded="true" />
+                <element signature="e#4537#4538#0" expanded="true" />
+                <element signature="e#4723#4724#0" expanded="true" />
+                <element signature="e#4771#4772#0" expanded="true" />
+                <element signature="e#4897#4898#0" expanded="true" />
+                <element signature="e#4937#4938#0" expanded="true" />
+                <element signature="e#5097#5098#0" expanded="true" />
+                <element signature="e#5127#5128#0" expanded="true" />
+                <element signature="e#5244#5245#0" expanded="true" />
+                <element signature="e#5275#5276#0" expanded="true" />
+                <element signature="e#5459#5460#0" expanded="true" />
+                <element signature="e#5503#5504#0" expanded="true" />
+                <element signature="e#5627#5628#0" expanded="true" />
+                <element signature="e#5665#5666#0" expanded="true" />
+                <element signature="e#5887#5888#0" expanded="true" />
+                <element signature="e#5925#5926#0" expanded="true" />
+                <element signature="e#6075#6076#0" expanded="true" />
+                <element signature="e#6110#6111#0" expanded="true" />
+                <element signature="e#6313#6314#0" expanded="true" />
+                <element signature="e#6357#6358#0" expanded="true" />
+                <element signature="e#6535#6536#0" expanded="true" />
+                <element signature="e#6573#6574#0" expanded="true" />
+                <element signature="e#6728#6729#0" expanded="true" />
+                <element signature="e#6774#6775#0" expanded="true" />
+                <element signature="e#6863#6864#0" expanded="true" />
+                <element signature="e#6897#6898#0" expanded="true" />
+                <element signature="e#7012#7013#0" expanded="true" />
+                <element signature="e#7051#7052#0" expanded="true" />
+                <element signature="e#7212#7213#0" expanded="true" />
+                <element signature="e#7260#7261#0" expanded="true" />
+                <element signature="e#7351#7352#0" expanded="true" />
+                <element signature="e#7386#7387#0" expanded="true" />
+                <element signature="e#7503#7504#0" expanded="true" />
+                <element signature="e#7543#7544#0" expanded="true" />
+                <element signature="e#7687#7688#0" expanded="true" />
+                <element signature="e#7729#7730#0" expanded="true" />
+                <element signature="e#7814#7815#0" expanded="true" />
+                <element signature="e#7846#7847#0" expanded="true" />
+                <element signature="e#7957#7958#0" expanded="true" />
+                <element signature="e#7994#7995#0" expanded="true" />
+                <element signature="e#9998#9999#0" expanded="true" />
+                <element signature="e#10046#10047#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -207,6 +211,7 @@
       <find>WinBoolean</find>
       <find>Exit</find>
       <find>setW</find>
+      <find>die</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -248,11 +253,9 @@
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/EntityTest.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/view/src/test/java/view/ViewPanelTest.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/view/src/test/java/view/ViewFrameTest.java" />
-        <option value="$PROJECT_DIR$/BoulderDashA1/main/src/main/java/main/Main.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/contract/src/main/java/contract/IView.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewLabel.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/controller/src/main/java/controller/Controller.java" />
-        <option value="$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewFrame.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Character.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Player.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/SlidingBlockTest.java" />
@@ -261,13 +264,21 @@
         <option value="$PROJECT_DIR$/BoulderDashA1/controller/src/test/java/controller/ControllerTest.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/EnemyPointTest.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/BoulderDash.sql" />
-        <option value="$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewPanel.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/UpdateWorld.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/SlidingBlock.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Enemy.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Model.java" />
+        <option value="$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewPanel.java" />
+        <option value="$PROJECT_DIR$/BoulderDashA1/main/src/main/java/main/Main.java" />
+        <option value="$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewFrame.java" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -295,10 +306,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="281" />
-    <option name="y" value="-8" />
-    <option name="width" value="1218" />
-    <option name="height" value="646" />
+    <option name="x" value="-7" />
+    <option name="width" value="1389" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -334,135 +344,6 @@
             <path>
               <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="contract" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="contract" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="contract" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="contract" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="contract" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="contract" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -494,141 +375,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="Assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -637,13 +383,14 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559330902007" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559392261929" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="D:/view" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/BoulderDashA1/main/target/main-0.0.1-SNAPSHOT-shaded.jar" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -692,54 +439,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Testsuits" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="model" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="model" />
-      <option name="MAIN_CLASS_NAME" value="model.Testsuits" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="BoulderDash" type="JarApplication" factoryName="JAR Application">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/BoulderDashA1/main/target/main-0.0.1-SNAPSHOT-shaded.jar" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\lecra\Desktop\JavaBoulderDash" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <method v="2" />
     </configuration>
-    <configuration name="model in model" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
-      <module name="model" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="model" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="PARAMETERS" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testsuits" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="model" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="model" />
-      <option name="MAIN_CLASS_NAME" value="model.testsuits" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Build" type="MavenRunConfiguration" factoryName="Maven">
+    <configuration name="Build Maven Main" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -771,17 +478,9 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.model in model" />
-      <item itemvalue="JUnit.testsuits" />
-      <item itemvalue="JUnit.Testsuits" />
-      <item itemvalue="Maven.Build" />
+      <item itemvalue="JAR Application.BoulderDash" />
+      <item itemvalue="Maven.Build Maven Main" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.testsuits" />
-        <item itemvalue="JUnit.Testsuits" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -808,6 +507,9 @@
       <workItem from="1559287371748" duration="8609000" />
       <workItem from="1559301165006" duration="1141000" />
       <workItem from="1559316276825" duration="1633000" />
+      <workItem from="1559382518952" duration="764000" />
+      <workItem from="1559386520750" duration="96000" />
+      <workItem from="1559388165019" duration="3538000" />
     </task>
     <task id="LOCAL-00001" summary="First class declaration">
       <created>1558697629087</created>
@@ -1132,7 +834,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="201282000" />
+    <option name="totallyTimeSpent" value="205966000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1144,10 +846,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="0" width="1389" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21162046" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15274642" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -1157,16 +859,16 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4978678" visible="true" weight="0.34236187" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4978678" visible="true" weight="0.34063527" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="7" weight="0.32827735" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32719395" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50319827" side_tool="true" weight="0.324295" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4968017" weight="0.324295" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.2549575" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50402683" side_tool="true" weight="0.32340425" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49597314" weight="0.32340425" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.44685465" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1175,7 +877,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Database" order="7" weight="0.21610738" />
+      <window_info anchor="right" id="Database" order="7" weight="0.21588486" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.0015991471" />
       <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32995737" />
       <window_info anchor="right" id="Maven" order="10" weight="0.32995737" />
@@ -1217,6 +919,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Modifying the model" />
@@ -1314,13 +1019,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
           <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/main/src/main/java/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
@@ -1593,44 +1291,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="299" column="9" selection-start-line="299" selection-start-column="9" selection-end-line="299" selection-end-column="9" />
-          <folding>
-            <element signature="e#2593#2594#0" expanded="true" />
-            <element signature="e#2645#2646#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="432" column="60" selection-start-line="432" selection-start-column="60" selection-end-line="432" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2842#2843#0" expanded="true" />
-            <element signature="e#2888#2889#0" expanded="true" />
-            <element signature="e#3441#3442#0" expanded="true" />
-            <element signature="e#3487#3488#0" expanded="true" />
-            <element signature="e#5948#5949#0" expanded="true" />
-            <element signature="e#5983#5984#0" expanded="true" />
-            <element signature="e#6601#6602#0" expanded="true" />
-            <element signature="e#6647#6648#0" expanded="true" />
-            <element signature="e#6736#6737#0" expanded="true" />
-            <element signature="e#6770#6771#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/SlidingBlock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
           <caret line="99" column="37" lean-forward="true" selection-start-line="99" selection-start-column="37" selection-end-line="99" selection-end-column="37" />
-          <folding>
-            <element signature="e#3800#3801#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1645,10 +1309,89 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3434">
           <caret line="42" column="6" lean-forward="true" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9860">
+          <caret line="647" column="39" selection-start-line="647" selection-start-column="24" selection-end-line="647" selection-end-column="39" />
           <folding>
-            <element signature="e#8547#8548#0" expanded="true" />
-            <element signature="e#8927#8928#0" expanded="true" />
-            <element signature="e#9698#9699#0" expanded="true" />
+            <element signature="e#2904#2905#0" expanded="true" />
+            <element signature="e#2950#2951#0" expanded="true" />
+            <element signature="e#3125#3126#0" expanded="true" />
+            <element signature="e#3173#3174#0" expanded="true" />
+            <element signature="e#3307#3308#0" expanded="true" />
+            <element signature="e#3347#3348#0" expanded="true" />
+            <element signature="e#3568#3569#0" expanded="true" />
+            <element signature="e#3614#3615#0" expanded="true" />
+            <element signature="e#3789#3790#0" expanded="true" />
+            <element signature="e#3825#3826#0" expanded="true" />
+            <element signature="e#3993#3994#0" expanded="true" />
+            <element signature="e#4031#4032#0" expanded="true" />
+            <element signature="e#4146#4147#0" expanded="true" />
+            <element signature="e#4181#4182#0" expanded="true" />
+            <element signature="e#4349#4350#0" expanded="true" />
+            <element signature="e#4387#4388#0" expanded="true" />
+            <element signature="e#4502#4503#0" expanded="true" />
+            <element signature="e#4537#4538#0" expanded="true" />
+            <element signature="e#4723#4724#0" expanded="true" />
+            <element signature="e#4771#4772#0" expanded="true" />
+            <element signature="e#4897#4898#0" expanded="true" />
+            <element signature="e#4937#4938#0" expanded="true" />
+            <element signature="e#5097#5098#0" expanded="true" />
+            <element signature="e#5127#5128#0" expanded="true" />
+            <element signature="e#5244#5245#0" expanded="true" />
+            <element signature="e#5275#5276#0" expanded="true" />
+            <element signature="e#5459#5460#0" expanded="true" />
+            <element signature="e#5503#5504#0" expanded="true" />
+            <element signature="e#5627#5628#0" expanded="true" />
+            <element signature="e#5665#5666#0" expanded="true" />
+            <element signature="e#5887#5888#0" expanded="true" />
+            <element signature="e#5925#5926#0" expanded="true" />
+            <element signature="e#6075#6076#0" expanded="true" />
+            <element signature="e#6110#6111#0" expanded="true" />
+            <element signature="e#6313#6314#0" expanded="true" />
+            <element signature="e#6357#6358#0" expanded="true" />
+            <element signature="e#6535#6536#0" expanded="true" />
+            <element signature="e#6573#6574#0" expanded="true" />
+            <element signature="e#6728#6729#0" expanded="true" />
+            <element signature="e#6774#6775#0" expanded="true" />
+            <element signature="e#6863#6864#0" expanded="true" />
+            <element signature="e#6897#6898#0" expanded="true" />
+            <element signature="e#7012#7013#0" expanded="true" />
+            <element signature="e#7051#7052#0" expanded="true" />
+            <element signature="e#7212#7213#0" expanded="true" />
+            <element signature="e#7260#7261#0" expanded="true" />
+            <element signature="e#7351#7352#0" expanded="true" />
+            <element signature="e#7386#7387#0" expanded="true" />
+            <element signature="e#7503#7504#0" expanded="true" />
+            <element signature="e#7543#7544#0" expanded="true" />
+            <element signature="e#7687#7688#0" expanded="true" />
+            <element signature="e#7729#7730#0" expanded="true" />
+            <element signature="e#7814#7815#0" expanded="true" />
+            <element signature="e#7846#7847#0" expanded="true" />
+            <element signature="e#7957#7958#0" expanded="true" />
+            <element signature="e#7994#7995#0" expanded="true" />
+            <element signature="e#9998#9999#0" expanded="true" />
+            <element signature="e#10046#10047#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/main/src/main/java/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="63" column="33" lean-forward="true" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

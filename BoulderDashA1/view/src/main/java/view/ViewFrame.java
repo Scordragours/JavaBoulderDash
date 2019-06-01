@@ -4,13 +4,17 @@ import contract.ControllerOrder;
 import contract.IController;
 import contract.IModel;
 import contract.IView;
+import sun.audio.AudioPlayer;
+import sun.audio.AudioStream;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -28,8 +32,11 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
     /** Texture condition with respect to time. */
     private int LevelTexture = 1, LevelMaxPlayer = 2;
 
+    /** Previous score */
+    private int PreviousScore = 0;
+
     /**  States of the game. */
-    private boolean Die, Live, Exit;
+    private boolean Die, Live, Exit, SoundExit = true;
 
     /** View panel */
     private ViewPanel Panel;
@@ -45,6 +52,13 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
 
     /** Frame class constructor. */
     public ViewFrame(){
+        try{
+            InputStream in = new FileInputStream(this.Path +"\\Sounds\\Boulder_Dash_in_stage.wav");
+            AudioStream as = new AudioStream(in);
+            AudioPlayer.player.start(as);
+        }catch(IOException e){
+            System.err.println(e);
+        }
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("Boulder Dash");
         this.setResizable(false);
@@ -91,6 +105,26 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
      */
     protected int getLevelTexture(){
         return this.LevelTexture;
+    }
+
+    /**
+     * Defines the previous score.
+     *
+     * @param PreviousScore Previous score.
+     *
+     */
+    protected void setPreviousScore(int PreviousScore){
+        this.PreviousScore = PreviousScore;
+    }
+
+    /**
+     * Recovers the previous score.
+     *
+     * @return int
+     *
+     */
+    protected int getPreviousScore(){
+        return this.PreviousScore;
     }
 
     /**
@@ -206,6 +240,13 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
      * @param keyCode Detect key code. {@link contract.ControllerOrder}
      */
     public ControllerOrder KeyCodeToControllerOrder(int keyCode){
+        try{
+            InputStream in = new FileInputStream(this.Path  +"\\Sounds\\Boulder_Dash_walk.wav");
+            AudioStream as = new AudioStream(in);
+            AudioPlayer.player.start(as);
+        }catch(IOException e){
+            System.err.println(e);
+        }
         this.setLevelMaxPlayer(3);
         this.Panel.setStatePlayer(1);
         switch(keyCode){
@@ -263,10 +304,30 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
         this.Panel.setRemainingTime(this.Model.getRemainingTime());
         this.Panel.setRemainingDiamonds(this.Model.getRemainingDiamonds());
         if(this.Model.getRemainingDiamonds() == 0){
+            if(SoundExit){
+                try{
+                    InputStream in = new FileInputStream(this.Path +"\\Sounds\\Boulder_Dash_Exit_Unlock.wav");
+                    AudioStream as = new AudioStream(in);
+                    AudioPlayer.player.start(as);
+                }catch(IOException e){
+                    System.err.println(e);
+                }
+                this.SoundExit = false;
+            }
             this.Panel.setExitPossible(true);
             this.Exit = true;
         }
         this.Panel.setScore(this.Model.getScore());
+        if(this.Model.getScore() != this.getPreviousScore()){
+            this.setPreviousScore(this.Model.getScore());
+            try{
+                InputStream in = new FileInputStream(this.Path +"\\Sounds\\Boulder_Dash_take_diamond.wav");
+                AudioStream as = new AudioStream(in);
+                AudioPlayer.player.start(as);
+            }catch(IOException e){
+                System.err.println(e);
+            }
+        }
 
         this.setLevelTexture(this.Model.getLevelTexture());
         this.Panel.setLevels(this.Model.getLevelTexture());
@@ -292,8 +353,7 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
             this.Die = true;
         }
 
-        while(!this.Model.getExplosions().isEmpty())
-        {
+        while(!this.Model.getExplosions().isEmpty()){
             int[] removedExp = this.Model.getExplosions().remove(0);
             this.Panel.addExplosion(new int[]{removedExp[0],removedExp[1],1});
             this.Panel.setExploid(true);
