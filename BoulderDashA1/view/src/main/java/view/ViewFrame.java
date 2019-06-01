@@ -53,7 +53,7 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
     /** Frame class constructor. */
     public ViewFrame(){
         try{
-            InputStream in = new FileInputStream(this.Path +"\\Sounds\\Boulder_Dash_in_stage.wav");
+            InputStream in = new FileInputStream(this.Path +"\\Sounds\\Atmosphere.wav");
             AudioStream as = new AudioStream(in);
             AudioPlayer.player.start(as);
         }catch(IOException e){
@@ -241,7 +241,7 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
      */
     public ControllerOrder KeyCodeToControllerOrder(int keyCode){
         try{
-            InputStream in = new FileInputStream(this.Path  +"\\Sounds\\Boulder_Dash_walk.wav");
+            InputStream in = new FileInputStream(this.Path  +"\\Sounds\\Movement.wav");
             AudioStream as = new AudioStream(in);
             AudioPlayer.player.start(as);
         }catch(IOException e){
@@ -306,7 +306,7 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
         if(this.Model.getRemainingDiamonds() == 0){
             if(SoundExit){
                 try{
-                    InputStream in = new FileInputStream(this.Path +"\\Sounds\\Boulder_Dash_Exit_Unlock.wav");
+                    InputStream in = new FileInputStream(this.Path +"\\Sounds\\Exit_Unlock.wav");
                     AudioStream as = new AudioStream(in);
                     AudioPlayer.player.start(as);
                 }catch(IOException e){
@@ -321,7 +321,7 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
         if(this.Model.getScore() != this.getPreviousScore()){
             this.setPreviousScore(this.Model.getScore());
             try{
-                InputStream in = new FileInputStream(this.Path +"\\Sounds\\Boulder_Dash_take_diamond.wav");
+                InputStream in = new FileInputStream(this.Path +"\\Sounds\\Take_diamond.wav");
                 AudioStream as = new AudioStream(in);
                 AudioPlayer.player.start(as);
             }catch(IOException e){
@@ -346,6 +346,13 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
         this.Panel.setPlayerY(Player[1]);
 
         if(!(this.Model.getIsAlivePlayer())){
+            try{
+                InputStream in = new FileInputStream(this.Path +"\\Sounds\\Exploid.wav");
+                AudioStream as = new AudioStream(in);
+                AudioPlayer.player.start(as);
+            }catch(IOException e){
+                System.err.println(e);
+            }
             this.setLevelMaxPlayer(2);
             this.Panel.setStatePlayer(1);
             this.Panel.setControlleStatePlayer(ControllerOrder.LOSE);
