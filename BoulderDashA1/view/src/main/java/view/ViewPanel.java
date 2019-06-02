@@ -19,7 +19,7 @@ import java.util.ArrayList;
  */
 public class ViewPanel extends JPanel{
     /** Definition of variables to store images */
-    private BufferedImage Breakable, Delemitation_Block, Background, GameOver, Win;
+    private BufferedImage Breakable, Delemitation_Block, Background;
 
     /** Texture condition with respect to time. */
     private int Levels;
@@ -383,8 +383,6 @@ public class ViewPanel extends JPanel{
             this.Breakable = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Breakable\\1.png"));
             this.Delemitation_Block = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Outline\\1.png"));
             this.Background = ImageIO.read(new File(this.Path +"Level_"+ this.Levels +"\\Background\\1.png"));
-            this.GameOver = ImageIO.read(new File(this.Path +"\\Interface\\Game_Over.png"));
-            this.Win = ImageIO.read(new File(this.Path +"\\Interface\\Game_Win.png"));
         }catch(IOException e){}
     }
 
@@ -447,9 +445,9 @@ public class ViewPanel extends JPanel{
             }
         }
         if(this.getDie()){
-            Graphic.drawImage(this.TestCase('G'), 132, 224, 248, 64, this);
+            Graphic.drawImage(this.AnimationText("Game_Over"), 191, 240, 129, 32, this);
         }else if(this.getWinBoolean()){
-            Graphic.drawImage(this.TestCase('V'), 0, 0, 512, 512, this);
+            Graphic.drawImage(this.AnimationText("Win"), 225, 240, 62, 32, this);
         }
     }
 
@@ -518,12 +516,6 @@ public class ViewPanel extends JPanel{
             case ' ':
                 // Nothing.
                 break;
-            case 'G':
-                Image = this.GameOver;
-                break;
-            case 'V':
-                Image = this.Win;
-                break;
         }
         return Image;
     }
@@ -554,6 +546,36 @@ public class ViewPanel extends JPanel{
         }catch(IOException e){}
         return null;
     }
+
+
+    /**
+     * Animation of the texts.
+     *
+     * @return BufferedImage {@link java.awt.image.BufferedImage}
+     * @param URL Respertory of the sprite.
+     */
+    private BufferedImage AnimationText(String URL){
+        try{
+            BufferedImage Image = ImageIO.read(new File(this.Path +"\\Interface\\"+ URL +"\\1.png"));
+            switch(this.getStateDiamond()){
+                case 1:
+                    Image = ImageIO.read(new File(this.Path +"\\Interface\\"+ URL +"\\1.png"));
+                    break;
+                case 3:
+                    Image = ImageIO.read(new File(this.Path +"\\Interface\\"+ URL +"\\2.png"));
+                    break;
+                case 5:
+                    Image = ImageIO.read(new File(this.Path +"\\Interface\\"+ URL +"\\3.png"));
+                    break;
+                case 7:
+                    Image = ImageIO.read(new File(this.Path +"\\Interface\\"+ URL +"\\4.png"));
+                    break;
+            }
+            return Image;
+        }catch(IOException e){}
+        return null;
+    }
+
 
     /**
      * Animation of an moving enemy.

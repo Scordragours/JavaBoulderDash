@@ -23,7 +23,7 @@ public abstract class Main {
      *          all exception in model, view or controller
      */
     public static void main(final String[] args) throws Exception {
-        Model model = new Model(1,6);
+        Model model = new Model(41,6);
 
         UpdateWorld uw = new UpdateWorld(model);
         uw.start();
