@@ -22,7 +22,7 @@ Group 1, shared the tasks : Arthur made the view and Nathan made the controller.
 ### Other
 
 Group 2 took care of cutting the required sprites one by one so that they would be easier to process.
-The GitHub were created by Gregory. The Trello were created by Gregory and Nathan. Nathan found and adapted sound effects and game music. Arthur incorporated them into the code. This document was written by Nathan
+The GitHub were created by Gregory. The Trello were created by Gregory and Nathan. Nathan and Arthur found and adapted sound effects and game music. Arthur incorporated them into the code. This document was written by Nathan
 
 ### Commits
 
