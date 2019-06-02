@@ -355,11 +355,6 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
             this.Die = true;
         }
 
-        while(!this.Model.getExplosions().isEmpty()){
-            int[] removedExp = this.Model.getExplosions().remove(0);
-            this.Panel.addExplosion(new int[]{removedExp[0],removedExp[1],1});
-            this.Panel.setExploid(true);
-        }
         if(!this.Model.getExplosions().isEmpty()){
             try{
                 InputStream in = new FileInputStream(this.Path +"\\Sounds\\Exploid.wav");
@@ -368,6 +363,11 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
             }catch(IOException e){
                 System.err.println(e);
             }
+        }
+        while(!this.Model.getExplosions().isEmpty()){
+            int[] removedExp = this.Model.getExplosions().remove(0);
+            this.Panel.addExplosion(new int[]{removedExp[0],removedExp[1],1});
+            this.Panel.setExploid(true);
         }
 
         this.Panel.Modify();
