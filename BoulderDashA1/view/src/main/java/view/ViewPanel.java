@@ -447,7 +447,7 @@ public class ViewPanel extends JPanel{
             }
         }
         if(this.getDie()){
-            Graphic.drawImage(this.TestCase('G'), 0, 0, 512, 512, this);
+            Graphic.drawImage(this.TestCase('G'), 132, 224, 248, 64, this);
         }else if(this.getWinBoolean()){
             Graphic.drawImage(this.TestCase('V'), 0, 0, 512, 512, this);
         }

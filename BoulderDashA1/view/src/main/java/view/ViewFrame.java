@@ -4,10 +4,11 @@ import contract.ControllerOrder;
 import contract.IController;
 import contract.IModel;
 import contract.IView;
+
 import sun.audio.AudioPlayer;
 import sun.audio.AudioStream;
-
 import javax.imageio.ImageIO;
+import javax.sound.sampled.*;
 import javax.swing.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -53,10 +54,11 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
     /** Frame class constructor. */
     public ViewFrame(){
         try{
-            InputStream in = new FileInputStream(this.Path +"\\Sounds\\Atmosphere.wav");
-            AudioStream as = new AudioStream(in);
-            AudioPlayer.player.start(as);
-        }catch(IOException e){
+            AudioInputStream Music = AudioSystem.getAudioInputStream(new File(this.Path +"\\Sounds\\Atmosphere.wav").getAbsoluteFile());
+            Clip clip = AudioSystem.getClip();
+            clip.open(Music);
+            clip.loop(Clip.LOOP_CONTINUOUSLY);
+        }catch(Exception e){
             System.err.println(e);
         }
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -353,19 +355,18 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
             this.Die = true;
         }
 
-        if(!this.Model.getExplosions().isEmpty())
-        {
+        while(!this.Model.getExplosions().isEmpty()){
+            int[] removedExp = this.Model.getExplosions().remove(0);
+            this.Panel.addExplosion(new int[]{removedExp[0],removedExp[1],1});
+            this.Panel.setExploid(true);
+        }
+        if(!this.Model.getExplosions().isEmpty()){
             try{
                 InputStream in = new FileInputStream(this.Path +"\\Sounds\\Exploid.wav");
                 AudioStream as = new AudioStream(in);
                 AudioPlayer.player.start(as);
             }catch(IOException e){
                 System.err.println(e);
-            }
-            while(!this.Model.getExplosions().isEmpty()){
-                int[] removedExp = this.Model.getExplosions().remove(0);
-                this.Panel.addExplosion(new int[]{removedExp[0],removedExp[1],1});
-                this.Panel.setExploid(true);
             }
         }
 
