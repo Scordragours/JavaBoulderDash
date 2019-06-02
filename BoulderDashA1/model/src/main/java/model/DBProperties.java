@@ -18,13 +18,13 @@ class DBProperties extends Properties {
 	private final static String	PROPERTIES_FILE_NAME	= "model.properties";
 
 	/** The url. */
-	private String							url										= "";
+	private String url		= "jdbc:mariadb://localhost:3306/boulder_dash";
 
 	/** The login. */
-	private String							login									= "";
+	private String login	= "root";
 
 	/** The password. */
-	private String							password							= "";
+	private String password	= "root";
 
 	/**
 	 * Instantiates a new DB properties.
