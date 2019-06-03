@@ -28,4 +28,3 @@ The GitHub were created by Gregory. The Trello were created by Gregory and Natha
 
 You can see the details with the commits on GitHub :
 - [Master Branch](https://github.com/Greg1709/JavaBoulderDash/commits/master)
-- [Ressources Branch](https://github.com/Greg1709/JavaBoulderDash/commits/Resources)
