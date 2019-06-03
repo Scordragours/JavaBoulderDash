@@ -1,7 +1,9 @@
 package model;
 
 /**
- * The Entity class.
+ * An instance of this class is an entity that can be create in the world.
+ * Every entity needs to be specialise into a specific type (e.g. a wall,
+ * the player, a rolling rock, ...).
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */

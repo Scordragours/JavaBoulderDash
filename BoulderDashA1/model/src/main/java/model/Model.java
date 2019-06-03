@@ -11,7 +11,11 @@ import model.db.DBConnection;
 
 
 /**
- * The Class Model.
+ * This class is a part of the MVC architecture. An instance of this class
+ * will load the selected level from the database, converts it to an
+ * entity {@link Entity} world. The view can use it to convert the current
+ * world into an usable char array. Some methods scan the world to update
+ * entities that need so.
  *
  * @author CANDANT ETIENNE AND DENEUVE GREGORY
  */

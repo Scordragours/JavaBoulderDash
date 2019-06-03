@@ -1,7 +1,10 @@
 package model;
 
 /**
- * The TimeCounter class. Use a Thread.
+ * This class use a thread to simulate a second counter. Each second, the thread
+ * will decrements the remaining seconds of the current game. When the player
+ * wins, the thread will increment the score by 1 point for each remaining
+ * second.
  *
  * @author ETIENNE CANDAT AND GREGORY DENEUVE
  *

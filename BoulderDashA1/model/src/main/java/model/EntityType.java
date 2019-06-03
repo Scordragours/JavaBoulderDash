@@ -1,7 +1,7 @@
 package model;
 
 /**
- * The EntityType enum.
+ * Enumerates every possible type of entity.
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
