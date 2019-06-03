@@ -4,6 +4,8 @@ package model;
  * The TimeCounter class. Use a Thread.
  *
  * @author ETIENNE CANDAT AND GREGORY DENEUVE
+ *
+ * @see java.lang.Thread
  */
 public class TimeCounter extends Thread {
 
@@ -23,6 +25,8 @@ public class TimeCounter extends Thread {
     /**
      * The run method of a thread.
      * In this one, the remaining time is updated.
+     *
+     * @see Thread#run()
      */
     public void run()
     {

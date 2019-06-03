@@ -4,6 +4,8 @@ package model;
  * The UpdateWorld class. Use a Thread.
  *
  * @author ETIENNE CANDAT AND GREGORY DENEUVE
+ *
+ * @see java.lang.Thread
  */
 public class UpdateWorld extends Thread {
 
@@ -23,6 +25,8 @@ public class UpdateWorld extends Thread {
     /**
      * The run method of a thread.
      * In this one, both SlidingBlocks and Enemies are updated.
+     *
+     * @see Thread#run()
      */
     public void run()
     {
