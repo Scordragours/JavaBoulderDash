@@ -1,7 +1,10 @@
 package model;
 
 /**
- * The UpdateWorld class. Use a Thread.
+ * This class use a thread to update the entities that needs to move over
+ * the time. Every 150 milliseconds, call {@link Model#updateSlidingBlocks()}
+ * and {@link Model#updateEnemies()} to update every Sliding Block and enemies
+ * in the model's world.
  *
  * @author ETIENNE CANDAT AND GREGORY DENEUVE
  *

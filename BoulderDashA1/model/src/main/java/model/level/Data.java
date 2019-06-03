@@ -1,4 +1,4 @@
-package entity;
+package model.level;
 
 /**
  * The Class Data.

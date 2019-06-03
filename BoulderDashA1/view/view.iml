@@ -49,7 +49,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER" level="application" />
     <orderEntry type="module" module-name="contract" />
-    <orderEntry type="module" module-name="entity" />
     <orderEntry type="library" name="Maven: org.junit.jupiter:junit-jupiter-api:5.2.0" level="project" />
     <orderEntry type="library" name="Maven: org.apiguardian:apiguardian-api:1.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.opentest4j:opentest4j:1.1.0" level="project" />

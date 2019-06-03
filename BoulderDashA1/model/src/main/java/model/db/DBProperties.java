@@ -1,4 +1,4 @@
-package model;
+package model.db;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -18,18 +18,18 @@ class DBProperties extends Properties {
 	private final static String	PROPERTIES_FILE_NAME	= "model.properties";
 
 	/** The url. */
-	private String url		= "jdbc:mariadb://localhost:3306/boulder_dash";
+	private String url		= "";
 
 	/** The login. */
-	private String login	= "root";
+	private String login	= "";
 
 	/** The password. */
-	private String password	= "root";
+	private String password	= "";
 
 	/**
-	 * Instantiates a new DB properties.
+	 * Instantiates a new db properties.
 	 */
-	public DBProperties() {
+	DBProperties() {
 		InputStream inputStream;
 
 		inputStream = this.getClass().getClassLoader().getResourceAsStream(DBProperties.PROPERTIES_FILE_NAME);
@@ -51,7 +51,7 @@ class DBProperties extends Properties {
 	 *
 	 * @return the url
 	 */
-	public String getUrl() {
+	String getUrl() {
 		return this.url;
 	}
 
@@ -70,7 +70,7 @@ class DBProperties extends Properties {
 	 *
 	 * @return the login
 	 */
-	public String getLogin() {
+	String getLogin() {
 		return this.login;
 	}
 
@@ -89,7 +89,7 @@ class DBProperties extends Properties {
 	 *
 	 * @return the password
 	 */
-	public String getPassword() {
+	String getPassword() {
 		return this.password;
 	}
 

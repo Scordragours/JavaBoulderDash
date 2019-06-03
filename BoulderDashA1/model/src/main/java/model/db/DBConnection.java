@@ -1,4 +1,4 @@
-package model;
+package model.db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,7 +9,7 @@ import java.sql.SQLException;
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
-final class DBConnection {
+public final class DBConnection {
 	/** The instance. */
 	private static DBConnection	INSTANCE	= null;
 
@@ -17,7 +17,7 @@ final class DBConnection {
 	private Connection					connection;
 
 	/**
-	 * Instantiates a new DB connection.
+	 * Instantiates a new db connection.
 	 */
 	private DBConnection() {
 		this.open();

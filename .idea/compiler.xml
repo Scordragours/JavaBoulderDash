@@ -7,11 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="contract" />
-        <module name="controller" />
-        <module name="entity" />
-        <module name="main" />
         <module name="model" />
         <module name="view" />
+        <module name="main" />
+        <module name="controller" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

@@ -1,6 +1,6 @@
-package model;
+package model.db;
 
-import entity.Data;
+import model.level.Data;
 import java.sql.Connection;
 import java.sql.SQLException;
 
@@ -25,7 +25,7 @@ import java.sql.SQLException;
          * @throws SQLException
          *           the SQL exception
          */
-        public DAOData(final Connection connection) throws SQLException {
+        DAOData(final Connection connection) throws SQLException {
             this.connection = connection;
         }
 
@@ -34,7 +34,7 @@ import java.sql.SQLException;
          *
          * @return the connection
          */
-        protected Connection getConnection() {
+        Connection getConnection() {
             return this.connection;
         }
 

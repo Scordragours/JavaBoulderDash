@@ -1,6 +1,6 @@
-package model;
+package model.db;
 
-import entity.Level;
+import model.level.Level;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;

@@ -1,4 +1,4 @@
-package entity;
+package model.level;
 
 public class Level extends Data {
     private int id;
@@ -23,21 +23,21 @@ public class Level extends Data {
         return this.id;
     }
 
-    public void setId(int id) { this.id = id; }
+    private void setId(int id) { this.id = id; }
 
     public int getTime()
     {
         return this.time;
     }
 
-    public void setTime(int time) { this.time = time; }
+    private void setTime(int time) { this.time = time; }
 
     public int getNbDiamond()
     {
         return this.nbDiamond;
     }
 
-    public void setNbDiamond(int nbDiamond) { this.nbDiamond = nbDiamond; }
+    private void setNbDiamond(int nbDiamond) { this.nbDiamond = nbDiamond; }
 
     public String getLevel()
     {

@@ -5,7 +5,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Observable;
 import contract.IModel;
-import entity.Level;
+import model.level.Level;
+import model.db.DAOLevel;
+import model.db.DBConnection;
 
 
 /**

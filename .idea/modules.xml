@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BoulderDashA1/contract/contract.iml" filepath="$PROJECT_DIR$/BoulderDashA1/contract/contract.iml" />
       <module fileurl="file://$PROJECT_DIR$/BoulderDashA1/controller/controller.iml" filepath="$PROJECT_DIR$/BoulderDashA1/controller/controller.iml" />
-      <module fileurl="file://$PROJECT_DIR$/BoulderDashA1/entity/entity.iml" filepath="$PROJECT_DIR$/BoulderDashA1/entity/entity.iml" />
       <module fileurl="file://$PROJECT_DIR$/BoulderDashA1/main/main.iml" filepath="$PROJECT_DIR$/BoulderDashA1/main/main.iml" />
       <module fileurl="file://$PROJECT_DIR$/BoulderDashA1/masterpom.iml" filepath="$PROJECT_DIR$/BoulderDashA1/masterpom.iml" />
       <module fileurl="file://$PROJECT_DIR$/BoulderDashA1/model/model.iml" filepath="$PROJECT_DIR$/BoulderDashA1/model/model.iml" />

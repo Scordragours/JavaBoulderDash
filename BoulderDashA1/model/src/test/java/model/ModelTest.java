@@ -1,6 +1,6 @@
 package model;
 
-import entity.Level;
+import model.level.Level;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
