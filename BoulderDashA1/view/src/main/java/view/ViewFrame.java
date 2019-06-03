@@ -53,14 +53,6 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
 
     /** Frame class constructor. */
     public ViewFrame(){
-        try{
-            AudioInputStream Music = AudioSystem.getAudioInputStream(new File(this.Path +"\\Sounds\\Atmosphere.wav").getAbsoluteFile());
-            Clip clip = AudioSystem.getClip();
-            clip.open(Music);
-            clip.loop(Clip.LOOP_CONTINUOUSLY);
-        }catch(Exception e){
-            System.err.println(e);
-        }
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("Boulder Dash");
         this.setResizable(false);
@@ -76,6 +68,14 @@ public class ViewFrame extends JFrame implements IView, KeyListener, Observer{
      *
      */
     public void Observer(IModel Model){
+        try{
+            AudioInputStream Music = AudioSystem.getAudioInputStream(new File(this.Path +"\\Sounds\\Atmosphere.wav").getAbsoluteFile());
+            Clip clip = AudioSystem.getClip();
+            clip.open(Music);
+            clip.loop(Clip.LOOP_CONTINUOUSLY);
+        }catch(Exception e){
+            System.err.println(e);
+        }
         try{
             this.setIconImage(ImageIO.read(new File(this.Path +"\\Personnage\\Left\\1.png")));
         }catch(IOException e){
