@@ -64,7 +64,6 @@ public final class Controller extends Thread implements IController {
 	 * @param timerActive
 	 * 			the active timer
 	 */
-
 	private void MotionLessControl(boolean timerActive) {
 		if (timerActive) {
 			if (this.timer == 0) {

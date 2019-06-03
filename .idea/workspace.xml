@@ -8,10 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ced6bba6-f76a-41f8-a65d-ecf6fea6b4a9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/EntityType.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/EntityType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/TimeCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/TimeCounter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoulderDashA1/controller/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoulderDashA1/controller/src/main/java/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoulderDashA1/controller/src/test/java/controller/ControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoulderDashA1/controller/src/test/java/controller/ControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/EntityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/EntityTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/ModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/ModelTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/BoulderDashA1/bin/" />
     <ignored path="$PROJECT_DIR$/BoulderDashA1/target/" />
@@ -52,49 +52,120 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/BoulderDashA1/controller/src/main/java/controller/Controller.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="272">
+                    <caret line="64" column="32" lean-forward="true" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Model.java">
+        <entry file="file://$PROJECT_DIR$/BoulderDashA1/controller/src/test/java/controller/ControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+            <state relative-caret-position="119">
+              <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+              <folding>
+                <element signature="e#1642#1643#0" expanded="true" />
+                <element signature="e#1746#1747#0" expanded="true" />
+                <element signature="e#1860#1861#0" expanded="true" />
+                <element signature="e#1656#1657#0" expanded="true" />
+                <element signature="e#1714#1715#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Entity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="36" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/EntityType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="44" lean-forward="true" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/TimeCounter.java">
+        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/PlayerTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+              <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/UpdateWorld.java">
+        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/CharacterTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="40" column="48" lean-forward="true" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/DiamondTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/DirtTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/EnemyTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/ModelTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/EnemyDiamondTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/EntityTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Model.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-170">
+              <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -157,32 +228,22 @@
         <option value="$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewFrameFinal.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/EnemyDiamond.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/EnemyPoint.java" />
-        <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Diamond.java" />
-        <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Dirt.java" />
-        <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Exit.java" />
-        <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/RollingRock.java" />
-        <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Wall.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/src/site/site.xml" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/RollingRockTest.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/PlayerTest.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/WallTest.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/view/pom.xml" />
         <option value="$PROJECT_DIR$/BoulderDashA1/contract/src/main/java/contract/IModel.java" />
-        <option value="$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/EntityTest.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/view/src/test/java/view/ViewPanelTest.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/view/src/test/java/view/ViewFrameTest.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/contract/src/main/java/contract/IView.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewLabel.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/SlidingBlockTest.java" />
-        <option value="$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/ModelTest.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/testsuits.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/EnemyPointTest.java" />
-        <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/SlidingBlock.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Enemy.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Player.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Character.java" />
-        <option value="$PROJECT_DIR$/BoulderDashA1/controller/src/main/java/controller/Controller.java" />
-        <option value="$PROJECT_DIR$/BoulderDashA1/controller/src/test/java/controller/ControllerTest.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewPanel.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewFrame.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/resources/BoulderDash.sql" />
@@ -199,6 +260,16 @@
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Model.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/EntityType.java" />
         <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Entity.java" />
+        <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Diamond.java" />
+        <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Dirt.java" />
+        <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Exit.java" />
+        <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/RollingRock.java" />
+        <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/SlidingBlock.java" />
+        <option value="$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Wall.java" />
+        <option value="$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/ModelTest.java" />
+        <option value="$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/EntityTest.java" />
+        <option value="$PROJECT_DIR$/BoulderDashA1/controller/src/main/java/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/BoulderDashA1/controller/src/test/java/controller/ControllerTest.java" />
       </list>
     </option>
   </component>
@@ -273,6 +344,65 @@
             <path>
               <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -310,10 +440,57 @@
               <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="apidocs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="testapidocs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaBoulderDash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BoulderDashA1" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="testapidocs" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -373,12 +550,59 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JAR Application.Boulder Dash">
+  <component name="RunManager" selected="Maven.Build Maven Main">
     <configuration name="Boulder Dash" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="controller" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.ControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControllerTest.testMotionLessControl" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="controller" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.ControllerTest" />
+      <option name="METHOD_NAME" value="testMotionLessControl" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControllerTest.testRun" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="controller" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.ControllerTest" />
+      <option name="METHOD_NAME" value="testRun" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -440,9 +664,15 @@
       <item itemvalue="JAR Application.Boulder Dash" />
       <item itemvalue="JUnit.testsuits" />
       <item itemvalue="Maven.Build Maven Main" />
+      <item itemvalue="JUnit.ControllerTest.testMotionLessControl" />
+      <item itemvalue="JUnit.ControllerTest.testRun" />
+      <item itemvalue="JUnit.ControllerTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ControllerTest" />
+        <item itemvalue="JUnit.ControllerTest.testMotionLessControl" />
+        <item itemvalue="JUnit.ControllerTest.testRun" />
         <item itemvalue="JUnit.testsuits" />
       </list>
     </recent_temporary>
@@ -807,43 +1037,57 @@
       <option name="project" value="LOCAL" />
       <updated>1559557632797</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="JavaDoc review">
+      <created>1559559959765</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1559559959765</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Class visibility review">
+      <created>1559560350113</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1559560350113</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ControllerTest - 2019.06.02 at 14h 13m 32s.xml">
+    <history-entry file="ControllerTest_testRun - 2019.06.03 at 14h 47m 43s.xml">
+      <configuration name="ControllerTest.testRun" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerTest_testRun - 2019.06.03 at 14h 47m 50s.xml">
+      <configuration name="ControllerTest.testRun" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerTest_testMotionLessControl - 2019.06.03 at 14h 57m 35s.xml">
+      <configuration name="ControllerTest.testMotionLessControl" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerTest_testMotionLessControl - 2019.06.03 at 14h 57m 40s.xml">
+      <configuration name="ControllerTest.testMotionLessControl" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerTest_testMotionLessControl - 2019.06.03 at 14h 57m 46s.xml">
+      <configuration name="ControllerTest.testMotionLessControl" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerTest_testMotionLessControl - 2019.06.03 at 14h 59m 07s.xml">
+      <configuration name="ControllerTest.testMotionLessControl" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerTest_testMotionLessControl - 2019.06.03 at 14h 59m 15s.xml">
+      <configuration name="ControllerTest.testMotionLessControl" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerTest_testMotionLessControl - 2019.06.03 at 14h 59m 41s.xml">
+      <configuration name="ControllerTest.testMotionLessControl" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerTest - 2019.06.03 at 15h 01m 01s.xml">
       <configuration name="ControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ControllerTest - 2019.06.02 at 14h 13m 35s.xml">
+    <history-entry file="ControllerTest - 2019.06.03 at 15h 22m 01s.xml">
       <configuration name="ControllerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ControllerTest - 2019.06.02 at 14h 15m 15s.xml">
-      <configuration name="ControllerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ControllerTest - 2019.06.02 at 14h 15m 17s.xml">
-      <configuration name="ControllerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ControllerTest - 2019.06.02 at 14h 15m 20s.xml">
-      <configuration name="ControllerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ControllerTest - 2019.06.02 at 14h 15m 47s.xml">
-      <configuration name="ControllerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ControllerTest - 2019.06.02 at 14h 17m 00s.xml">
-      <configuration name="ControllerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ControllerTest - 2019.06.02 at 14h 20m 01s.xml">
-      <configuration name="ControllerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testsuits - 2019.06.03 at 09h 43m 18s.xml">
-      <configuration name="testsuits" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testsuits - 2019.06.03 at 12h 22m 18s.xml">
-      <configuration name="testsuits" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230947000" />
+    <option name="totallyTimeSpent" value="238777000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -876,7 +1120,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32719395" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5042644" side_tool="true" weight="0.3394794" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.45362473" weight="0.3219858" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49946865" weight="0.44475922" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49946865" weight="0.44420367" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -891,7 +1135,7 @@
       <window_info anchor="right" id="Maven" order="10" weight="0.2409396" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.17004265" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2238806" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -900,17 +1144,17 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4284165" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49573562" visible="true" weight="0.34019503" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39869988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="7" weight="0.32907802" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32765958" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50067115" side_tool="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49932885" weight="0.3286119" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.2559653" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
+      <window_info anchor="bottom" id="Database Changes" order="7" weight="0.32827735" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32719395" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5042644" side_tool="true" weight="0.3394794" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.45362473" weight="0.3219858" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49946865" weight="0.44475922" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -919,18 +1163,16 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Database" order="7" weight="0.21610738" />
-      <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.0015991471" />
+      <window_info anchor="right" id="Database" order="7" weight="0.21588486" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.0015991471" />
       <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32995737" />
-      <window_info anchor="right" id="Maven" order="10" />
+      <window_info anchor="right" id="Maven" order="10" weight="0.2409396" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="CharacterTests child tests implementation" />
-    <MESSAGE value="Tests and method implementation" />
     <MESSAGE value="Tests implementation" />
     <MESSAGE value="Threads implementation" />
     <MESSAGE value="Delete useless method in Controller" />
@@ -954,7 +1196,9 @@
     <MESSAGE value="Correction of the bawl with explosions." />
     <MESSAGE value="JavaDoc update in TimeCounter and UpdateWorld" />
     <MESSAGE value="Packaging review" />
-    <option name="LAST_COMMIT_MESSAGE" value="Packaging review" />
+    <MESSAGE value="JavaDoc review" />
+    <MESSAGE value="Class visibility review" />
+    <option name="LAST_COMMIT_MESSAGE" value="Class visibility review" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -969,127 +1213,6 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/view/src/test/java/view/ViewPanelTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1592">
-          <caret line="19" column="52" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/model">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>model</OriginalElement>
-          <nodes>
-            <node x="" y="">model.DAOLevel</node>
-            <node x="" y="">model.Direction</node>
-            <node x="" y="">model.PlayerTest</node>
-            <node x="" y="">model.DBProperties</node>
-            <node x="" y="">model.DirtTest</node>
-            <node x="" y="">model.DBConnection</node>
-            <node x="" y="">model.Enemy</node>
-            <node x="" y="">model.EntityType</node>
-            <node x="" y="">model.WallTest</node>
-            <node x="" y="">model.RollingRock</node>
-            <node x="" y="">model.EnemyDiamond</node>
-            <node x="" y="">model.RollingRockTest</node>
-            <node x="" y="">model.SlidingBlockTest</node>
-            <node x="" y="">model.EntityTest</node>
-            <node x="" y="">model.Exit</node>
-            <node x="" y="">model.ModelTest</node>
-            <node x="" y="">model.Player</node>
-            <node x="" y="">model.EnemyDiamondTest</node>
-            <node x="" y="">model.Model</node>
-            <node x="" y="">model.TimeCounter</node>
-            <node x="" y="">model.UpdateWorld</node>
-            <node x="" y="">model.EnemyPointTest</node>
-            <node x="" y="">model.ExitTest</node>
-            <node x="" y="">model.EnemyPoint</node>
-            <node x="" y="">model.Character</node>
-            <node x="" y="">model.Entity</node>
-            <node x="" y="">model.DAOData</node>
-            <node x="" y="">model.Wall</node>
-            <node x="" y="">model.EnemyTest</node>
-            <node x="" y="">model.DiamondTest</node>
-            <node x="" y="">model.CharacterTest</node>
-            <node x="" y="">model.Diamond</node>
-            <node x="" y="">model.Dirt</node>
-            <node x="" y="">model.SlidingBlock</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.3946308724832217" x="410.0" y="491.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/view/src/main/java/view/ViewLabel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="102" selection-start-line="102" selection-end-line="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/DiamondTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/DirtTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/EnemyDiamondTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/EnemyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/EntityTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" selection-start-line="7" selection-end-line="11" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/ExitTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/ModelTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="178" column="59" lean-forward="true" selection-start-line="178" selection-start-column="59" selection-end-line="178" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/PlayerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/RollingRockTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -1116,83 +1239,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/SlidingBlock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="99" column="37" lean-forward="true" selection-start-line="99" selection-start-column="37" selection-end-line="99" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Enemy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="70" column="36" lean-forward="true" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/EnemyDiamond.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/EnemyPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="32" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Wall.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="76" lean-forward="true" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Dirt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Exit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Character.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="96" column="6" selection-start-line="96" selection-start-column="6" selection-end-line="96" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="80" column="6" selection-start-line="80" selection-start-column="6" selection-end-line="80" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/controller/src/test/java/controller/ControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="93" column="40" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/controller/src/main/java/controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="125" column="44" selection-start-line="125" selection-start-column="44" selection-end-line="125" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -1244,13 +1290,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
           <caret line="47" column="51" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/CharacterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="40" column="48" lean-forward="true" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -1351,6 +1390,108 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Character.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1581">
+          <caret line="96" column="6" selection-start-line="96" selection-start-column="6" selection-end-line="96" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Direction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Enemy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1190">
+          <caret line="70" column="36" lean-forward="true" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/EnemyDiamond.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/EnemyPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="32" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="68" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/EntityType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="44" lean-forward="true" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Exit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="80" column="6" selection-start-line="80" selection-start-column="6" selection-end-line="80" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Diamond.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Dirt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/RollingRock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/SlidingBlock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Wall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding>
+            <element signature="e#487#488#0" expanded="true" />
+            <element signature="e#524#525#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/UpdateWorld.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1365,24 +1506,98 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/lang/reflect/Field.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1673">
+          <caret line="169" column="18" selection-start-line="169" selection-start-column="18" selection-end-line="169" selection-end-column="18" />
+          <folding>
+            <element signature="e#5431#5432#0" expanded="true" />
+            <element signature="e#5458#5459#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Model.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+        <state relative-caret-position="-170">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/EntityType.java">
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/CharacterTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="44" lean-forward="true" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+        <state relative-caret-position="629">
+          <caret line="40" column="48" lean-forward="true" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/main/java/model/Entity.java">
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/DiamondTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="36" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+        <state relative-caret-position="136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/DirtTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/EnemyDiamondTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/EnemyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/EntityTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/ModelTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/controller/src/main/java/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="64" column="32" lean-forward="true" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/controller/src/test/java/controller/ControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+          <folding>
+            <element signature="e#1642#1643#0" expanded="true" />
+            <element signature="e#1746#1747#0" expanded="true" />
+            <element signature="e#1860#1861#0" expanded="true" />
+            <element signature="e#1656#1657#0" expanded="true" />
+            <element signature="e#1714#1715#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoulderDashA1/model/src/test/java/model/PlayerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
         </state>
       </provider>
     </entry>

@@ -11,7 +11,8 @@ import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 /**
- * Model Test
+ * The ModelTest class.
+ *
  * @author CANDAT ETIENNE AND DENEUVE GREGORY
  * @version 1.0
  */
@@ -21,12 +22,12 @@ public class ModelTest {
     /** Field declaration */
     private Field[] fields;
 
-    @BeforeClass
-    public static void setUpBeforeClass() throws Exception {
-    }
-
-
-
+    /**
+     * Instantiates a new Model for testing purpose.
+     * Use the reflection in Java.
+     *
+     * @see java.lang.reflect.Field
+     */
     @Before
     public void setUp() throws Exception
     {

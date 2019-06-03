@@ -3,45 +3,60 @@ package controller;
 import contract.IModel;
 import contract.IView;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Observable;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 /**
- * The class ControllerTest
+ * The ControllerTest class.
  *
- * @author Nathan PORET
+ * @author Nathan PORET and Etienne CANDAT
  */
-
 public class ControllerTest {
 
-    /** The controller use for the test */
+    /** The controller for the test */
     private Controller controller;
-    /** The model for the test*/
+    /** The model for the test */
     private IModel model;
-    /** The vie for the test*/
+    /** The view for the test */
     private IView view;
-    /** The field */
+    /** The reflected fields of the Controller class */
     private Field[] fields;
-    /** Last position of the player */
-    private int[] lastPositionPlayer = new int[2];
+    /** The reflected methods of the Controller class */
+    private Method[] methods;
+    /** The reflected fields of the local class "NewModel" in {@link #setUp()} */
+    private Field[] modelFields;
 
     /**
-     * instantiate the controller class
-     * Use the reflexion in Java
+     * Instantiates new Controller, Model, View.
+     * Use the reflection in Java.
      *
+     * @see java.lang.reflect.Field
+     * @see java.lang.reflect.Method
      */
-
     @Before
-    public void setUp() {
-        this.model = new IModel() {
+    public void setUp() throws Exception {
+        class NewModel implements IModel
+        {
+            private int remainingTime;
+            private int[] positionPlayer;
+
+            private NewModel(int remainingTime, int[] positions)
+            {
+                this.remainingTime = remainingTime;
+                this.positionPlayer = positions;
+            }
+
             @Override
             public int getRemainingTime() {
-                return 50;
+                return this.remainingTime;
             }
 
             @Override
@@ -56,10 +71,7 @@ public class ControllerTest {
 
             @Override
             public int[] getPositionsPlayer() {
-                int[] pos = new int[2];
-                pos[0] = 0;
-                pos[1] = 0;
-                return pos;
+                return this.positionPlayer;
             }
 
             @Override
@@ -85,44 +97,128 @@ public class ControllerTest {
 
             @Override
             public boolean getIsOpenExit() { return false; }
+        }
+        this.model = new NewModel(50, new int[]{5,5});
+
+        this.view = new IView() {
+            @Override
+            public void setStandBy(boolean StandBy) {
+
+            }
         };
 
-        this.controller = new Controller(view, this.model);
-
-        Class<?> modelReflector = this.controller.getClass();
-        this.fields = modelReflector.getDeclaredFields();
-        for(Field field : this.fields) {
+        Class<?> newModelReflector = NewModel.class;
+        this.modelFields = newModelReflector.getDeclaredFields();
+        for(Field field : this.modelFields) {
             field.setAccessible(true);
         }
 
-        this.lastPositionPlayer[0] = 0;
-        this.lastPositionPlayer[1] = 0;
+        this.controller = new Controller(this.view, this.model);
+
+        Class<?> controllerReflector = this.controller.getClass();
+        this.fields = controllerReflector.getDeclaredFields();
+        this.methods = controllerReflector.getDeclaredMethods();
+        for(Field field : this.fields) {
+            field.setAccessible(true);
+        }
+        for(Method method : this.methods)
+        {
+            method.setAccessible(true);
+        }
+
+        for (Field field : fields) {
+            if (field.getName().equals("lastPositionPlayer"))
+            {
+                field.set(this.controller, model.getPositionsPlayer());
+            }
+        }
     }
 
     /**
-     * Test method for {@link Controller#run()}
-     * when the player don't move
+     * Test method for {@link Controller#MotionLessControl(boolean)}.
      *
      * @throws Exception for bad direction assign to the player
-     *
      */
-
     @Test
     public void testMotionLessControl() throws Exception
     {
         int expectedTimer = 50;
-        controller.start();
         int currentTimer = -1;
-
-        do {
-            for (Field field : fields) {
-                if (field.getName().equals("timer"))
-                    currentTimer = (int) field.get(this.controller);
+        for(Method method : this.methods)
+        {
+            if(method.getName().equals("MotionLessControl"))
+            {
+                method.invoke(this.controller, true);
             }
-        } while (currentTimer == 0);
+        }
 
+        for (Field field : fields) {
+            if (field.getName().equals("timer"))
+                currentTimer = (int) field.get(this.controller);
+        }
 
         assertEquals(expectedTimer, currentTimer);
+
+        expectedTimer = 0;
+
+        for(Method method : this.methods)
+        {
+            if(method.getName().equals("MotionLessControl"))
+            {
+                method.invoke(this.controller, false);
+            }
+        }
+
+        for (Field field : fields) {
+            if (field.getName().equals("timer"))
+                currentTimer = (int) field.get(this.controller);
+        }
+
+        assertEquals(expectedTimer, currentTimer);
+    }
+
+    /**
+     * Test method for {@link Controller#run()}.
+     *
+     * @throws Exception for bad direction assign to the player
+     */
+    @Test
+    public void testRun() throws Exception
+    {
+        int[] expectedPositions = new int[]{5,5};
+        int[] currentPositions = new int[2];
+
+        controller.start();
+        Controller.sleep(1);
+
+        for (Field field : fields) {
+            if (field.getName().equals("lastPositionPlayer"))
+                currentPositions = (int[]) field.get(this.controller);
+        }
+
+        assertArrayEquals(expectedPositions, currentPositions);
+
+
+        for (Field field : this.modelFields) {
+            if (field.getName().equals("positionPlayer"))
+            {
+                field.set(this.model, new int[]{6,8});
+            }
+        }
+
+        expectedPositions = new int[]{6,8};
+        currentPositions = new int[2];
+
+        this.controller = new Controller(this.view, this.model);
+        controller.start();
+        Controller.sleep(1);
+
+        for (Field field : fields) {
+            if (field.getName().equals("lastPositionPlayer"))
+                currentPositions = (int[]) field.get(this.controller);
+        }
+
+        assertArrayEquals(expectedPositions, currentPositions);
     }
 
 }

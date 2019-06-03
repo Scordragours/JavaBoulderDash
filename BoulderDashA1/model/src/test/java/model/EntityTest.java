@@ -16,8 +16,10 @@ public abstract class EntityTest {
     protected Model model;
 
     /**
-     * Use the reflexion in Java
+     * Use the reflection in Java
      * @throws Exception if the position are negatives
+     *
+     * @see java.lang.reflect.Field
      */
     @BeforeClass
     public static void setUpBeforeClass() throws Exception
