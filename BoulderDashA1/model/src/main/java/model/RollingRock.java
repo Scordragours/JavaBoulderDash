@@ -5,7 +5,7 @@ package model;
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
-public class RollingRock extends SlidingBlock {
+class RollingRock extends SlidingBlock {
 
     /**
      * Instantiates a new RollingRock.

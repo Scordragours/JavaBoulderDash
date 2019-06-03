@@ -5,7 +5,7 @@ package model;
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
-public class Dirt extends Entity {
+class Dirt extends Entity {
 
     /**
      * Instantiates a new Dirt.

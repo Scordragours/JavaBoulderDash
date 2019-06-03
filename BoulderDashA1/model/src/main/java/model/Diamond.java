@@ -5,7 +5,7 @@ package model;
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
-public class Diamond extends SlidingBlock {
+class Diamond extends SlidingBlock {
 
     /**
      * Instantiates a new Diamond.

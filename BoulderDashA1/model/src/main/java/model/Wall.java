@@ -5,7 +5,8 @@ package model;
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
-public class Wall extends Entity {
+class Wall extends Entity {
+
     /**
      * Instantiates a new Wall.
      *

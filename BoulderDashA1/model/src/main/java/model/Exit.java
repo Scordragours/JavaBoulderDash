@@ -5,7 +5,7 @@ package model;
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
-public class Exit extends Entity {
+class Exit extends Entity {
 
     /** The open state of the exit */
     private boolean open;

@@ -5,7 +5,7 @@ package model;
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
-public abstract class SlidingBlock extends Entity {
+abstract class SlidingBlock extends Entity {
 
     /** Used when the entity has moved during an update. */
     private boolean hasMove;
