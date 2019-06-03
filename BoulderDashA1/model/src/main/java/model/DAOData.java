@@ -38,40 +38,8 @@ import java.sql.SQLException;
             return this.connection;
         }
 
-        /**
-         * Creates the.
-         *
-         * @param Data
-         *          the entity
-         * @return true, if successful
-         */
-        public abstract boolean create(D Data);
 
-        /**
-         * Delete.
-         *
-         * @param Data
-         *          the entity
-         * @return true, if successful
-         */
-        public abstract boolean delete(D Data);
 
-        /**
-         * Update.
-         *
-         * @param Data
-         *          the entity
-         * @return true, if successful
-         */
-        public abstract boolean update(D Data);
-
-        /**
-         * Find.
-         *
-         * @param id
-         *          the id
-         * @return the e
-         */
         public abstract D find(int id);
 
     }

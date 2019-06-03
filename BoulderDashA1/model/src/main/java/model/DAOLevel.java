@@ -7,28 +7,20 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Dao level
+ * @author DENEUVE GREGORY AND CANDAT ETIENNE
+ */
+
 public class DAOLevel extends DAOData<Level> {
 
+    /**
+     * Constructor for DAOLevel
+     * @param connection connection to database
+     * @throws SQLException retrieve the sql errors
+     */
     public DAOLevel(final Connection connection) throws SQLException {
         super(connection);
-    }
-
-    @Override
-    public boolean create(final Level data)
-    {
-        return false;
-    }
-
-    @Override
-    public boolean delete(final Level data)
-    {
-        return false;
-    }
-
-    @Override
-    public boolean update(final Level data)
-    {
-        return false;
     }
 
     @Override
