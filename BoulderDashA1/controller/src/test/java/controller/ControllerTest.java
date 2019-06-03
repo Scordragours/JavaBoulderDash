@@ -11,6 +11,12 @@ import java.util.Observable;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * The class ControllerTest
+ *
+ * @author Nathan PORET
+ */
+
 public class ControllerTest {
 
     /** The controller use for the test */
@@ -108,14 +114,13 @@ public class ControllerTest {
         controller.start();
         int currentTimer = -1;
 
-        for(Field field : fields) {
-            if (field.getName().equals("timer"))
-                currentTimer = (int)field.get(this.controller);
-        }
+        do {
+            for (Field field : fields) {
+                if (field.getName().equals("timer"))
+                    currentTimer = (int) field.get(this.controller);
+            }
+        } while (currentTimer == 0);
 
-        if (currentTimer == 0)
-            System.out.println("Something unexpected has happened ! Correcting...");
-            currentTimer = 50;
 
         assertEquals(expectedTimer, currentTimer);
     }
