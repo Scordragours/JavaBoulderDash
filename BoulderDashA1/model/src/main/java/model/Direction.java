@@ -1,7 +1,7 @@
 package model;
 
 /**
- * The Direction enum.
+ * This enum represents the 4 directions possible.
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */

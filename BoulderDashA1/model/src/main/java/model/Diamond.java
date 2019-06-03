@@ -1,7 +1,7 @@
 package model;
 
 /**
- * The Diamond Class.
+ * This class represents the diamond entity.
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */

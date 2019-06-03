@@ -1,7 +1,7 @@
 package model;
 
 /**
- * The RollingRock class.
+ * This class represents the rolling block entity.
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */

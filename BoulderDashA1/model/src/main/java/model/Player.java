@@ -1,7 +1,7 @@
 package model;
 
 /**
- * The Player class.
+ * This class represents the player's entity with his movement and death.
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */

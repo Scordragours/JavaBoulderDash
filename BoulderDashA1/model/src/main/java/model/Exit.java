@@ -1,7 +1,7 @@
 package model;
 
 /**
- * The Exit class.
+ * This class represents the exit entity.
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */

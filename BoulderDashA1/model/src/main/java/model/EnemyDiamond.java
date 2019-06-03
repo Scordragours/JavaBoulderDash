@@ -1,7 +1,7 @@
 package model;
 
 /**
- * The EnemyDiamond class.
+ * This class represents the enemies who generate diamonds when they die.
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */

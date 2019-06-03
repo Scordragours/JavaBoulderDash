@@ -1,7 +1,7 @@
 package model;
 
 /**
- * The Enemy class.
+ * This class represents the different enemy entity with his movement and death.
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */

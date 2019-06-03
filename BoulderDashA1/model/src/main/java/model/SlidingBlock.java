@@ -1,7 +1,7 @@
 package model;
 
 /**
- * The SlidingBlock class.
+ * This class represents the sliding of a diamond or a rolling block.
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */

@@ -1,7 +1,7 @@
 package model;
 
 /**
- * The Wall class.
+ * This class represents the wall entity, the wall entity is destructible or indestructible.
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */

@@ -1,7 +1,7 @@
 package model;
 
 /**
- * The EnemyPoint class.
+ * This class represents the enemies who generate points when they die.
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */

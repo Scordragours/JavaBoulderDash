@@ -1,7 +1,7 @@
 package model;
 
 /**
- * The Dirt class.
+ * This class represents the dirt entity.
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */

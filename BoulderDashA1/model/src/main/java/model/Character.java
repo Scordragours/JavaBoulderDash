@@ -1,7 +1,7 @@
 package model;
 
 /**
- * The Character class.
+ * This class represents the different characters present in the game and the behavior they can adopt.
  *
  * @author DENEUVE GREGORY AND CANDAT ETIENNE
  */
