@@ -7,6 +7,7 @@ import contract.IView;
 
 /**
  * The class Controller
+ * 		Used to move the player and check if he is inactive.
  *
  * @author Nathan PORET
  */
